@@ -1,6 +1,10 @@
 import React from "react";
 import cover from './../assets/images/cover.webp';
 import Link from 'next/link';
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import {leftBarDataProps} from "./docs/[...slug]";
 
 interface ctaProps {
     name: string;
@@ -31,8 +35,8 @@ const LeftSideContent:React.FC<LeftSideContentProps> = ({title,subtitle,descript
                 <main className="flex justify-center items-center mx-auto max-w-7xl min-h-[calc(100vh-4rem)] px-4 sm:px-6 lg:px-8">
                     <div className="sm:text-center lg:text-left">
                         <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                            <span className="block xl:inline">{title}</span><br/>
-                            <span className="block text-primary xl:inline">{subtitle}</span>
+                            <p className="block xl:inline">{title}</p>
+                            <p className="block text-primary xl:inline">{subtitle}</p>
                         </h1>
                         <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                             {description}
@@ -75,13 +79,24 @@ const RightSideContent = () => {
         </div>
     )
 }
+interface Props {
+    leftBarData: leftBarDataProps[];
+}
 
-const Home:React.FC<{}> =() => {
+const Home:React.FC<Props> =({leftBarData}) => {
+
+    React.useEffect(()=>{
+        if(leftBarData.length  > 0) {
+            // fetching data in index page for documentation
+            localStorage.setItem('leftBarData',JSON.stringify(leftBarData))
+        }
+    },[])
+
   return (
       <div className="relative bg-white overflow-hidden h-[calc(100vh-4rem)]">
           <LeftSideContent
               title={'bKash Web'}
-              subtitle={'02. Design System'}
+              subtitle={'Design System'}
               description={'Developer and Designer Guideline to follow design principles'}
               ctaFirst={{name: 'Documentation', link: '/docs'}}
               ctaSecond={{name: 'Storybook', link: '/storybook'}}
@@ -89,6 +104,44 @@ const Home:React.FC<{}> =() => {
           <RightSideContent />
       </div>
   )
+}
+
+export async function getStaticProps() {
+
+    //getting folder info, folder always should have 01-99.. with "." in last we split it
+    // purpose of 01... is to maintain folder order as we are getting it from fs
+    const folders = fs.readdirSync(path.join('docs'));
+
+    const leftbarData = folders.map((folder)=>{
+        //initiating return values
+        let slug = '';
+        let folderName = '';
+        //if folder has serial ex 01. Name , we will split with .
+        let slugArr = folder.split('.');
+        // check if it has . in the folder name
+        if(slugArr.length > 1) {
+            slug = slugArr[1].toLowerCase().trim().replace(' ','');
+            folderName = slugArr[1].trim();
+        }else {
+            slug = slugArr[0].toLowerCase().trim().replace(' ','');
+            folderName = slugArr[0].trim();
+        }
+        const getFiles = fs.readdirSync(path.join(`docs/${folder}`));
+        //get files data;
+        const getFilesData = getFiles.map((fileName)=>{
+            const markdownMeta = fs.readFileSync(path.join(`docs/${folder}`,fileName),'utf-8');
+            const {data} = matter(markdownMeta);
+            return data;
+        })
+
+        return {slug,name: folderName,data:getFilesData}
+    })
+
+    return {
+        props: {
+            leftBarData: leftbarData
+        }
+    }
 }
 
 export default Home;

@@ -9,8 +9,8 @@ interface HeadCustomProps {
 const HeadCustom:React.FC<HeadCustomProps> = ({title,description}) => {
     return(
         <Head>
-            <title>{title || 'bKash 02. Design System'}</title>
-            <meta name="description" content={description || '02. Design System Created for bKash web'} />
+            <title>{title || 'bKash Components'}</title>
+            <meta name="description" content={description || 'Components Created for bKash web'} />
             <link rel="icon" href="/favicon.ico" />
         </Head>
     )

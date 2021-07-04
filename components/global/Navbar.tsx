@@ -61,9 +61,10 @@ const NavList = () => {
                     navLink.type.toLowerCase() === 'link' ?
                         <a
                             key={navLink.id}
+                            rel={'noreferrer noopener'}
                             href={navLink.link}
                             target={'_blank'}
-                            className="focus:text-gray-700 hover:bg-gray-50 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+                            className="text-gray-700 focus:text-gray-700 hover:bg-gray-50 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium"
                         >
                             {navLink.name}
                         </a>
@@ -72,7 +73,7 @@ const NavList = () => {
                             key={navLink.id}
                             href={navLink.link}
                         >
-                            <span className={clsx('cursor-pointer px-3 py-2 rounded-md text-sm font-medium', router.pathname === navLink.link ? 'bg-primary text-white': 'text-gray-700 focus:text-gray-700 hover:bg-gray-50 hover:text-gray-700')}>{navLink.name}</span>
+                            <span className={clsx('cursor-pointer px-3 py-2 rounded-md text-sm font-medium', router.pathname.includes(navLink.link) ? 'bg-primary text-white': 'text-gray-700 focus:text-gray-700 hover:bg-gray-50 hover:text-gray-700')}>{navLink.name}</span>
                         </Link>
                 )}
             </div>
@@ -88,6 +89,7 @@ const MobileNavList =  () => {
                 navLink.type.toLowerCase() === 'link' ?
                     <a
                         key={navLink.id}
+                        rel={'noreferrer noopener'}
                         href={navLink.link}
                         target={'_blank'}
                         className="cursor-pointer text-gray-700 hover:bg-gray-50 hover:text-gray-700 block px-3 py-2 rounded-md text-base font-medium"
