@@ -4,11 +4,12 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import {useRouter} from "next/router";
+import marked from 'marked';
 
 interface fileDataProps {
-  title: string;
-  slug:string;
-  excerpt:string;
+ title: string;
+ id: string;
+ slug: string;
 }
 
 export interface leftBarDataProps {
@@ -19,10 +20,11 @@ export interface leftBarDataProps {
 
 export interface Props {
   leftBarData?: leftBarDataProps[];
-  children?: React.ReactNode;
+  meta:any;
+  content: any;
 }
 
-const PostDetails:React.FC<Props> =({children}) => {
+const PostDetails:React.FC<Props> =({meta,content}) => {
 
   const [leftBarData,setLeftBarData]  = React.useState([]);
   const router = useRouter();
@@ -37,10 +39,48 @@ const PostDetails:React.FC<Props> =({children}) => {
     }
   },[])
 
+
   return (
     <Layout leftBarData={leftBarData} slugs={router.query.slug}>
-      hello
+      <div className='prose prose-sm sm:prose lg:prose-lg xl:prose-xl prose-pink'>
+        <div dangerouslySetInnerHTML={{__html: marked(content)}} />
+      </div>
     </Layout>
   )
 }
+
+export async function getStaticPaths() {
+  const folders = fs.readdirSync(path.join('docs'));
+
+  let paths:any = [];
+
+  folders.forEach((folder)=>{
+
+    const getFiles = fs.readdirSync(path.join(`docs/${folder}`));
+    //get files data;
+    const getFilesData = getFiles.map((fileName)=>{
+      paths.push({params: {slug:[folder,fileName]}});
+    })
+  })
+
+  return{
+    paths,
+    fallback:false,
+  }
+}
+
+export async function getStaticProps({params}:any) {
+
+  const markdownMeta = fs.readFileSync(path.join(`docs/${params.slug[0]}`,params.slug[1]),'utf-8');
+
+  const {data:meta,content} = matter(markdownMeta);
+
+  return {
+    props: {
+      meta,content
+    }
+  }
+
+}
+
 export default PostDetails;

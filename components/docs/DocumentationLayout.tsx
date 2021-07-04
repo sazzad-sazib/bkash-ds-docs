@@ -16,7 +16,7 @@ const DocumentLayout:React.FC<Props> =({leftBarData,children,slugs}) => {
             <HeadCustom title={'Documentation'}/>
             <div className='h-[calc(100vh-4rem)] overflow-hidden grid grid-cols-7 gap-4'>
                 <LeftBar data={leftBarData || []} slugs={slugs || []} />
-                <div className='col-span-5'>
+                <div className='col-span-5 overflow-auto'>
                     {children}
                 </div>
             </div>

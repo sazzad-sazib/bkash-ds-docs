@@ -12,9 +12,21 @@ module.exports = {
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+      typography:(theme)=> ({
+        DEFAULT: {
+          css: {
+            color: theme('colors.gray.400'),
+            pre: {
+              colors: theme('colors.gray.50')
+            }
+          },
+        },
+      })
+    },
   },
   plugins: [
     require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
   ],
 }

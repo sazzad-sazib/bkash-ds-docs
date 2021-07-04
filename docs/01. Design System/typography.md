@@ -1,8 +1,6 @@
 ---
-
-title: 'Get Started'
-id: "01"
-
+title: "Typography"
+id: "02"
 ---
 
 # Title 

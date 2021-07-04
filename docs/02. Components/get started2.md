@@ -1,8 +1,7 @@
 ---
 
 title: 'Get Started'
-excerpt: 'Get Started'
-slug: 'get-started-2'
+id: "02"
 
 ---
 

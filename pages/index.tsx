@@ -114,16 +114,13 @@ export async function getStaticProps() {
 
     const leftbarData = folders.map((folder)=>{
         //initiating return values
-        let slug = '';
         let folderName = '';
         //if folder has serial ex 01. Name , we will split with .
         let slugArr = folder.split('.');
         // check if it has . in the folder name
         if(slugArr.length > 1) {
-            slug = slugArr[1].toLowerCase().trim().replace(' ','');
             folderName = slugArr[1].trim();
         }else {
-            slug = slugArr[0].toLowerCase().trim().replace(' ','');
             folderName = slugArr[0].trim();
         }
         const getFiles = fs.readdirSync(path.join(`docs/${folder}`));
@@ -131,10 +128,10 @@ export async function getStaticProps() {
         const getFilesData = getFiles.map((fileName)=>{
             const markdownMeta = fs.readFileSync(path.join(`docs/${folder}`,fileName),'utf-8');
             const {data} = matter(markdownMeta);
-            return data;
+            return {slug: fileName, title: data.title,id: data.id};
         })
 
-        return {slug,name: folderName,data:getFilesData}
+        return {slug:folder,name: folderName,data:getFilesData.sort((a,b)=>a.id-b.id)}
     })
 
     return {
