@@ -81,7 +81,7 @@ const Home:React.FC<{}> =() => {
       <div className="relative bg-white overflow-hidden h-[calc(100vh-4rem)]">
           <LeftSideContent
               title={'bKash Web'}
-              subtitle={'Design System'}
+              subtitle={'02. Design System'}
               description={'Developer and Designer Guideline to follow design principles'}
               ctaFirst={{name: 'Documentation', link: '/docs'}}
               ctaSecond={{name: 'Storybook', link: '/storybook'}}
