@@ -6,7 +6,7 @@ import fs from 'fs';
 import path from 'path';
 
 interface fileDataProps {
-    name: string;
+    title: string;
     slug:string;
     excerpt:string;
 }
@@ -42,7 +42,7 @@ export async function getStaticProps() {
     const folders = fs.readdirSync(path.join('docs'));
 
     const leftbarData = folders.map((folder)=>{
-        const slug = folder.split('.')[1].toLowerCase().trim().replace(' ','-');
+        const slug = folder.split('.')[1].toLowerCase().trim().replace(' ','');
 
         const getFiles = fs.readdirSync(path.join(`docs/${folder}`));
         const getFilesData = getFiles.map((fileName)=>{

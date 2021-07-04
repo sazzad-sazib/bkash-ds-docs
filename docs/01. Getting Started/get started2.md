@@ -1,6 +1,6 @@
 ---
 
-title: 'Get Started'
+title: 'Get Started two'
 excerpt: 'Get Started'
 slug: 'get-started-2'
 
