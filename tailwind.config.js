@@ -13,16 +13,6 @@ module.exports = {
   },
   variants: {
     extend: {
-      typography:(theme)=> ({
-        DEFAULT: {
-          css: {
-            color: theme('colors.gray.400'),
-            pre: {
-              colors: theme('colors.gray.50')
-            }
-          },
-        },
-      })
     },
   },
   plugins: [

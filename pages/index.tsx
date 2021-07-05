@@ -4,7 +4,6 @@ import Link from 'next/link';
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import {leftBarDataProps} from "./docs/[...slug]";
 
 interface ctaProps {
     name: string;
@@ -71,6 +70,7 @@ const LeftSideContent:React.FC<LeftSideContentProps> = ({title,subtitle,descript
 const RightSideContent = () => {
     return (
         <div className="hidden md:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 h-[calc(100vh-4rem)]">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
                 className="h-full w-full object-cover sm:h-full md:h-full lg:w-full lg:h-full"
                 src={`${cover.src}`}
@@ -80,15 +80,15 @@ const RightSideContent = () => {
     )
 }
 interface Props {
-    leftBarData: leftBarDataProps[];
+    staticMdxFiles: any;
 }
 
-const Home:React.FC<Props> =({leftBarData}) => {
+const Home:React.FC<Props> =({staticMdxFiles}) => {
 
     React.useEffect(()=>{
-        if(leftBarData.length  > 0) {
+        if(staticMdxFiles.length  > 0) {
             // fetching data in index page for documentation
-            localStorage.setItem('leftBarData',JSON.stringify(leftBarData))
+            localStorage.setItem('staticMdxFiles',JSON.stringify(staticMdxFiles))
         }
     },[])
 
@@ -108,35 +108,19 @@ const Home:React.FC<Props> =({leftBarData}) => {
 
 export async function getStaticProps() {
 
-    //getting folder info, folder always should have 01-99.. with "." in last we split it
-    // purpose of 01... is to maintain folder order as we are getting it from fs
-    const folders = fs.readdirSync(path.join('docs'));
-
-    const leftbarData = folders.map((folder)=>{
-        //initiating return values
-        let folderName = '';
-        //if folder has serial ex 01. Name , we will split with .
-        let slugArr = folder.split('.');
-        // check if it has . in the folder name
-        if(slugArr.length > 1) {
-            folderName = slugArr[1].trim();
-        }else {
-            folderName = slugArr[0].trim();
-        }
-        const getFiles = fs.readdirSync(path.join(`docs/${folder}`));
+    //getting folders
+    const folderPath = 'docs'
+    const getFiles = fs.readdirSync(path.join(folderPath));
         //get files data;
         const getFilesData = getFiles.map((fileName)=>{
-            const markdownMeta = fs.readFileSync(path.join(`docs/${folder}`,fileName),'utf-8');
+            const markdownMeta = fs.readFileSync(path.join(folderPath,fileName),'utf-8');
             const {data} = matter(markdownMeta);
-            return {slug: fileName, title: data.title,id: data.id};
-        })
-
-        return {slug:folder,name: folderName,data:getFilesData.sort((a,b)=>a.id-b.id)}
-    })
+            return {slug: fileName.replace('.md',''), title: data.title,id: data.id};
+        }).sort((a,b)=>a.id-b.id);
 
     return {
         props: {
-            leftBarData: leftbarData
+            staticMdxFiles: getFilesData
         }
     }
 }

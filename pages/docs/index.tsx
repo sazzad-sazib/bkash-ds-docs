@@ -1,6 +1,6 @@
 import React from 'react';
 import {useRouter} from "next/router";
-import {leftBarDataProps} from "./[...slug]";
+import {leftBarDataProps} from "../../utilities/leftBarData";
 
 export interface Props {
 }
@@ -10,7 +10,7 @@ const DefaultDocRoute:React.FC<Props> =() => {
     const router = useRouter();
 
     React.useEffect(()=>{
-        const data = localStorage.getItem('leftBarData');
+        const data = localStorage.getItem('staticMdxFiles');
         let leftBarData:leftBarDataProps[] = [];
         if(data) {
             leftBarData = JSON.parse(data);
@@ -19,12 +19,12 @@ const DefaultDocRoute:React.FC<Props> =() => {
         }
 
         if(!!leftBarData && leftBarData.length !== 0){
-            router.push(`/docs/${leftBarData[0].slug}/${leftBarData[0].data[0].slug}`)
+            router.push(`/docs/contents/${leftBarData[0].slug}`)
         }else {
             router.push('/');
         }
     },[])
-  return (<div/>)
+    return (<div/>)
 }
 
 export default DefaultDocRoute;
