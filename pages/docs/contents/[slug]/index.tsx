@@ -1,6 +1,5 @@
 import React from 'react';
-import Layout from './../..//../../components/docs/DocumentationLayout';
-import {useRouter} from "next/router";
+import Layout from './../../../../components/docs/DocumentationLayout';
 import marked from "marked";
 import fs from "fs";
 import path from "path";

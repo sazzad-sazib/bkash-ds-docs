@@ -4,12 +4,12 @@ import DocumentationLayout from "../../../components/docs/DocumentationLayout";
 export interface Props {
 }
 
-const Avatar:React.FC<Props> =() => {
+const Color:React.FC<Props> =() => {
     return (
-        <DocumentationLayout parentSlug='components' childSlug='avatar'>
-            Avatar Documentation
+        <DocumentationLayout parentSlug='components' childSlug='color'>
+            color Documentation
         </DocumentationLayout>
     )
 }
 
-export default Avatar;
+export default Color;

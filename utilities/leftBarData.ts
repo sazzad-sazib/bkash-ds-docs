@@ -22,13 +22,18 @@ const data:leftBarDataProps[] = [
         data: [
             {
                 id: 0,
-                title: 'Buttons Component',
-                slug: 'buttons'
+                title: 'Typography',
+                slug: 'typography'
             },
             {
                 id: 1,
-                title: 'Avatar Component',
-                slug: 'avatar'
+                title: 'Color Palette',
+                slug: 'color'
+            },
+            {
+                id: 2,
+                title: 'Box Shadow',
+                slug: 'shadow'
             },
         ]
     }

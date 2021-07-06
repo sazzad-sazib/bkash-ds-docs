@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply font-sans font-black text-6xl text-gray-800 my-6
+  }
+  h2 {
+    @apply font-sans font-extrabold text-5xl text-gray-800 my-5
+  }
+  h3 {
+    @apply font-sans font-bold text-4xl text-gray-700 my-4
+  }
+  h4 {
+    @apply font-sans font-semibold text-3xl text-gray-700 my-3
+  }
+  h5 {
+    @apply font-sans font-medium text-2xl text-gray-700 my-2
+  }
+  h6 {
+    @apply font-sans font-medium text-xl text-gray-700 my-2
+  }
+  a {
+    @apply font-medium underline text-primary
+  }
+  p,div {
+    @apply text-gray-700
+  }
+}
+
+.code-snippet {
+  @apply flex shadow rounded-lg;
+
+  &__editor {
+    @apply flex-1 p-4 rounded-r-lg;
+  }
+  &__preview{
+    @apply flex-1 p-4 rounded-l-lg bg-pink-100;
+  }
+  &__error {
+    @apply w-full bg-primary mt-2 rounded-lg;
+  }
+}

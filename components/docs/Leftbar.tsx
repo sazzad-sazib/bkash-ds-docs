@@ -63,7 +63,7 @@ const LeftBar:React.FC<Props> =({data, parentSlug,childSlug}) => {
                                      leaveFrom="opacity-100"
                                      leaveTo="opacity-0"
                                  >
-                                     <ul className="px-4 pb-2 text-sm text-gray-500">
+                                     <ul className="px-2 pb-2 text-sm text-gray-500">
                                          {sideBar.data.map((sidebarFiles:any,index:number)=>
                                              <li
                                                  onClick={()=>{
@@ -71,10 +71,10 @@ const LeftBar:React.FC<Props> =({data, parentSlug,childSlug}) => {
                                                      setChildActive(sidebarFiles.slug);
                                                      router.push(`/docs/${sideBar.slug}/${sidebarFiles.slug}`)
                                                  }}
-                                                 className={clsx('py-2 px-2 my-1 rounded-md text-md font-sans cursor-pointer', isChildActive === sidebarFiles.slug ? 'text-primary bg-gray-100 font-medium' :'font-normal hover:bg-gray-50 hover:text-gray-700')} key={index}>
+                                                 className={clsx('py-2 px-4 my-1 rounded-md text-md font-sans cursor-pointer', isChildActive === sidebarFiles.slug ? 'text-primary bg-gray-100 font-medium' :'font-normal hover:bg-gray-50 hover:text-gray-700')} key={index}>
                                                  {sidebarFiles.title}
-                                             </li>)
-                                         }
+                                             </li>
+                                         )}
                                      </ul>
                                  </Transition>
                              </div>

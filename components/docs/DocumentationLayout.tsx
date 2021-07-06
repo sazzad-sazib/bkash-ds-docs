@@ -39,8 +39,11 @@ const DocumentLayout:React.FC<Props> =({children,parentSlug,childSlug}) => {
             <HeadCustom title={'Documentation'}/>
             <div className='h-[calc(100vh-4rem)] overflow-hidden grid grid-cols-7 gap-4'>
                 <LeftBar data={newLeftBarData} childSlug={childSlug} parentSlug={parentSlug}/>
-                <div className='col-span-5 overflow-auto'>
+                <div className='col-span-5 overflow-auto p-4'>
                     {children}
+                    <p className='text-gray-400 flex justify-end text-xs w-full items-center'>
+                        &copy; bKash Limited {new Date().getFullYear()}
+                    </p>
                 </div>
             </div>
         </>

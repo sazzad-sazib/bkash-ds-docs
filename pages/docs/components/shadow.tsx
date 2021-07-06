@@ -4,12 +4,12 @@ import DocumentationLayout from "../../../components/docs/DocumentationLayout";
 export interface Props {
 }
 
-const Buttons:React.FC<Props> =() => {
+const Typography:React.FC<Props> =() => {
     return (
-        <DocumentationLayout parentSlug='components' childSlug='buttons'>
-            Button Documentation
+        <DocumentationLayout parentSlug='components' childSlug='shadow'>
+            shadow Documentation
         </DocumentationLayout>
     )
 }
 
-export default Buttons;
+export default Typography;
