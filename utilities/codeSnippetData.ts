@@ -21,59 +21,29 @@ export const typographySnippet = {
 
 export const typographyExactSnippet = {
     jsx: `<div>
-\t<p className="font-sans font-black text-6xl text-gray-800 my-6">
-\t\th1 - bKash
-\t</p>
-\t<p className="font-sans font-extrabold text-5xl text-gray-800 my-5">
-\t\th2 - bKash
-\t</p>
-\t<p className="font-sans font-bold text-4xl text-gray-700 my-4">
-\t\th3 - bKash
-\t</p>
-\t<p className="font-sans font-semibold text-3xl text-gray-700 my-3">
-\t\th4 - bKash
-\t</p>
-\t<p className="font-sans font-medium text-2xl text-gray-700 my-2">
-\t\th5 - bKash
-\t</p>
-\t<p className="font-sans font-medium text-xl text-gray-700 my-2">
-\t\th6 - bKash
-\t</p>
+\t<p className="font-sans font-black text-6xl text-gray-800 my-6">h1 - bKash</p>
+\t<p className="font-sans font-extrabold text-5xl text-gray-800 my-5">h2 - bKash</p>
+\t<p className="font-sans font-bold text-4xl text-gray-700 my-4">h3 - bKash</p>
+\t<p className="font-sans font-semibold text-3xl text-gray-700 my-3">h4 - bKash</p>
+\t<p className="font-sans font-medium text-2xl text-gray-700 my-2">h5 - bKash</p>
+\t<p className="font-sans font-medium text-xl text-gray-700 my-2">h6 - bKash</p>
 \t<p className="text-gray-700">p - bKash</p>
-\t<a
-\t\tclassName="font-medium underline text-primary"
-\t\thref="www.bkash.com"
-\t>
-\t\ta link
-\t</a>
-</div>;`,
-    html: `<div>
-\t<p class="font-sans font-black text-6xl text-gray-800 my-6">
-\t\th1 - bKash
-\t</p>
-\t<p class="font-sans font-extrabold text-5xl text-gray-800 my-5">
-\t\th2 - bKash
-\t</p>
-\t<p class="font-sans font-bold text-4xl text-gray-700 my-4">
-\t\th3 - bKash
-\t</p>
-\t<p class="font-sans font-semibold text-3xl text-gray-700 my-3">
-\t\th4 - bKash
-\t</p>
-\t<p class="font-sans font-medium text-2xl text-gray-700 my-2">
-\t\th5 - bKash
-\t</p>
-\t<p class="font-sans font-medium text-xl text-gray-700 my-2">
-\t\th6 - bKash
-\t</p>
-\t<p class="text-gray-700">p - bKash</p>
-\t<a
-\t\tclass="font-medium underline text-primary"
-\t\thref="www.bkash.com"
-\t>
+\t<a className="font-medium underline text-primary" href="www.bkash.com">
 \t\ta link
 \t</a>
 </div>`,
+    html: `<div>
+\t<p class="font-sans font-black text-6xl text-gray-800 my-6">h1 - bKash</p>
+\t<p class="font-sans font-extrabold text-5xl text-gray-800 my-5">h2 - bKash</p>
+\t<p class="font-sans font-bold text-4xl text-gray-700 my-4">h3 - bKash</p>
+\t<p class="font-sans font-semibold text-3xl text-gray-700 my-3">h4 - bKash</p>
+\t<p class="font-sans font-medium text-2xl text-gray-700 my-2">h5 - bKash</p>
+\t<p class="font-sans font-medium text-xl text-gray-700 my-2">h6 - bKash</p>
+\t<p class="text-gray-700">p - bKash</p>
+\t<a class="font-medium underline text-primary" href="www.bkash.com">
+\t\ta link
+\t</a>
+</div>;`,
 }
 
 export const tailwindLayerExtention =
@@ -103,3 +73,12 @@ export const tailwindLayerExtention =
     @apply text-gray-700
   }
 }`
+
+export const tailwindFontColorImport = `const colors =require('tailwindcss/colors');
+theme: {
+    colors: {
+      primary: '#d82a77',
+      ...colors,
+    },
+    extend: {},
+  },`

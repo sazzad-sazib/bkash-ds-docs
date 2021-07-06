@@ -2,6 +2,10 @@ import React from 'react';
 import {LiveProvider,LiveEditor,LiveError,LivePreview} from "react-live";
 import dracula from 'prism-react-renderer/themes/dracula'
 import CodeSwitcher from "./CodeSwitcher";
+import Image from 'next/image';
+import bKashImage from './../../public/bkash-small.svg';
+import {ClipboardCheckIcon, ClipboardCopyIcon} from "@heroicons/react/solid";
+import {copyTextToClipboard} from "../../utilities/utilFunction";
 
 interface codeType {
     jsx: string;
@@ -11,18 +15,21 @@ interface codeType {
 export interface CodeEditorProps {
     code: codeType | any;
     className?: string;
+    hasCopy?: boolean;
 }
 
 const options = ['jsx','html'];
 
-const CodeLiveEditor:React.FC<CodeEditorProps> =({code,className}) => {
+const CodeLiveEditor:React.FC<CodeEditorProps> =({code,className,hasCopy=false}) => {
     const [activeType,setActiveType] = React.useState(options[0]);
 
     const Header = () => (
-        <div className='flex justify-between'>
-            <img src={'/bkash.svg'} className='ml-2' width={60} alt='bkash Branding' />
+        <div className='flex justify-end items-center'>
+            <div className='mr-2 mt-2'>
+            <Image src={bKashImage} loading={'lazy'} width={30} height={30} alt='bkash Branding' />
+            </div>
             <div>
-                <CodeSwitcher options={options} active={activeType} onChange={setActiveType} />
+                <CodeSwitcher options={options} active={activeType} onChange={setActiveType} hasCopy={hasCopy} handleCopy={()=>copyTextToClipboard(code[activeType])} />
             </div>
         </div>
     )

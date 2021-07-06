@@ -23,6 +23,7 @@ const DefaultDocRoute:React.FC<Props> =() => {
         }else {
             router.push('/');
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
     return (<div/>)
 }

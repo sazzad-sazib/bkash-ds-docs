@@ -24,11 +24,13 @@ const MainTypography:React.FC<Props> =() => {
           </CodeSnippet>
           <p>See the Live Editor below for whole typography and you can change and see how its changes </p>
           <CodeLiveEditor
+              hasCopy={true}
               className='my-6'
               code={typographySnippet}
           />
           <p className='mt-6'>This happen because we applied a css layer.Here is the preview with same style</p>
           <CodeLiveEditor
+              hasCopy={true}
               className='my-6'
               code={typographyExactSnippet}
           />

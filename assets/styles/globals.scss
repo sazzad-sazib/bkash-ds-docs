@@ -28,15 +28,17 @@
     @apply text-gray-700
   }
 }
-
+.h-\[calc\(100vh-4rem\)\] {
+  height: calc(100vh - 4rem);
+}
 .code-snippet {
-  @apply flex shadow rounded-lg;
+  @apply flex shadow rounded-lg flex-wrap;
 
   &__editor {
-    @apply flex-1 p-4 rounded-r-lg;
+    @apply flex-auto p-4 rounded-lg;
   }
   &__preview{
-    @apply flex-1 p-4 rounded-l-lg bg-pink-100;
+    @apply flex-auto p-4 rounded-lg bg-pink-100;
   }
   &__error {
     @apply w-full bg-primary mt-2 rounded-lg;

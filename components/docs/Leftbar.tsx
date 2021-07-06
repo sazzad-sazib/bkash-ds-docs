@@ -31,6 +31,7 @@ const LeftBar:React.FC<Props> =({data, parentSlug,childSlug}) => {
                 setChildActive(data[0].data[0].slug);
             }
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[router.query])
 
 

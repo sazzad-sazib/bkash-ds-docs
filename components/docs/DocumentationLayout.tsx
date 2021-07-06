@@ -31,19 +31,17 @@ const DocumentLayout:React.FC<Props> =({children,parentSlug,childSlug}) => {
         const leftBarLocalData= newLeftBarData;
         leftBarLocalData[0].data = getMdxData();
         setLeftbarData(leftBarLocalData)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
     const router = useRouter();
     return (
         <>
             <HeadCustom title={'Documentation'}/>
-            <div className='h-[calc(100vh-4rem)] overflow-hidden grid grid-cols-7 gap-4'>
+            <div className='h-[calc(100vh-4rem)] overflow-hidden block md:grid md:grid-cols-7 gap-4'>
                 <LeftBar data={newLeftBarData} childSlug={childSlug} parentSlug={parentSlug}/>
-                <div className='col-span-5 overflow-auto p-4'>
+                <div className='block md:col-span-5 h-[calc(100vh-4rem)] overflow-auto p-4'>
                     {children}
-                    <p className='text-gray-400 flex justify-end text-xs w-full items-center'>
-                        &copy; bKash Limited {new Date().getFullYear()}
-                    </p>
                 </div>
             </div>
         </>
