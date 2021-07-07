@@ -16,11 +16,12 @@ export interface CodeEditorProps {
     code: codeType | any;
     className?: string;
     hasCopy?: boolean;
+    previewClassName?: string;
 }
 
 const options = ['jsx','html'];
 
-const CodeLiveEditor:React.FC<CodeEditorProps> =({code,className,hasCopy=false}) => {
+const CodeLiveEditor:React.FC<CodeEditorProps> =({code,className,hasCopy=false, previewClassName=""}) => {
     const [activeType,setActiveType] = React.useState(options[0]);
 
     const Header = () => (
@@ -39,7 +40,7 @@ const CodeLiveEditor:React.FC<CodeEditorProps> =({code,className,hasCopy=false})
             <LiveProvider code={code[activeType]} theme={dracula}>
                 <Header/>
                 <div className={`code-snippet`}>
-                    <LivePreview className='code-snippet__preview' />
+                    <LivePreview className={`code-snippet__preview ${!!previewClassName ? previewClassName: ''}`} />
                     <LiveEditor className='code-snippet__editor'/>
                 </div>
                 <LiveError className='code-snippet__error' />

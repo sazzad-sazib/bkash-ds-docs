@@ -5,12 +5,9 @@ import {typographySnippet,typographyExactSnippet,tailwindLayerExtention} from ".
 import CodeLiveEditor from "../../global/CodeLiveEditor";
 import FontHeadingTable from "./components/FontHeadingTable";
 
-export interface Props {
-}
-
-const MainTypography:React.FC<Props> =() => {
+const MainTypography:React.FC =() => {
   return (
-      <div className='mb-8'>
+      <div className='my-12'>
           <h4>bKash Typography</h4>
           <div className="mt-2 mb-4">
              The main idea of typography is to build a system providing styles for all headlines and paragraph.
@@ -42,9 +39,6 @@ const MainTypography:React.FC<Props> =() => {
               Please find the sizes in css format below
           </p>
           <FontHeadingTable />
-          <p className='my-6'>
-              If you have any question please consult Delivery lead.
-          </p>
       </div>
   )
 }

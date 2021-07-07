@@ -1,5 +1,5 @@
 import React from 'react';
-import {colorData} from "../../../utilities/otherData";
+import {colorData} from "../../../utilities/otheInfoData";
 import ColorItem from "./components/ColorItem";
 
 const ColorTable: React.FC<{}> = () => {

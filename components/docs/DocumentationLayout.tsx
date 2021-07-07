@@ -1,12 +1,12 @@
 import React from 'react';
-import HeadCustom from "../global/HeadCustom";
+import CustomHead from "../global/CustomHead";
 import LeftBar from "./Leftbar";
 import leftBarData, {leftBarDataElemProps} from "../../utilities/leftBarData";
-import {useRouter} from "next/router";
+
 
 interface Props {
   children: React.ReactNode;
-  parentSlug: 'components' | 'contents';
+  parentSlug: 'components' | 'contents' | 'principles';
   childSlug?: string;
 }
 
@@ -34,13 +34,12 @@ const DocumentLayout:React.FC<Props> =({children,parentSlug,childSlug}) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
-    const router = useRouter();
     return (
         <>
-            <HeadCustom title={'Documentation'}/>
-            <div className='h-[calc(100vh-4rem)] overflow-hidden block md:grid md:grid-cols-7 gap-4'>
+            <CustomHead title={'Documentation'}/>
+            <div className='h-[calc(100vh-4rem)] overflow-hidden block lg:grid lg:grid-cols-7 gap-4'>
                 <LeftBar data={newLeftBarData} childSlug={childSlug} parentSlug={parentSlug}/>
-                <div className='block md:col-span-5 h-[calc(100vh-4rem)] overflow-auto p-4'>
+                <div className='block lg:col-span-5 h-[calc(100vh-4rem)] overflow-auto p-4'>
                     {children}
                 </div>
             </div>

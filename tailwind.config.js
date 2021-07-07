@@ -23,6 +23,7 @@ module.exports = {
       flex: ['group-hover'],
       alignItems: ['group-hover'],
       justifyContent: ['group-hover'],
+      ringOpacity: ['focus']
     },
   },
   plugins: [

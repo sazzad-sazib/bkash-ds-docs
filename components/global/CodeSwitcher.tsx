@@ -28,7 +28,7 @@ const CodeSwitcher:React.FC<Props> =({options,active,onChange,handleCopy,hasCopy
         {!!hasCopy &&
         <button
             onClick={()=>handleCopyLocal()}
-            className={`bg-white border shadow ${isCopied?'bg-opacity-90':''} flex focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 rounded-md focus:outline-none focus-visible:ring-offset-gray-100 ml-0.5 p-1.5 lg:pl-2.5 lg:pr-3.5 rounded-md flex items-center text-sm text-gray-600 font-medium focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 focus:outline-none focus-visible:ring-offset-gray-100`}>
+            className={`bg-white border shadow ${isCopied?'bg-opacity-90':''} flex focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 rounded-md focus:outline-none focus-visible:ring-offset-gray-100 ml-0.5 p-1.5 lg:pl-1.5 lg:pr-2.5 rounded-md flex items-center text-sm text-gray-600 font-medium focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 focus:outline-none focus-visible:ring-offset-gray-100`}>
             {isCopied ? <ClipboardCheckIcon className='h-5 w-5 ml-1 text-primary ' /> : <ClipboardCopyIcon className='h-5 w-5 ml-1 text-gray-600 ' />}
         </button>
         }

@@ -4,14 +4,16 @@ import {getPrimaryColor} from "../../../utilities/utilFunction";
 import ColorTable from "../../../components/components/color/ColorTable";
 import CodeSnippet from "../../../components/global/CodeSnippet";
 import {tailwindFontColorImport} from "../../../utilities/codeSnippetData";
+import CustomHead from "../../../components/global/CustomHead";
 
 export interface Props {
 }
 
 const Color:React.FC<Props> =() => {
     return (
-        <DocumentationLayout parentSlug='components' childSlug='color'>
+        <DocumentationLayout parentSlug='principles' childSlug='color'>
             <div>
+                <CustomHead title={'Color System'} description={'Color System for bKash'} />
                 <h3 className='text-primary mb-2'>Color System</h3>
                 <p>
                     We will use a color system that has color shade from {getPrimaryColor('`50`')} to

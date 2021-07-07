@@ -17,8 +17,8 @@ const data:leftBarDataProps[] = [
         data: [],
     },
     {
-        name: 'Components',
-        slug: 'components',
+        name: 'Principles',
+        slug: 'principles',
         data: [
             {
                 id: 0,
@@ -32,9 +32,30 @@ const data:leftBarDataProps[] = [
             },
             {
                 id: 2,
-                title: 'Box Shadow',
+                title: 'Shadow',
                 slug: 'shadow'
             },
+            {
+                id: 3,
+                title: 'Icon Pack',
+                slug: 'icon'
+            },
+        ]
+    },
+    {
+        name: 'Components',
+        slug: 'components',
+        data: [
+            {
+                id: 0,
+                title: 'Button',
+                slug: 'buttons'
+            },
+            {
+                id: 0,
+                title: 'Avatar',
+                slug: 'avatar'
+            }
         ]
     }
 ]

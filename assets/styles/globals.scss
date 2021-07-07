@@ -27,7 +27,14 @@
   p,div {
     @apply text-gray-700
   }
-}
+  .rest-shadow-classes {
+    @apply bg-white h-36 w-36 rounded-md flex items-center justify-center
+  }
+  .button-layout {
+    @apply max-w-3xl mx-auto space-y-4 flex flex-col items-center justify-start sm:space-y-0 sm:flex-row sm:items-end sm:justify-around
+  }
+ }
+
 .h-\[calc\(100vh-4rem\)\] {
   height: calc(100vh - 4rem);
 }
@@ -44,3 +51,5 @@
     @apply w-full bg-primary mt-2 rounded-lg;
   }
 }
+
+

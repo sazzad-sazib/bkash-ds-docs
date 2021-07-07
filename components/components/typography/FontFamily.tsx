@@ -7,7 +7,7 @@ export interface Props {
 
 const FontFamily:React.FC<Props> =() => {
   return (
-    <div className='my-6'>
+    <div className='my-12'>
      <h4>Font Family</h4>
      <div className="mt-2 mb-4">
          We are Going to use Font {getPrimaryColor('`Inter`')} for Primary Font. It may change system to system

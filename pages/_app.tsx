@@ -1,12 +1,12 @@
 import '../assets/styles/globals.scss'
 import type { AppProps } from 'next/app'
-import HeadCustom from "../components/global/HeadCustom";
+import CustomHead from "../components/global/CustomHead";
 import Navbar from "../components/global/Navbar";
 
 function MyApp({ Component, pageProps }: AppProps) {
     return(
         <>
-          <HeadCustom />
+          <CustomHead />
           <Navbar />
           <Component {...pageProps} />
         </>

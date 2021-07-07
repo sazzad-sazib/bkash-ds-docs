@@ -16,7 +16,6 @@ const ColorItem: React.FC<Props> = ({data}) => {
             setIsCopied(false);
         }, 1500)
     }
-
     return (
         <>
             <div>

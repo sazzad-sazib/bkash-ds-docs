@@ -7,15 +7,16 @@ import matter from "gray-matter";
 
 export interface Props {
   content: string;
+  childSlug: string;
 }
 
-const ContentDetails:React.FC<Props> =({content}) => {
+const ContentDetails:React.FC<Props> =({content,childSlug}) => {
   return (
-    <Layout parentSlug={'contents'}>
-      <div className='prose mt-6'>
-        <div dangerouslySetInnerHTML={{__html: marked(content)}} />
-      </div>
-    </Layout>
+      <Layout parentSlug={'contents'} childSlug={childSlug}>
+        <div className='prose mt-6'>
+          <div dangerouslySetInnerHTML={{__html: marked(content)}}/>
+        </div>
+      </Layout>
   )
 }
 
@@ -43,7 +44,7 @@ export async function getStaticProps({params}:any) {
 
   return {
     props: {
-      meta,content
+      meta,content,childSlug: params.slug
     }
   }
 
