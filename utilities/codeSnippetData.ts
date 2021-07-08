@@ -95,7 +95,7 @@ export const shadowExampleLive = {
 }
 
 export const buttonDataSizes = {
-    jsx: `<div className="button-layout">
+    jsx: `<div className="layout">
   <button
     type="button"
     className="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-primary hover:bg-pink-700 focus:outline-none"
@@ -127,7 +127,7 @@ export const buttonDataSizes = {
     btn xl
   </button>
 </div>`,
-    html: `<div class="button-layout">
+    html: `<div class="layout">
   <button
     type="button"
     class="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-primary hover:bg-pink-700 focus:outline-none"
@@ -163,7 +163,7 @@ export const buttonDataSizes = {
 
 export const buttonDataVariant = {
     jsx: `<div>
-  <div className="button-layout">
+  <div className="layout">
     <button
       type="button"
       className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md shadow-sm text-green-600 bg-green-100 hover:bg-green-100 focus:outline-none"
@@ -209,7 +209,7 @@ export const buttonDataVariant = {
   </div>
 </div>`,
     html: `<div>
-  <div class="button-layout">
+  <div class="layout">
     <button
       type="button"
       class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md shadow-sm text-green-600 bg-green-100 hover:bg-green-100 focus:outline-none"
@@ -277,7 +277,7 @@ export const buttonDataIconVariants = {
     );
   };
 
-  return (<div className="button-layout">
+  return (<div className="layout">
   <button
     type="button"
     className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary hover:bg-pink-700 focus:outline-none"
@@ -312,7 +312,7 @@ export const buttonDataIconVariants = {
 </div>);
 };
 `,
-    html: `<div className="button-layout">
+    html: `<div className="layout">
   <button
     type="button"
     className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary hover:bg-pink-700 focus:outline-none"
@@ -366,3 +366,484 @@ export const iconPackSvgSample = `<svg class="h-6 w-6 text-gray-500" fill="none"
     d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
   />
 </svg>`;
+
+
+export const avatarSizesData = {
+    jsx: `<div className="layout">
+  <div
+    className="relative rounded-full inline-block w-6 h-6"
+    role="img"
+    aria-label="Avatar of Unknown "
+  >
+    <img
+      className="object-cover w-full h-full rounded-full"
+      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
+      alt="Profile image"
+      loading="lazy"
+    />
+    <div
+      className="absolute inset-0 rounded-full shadow-inner"
+      aria-hidden="true"
+    />
+  </div>
+
+  <div
+    className="relative rounded-full inline-block w-8 h-8"
+    role="img"
+    aria-label="Avatar of Unknown "
+  >
+    <img
+      className="object-cover w-full h-full rounded-full"
+      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
+      alt="Profile image"
+      loading="lazy"
+    />
+    <div
+      className="absolute inset-0 rounded-full shadow-inner"
+      aria-hidden="true"
+    />
+  </div>
+
+  <div
+    className="relative rounded-full inline-block w-10 h-10"
+    role="img"
+    aria-label="Avatar of Unknown "
+  >
+    <img
+      className="object-cover w-full h-full rounded-full"
+      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
+      alt="Profile image"
+      loading="lazy"
+    />
+    <div
+      className="absolute inset-0 rounded-full shadow-inner"
+      aria-hidden="true"
+    />
+  </div>
+</div>`,
+    html: `<div class="layout">
+  <div
+    class="relative rounded-full inline-block w-6 h-6"
+    role="img"
+    aria-label="Avatar of Unknown "
+  >
+    <img
+      class="object-cover w-full h-full rounded-full"
+      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
+      alt="Profile image"
+      loading="lazy"
+    />
+    <div
+      class="absolute inset-0 rounded-full shadow-inner"
+      aria-hidden="true"
+    />
+  </div>
+
+  <div
+    class="relative rounded-full inline-block w-8 h-8"
+    role="img"
+    aria-label="Avatar of Unknown "
+  >
+    <img
+      class="object-cover w-full h-full rounded-full"
+      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
+      alt="Profile image"
+      loading="lazy"
+    />
+    <div
+      class="absolute inset-0 rounded-full shadow-inner"
+      aria-hidden="true"
+    />
+  </div>
+
+  <div
+    class="relative rounded-full inline-block w-10 h-10"
+    role="img"
+    aria-label="Avatar of Unknown "
+  >
+    <img
+      class="object-cover w-full h-full rounded-full"
+      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
+      alt="Profile image"
+      loading="lazy"
+    />
+    <div
+      class="absolute inset-0 rounded-full shadow-inner"
+      aria-hidden="true"
+    />
+  </div>
+</div>`,
+}
+
+export const avatarSizesWithStatusData = {
+    jsx: `<div className="layout">
+  <div
+    className="relative rounded-full inline-block w-6 h-6"
+    role="img"
+    aria-label="Avatar of Unknown "
+  >
+    <img
+      className="object-cover w-full h-full rounded-full"
+      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
+      alt="Profile image"
+      loading="lazy"
+    />
+    <div
+      data-testid="statusNode"
+      className="absolute bottom-0 right-0 rounded-md bg-green-500 w-1.5 h-1.5"
+    />
+    <div
+      className="absolute inset-0 rounded-full shadow-inner"
+      aria-hidden="true"
+    />
+  </div>
+
+  <div
+    className="relative rounded-full inline-block w-8 h-8"
+    role="img"
+    aria-label="Avatar of Unknown "
+  >
+    <img
+      className="object-cover w-full h-full rounded-full"
+      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
+      alt="Profile image"
+      loading="lazy"
+    />
+    <div
+      data-testid="statusNode"
+      className="absolute bottom-0 right-0 rounded-md bg-green-500 w-2 h-2"
+    />
+    <div
+      className="absolute inset-0 rounded-full shadow-inner"
+      aria-hidden="true"
+    />
+  </div>
+
+  <div
+    className="relative rounded-full inline-block w-10 h-10"
+    role="img"
+    aria-label="Avatar of Unknown "
+  >
+    <img
+      className="object-cover w-full h-full rounded-full"
+      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
+      alt="Profile image"
+      loading="lazy"
+    />
+    <div
+      data-testid="statusNode"
+      className="absolute bottom-0 right-0 rounded-md bg-green-500 w-3 h-3"
+    />
+    <div
+      className="absolute inset-0 rounded-full shadow-inner"
+      aria-hidden="true"
+    />
+  </div>
+</div>`,
+    html: `<div class="layout">
+  <div
+    class="relative rounded-full inline-block w-6 h-6"
+    role="img"
+    aria-label="Avatar of Unknown "
+  >
+    <img
+      class="object-cover w-full h-full rounded-full"
+      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
+      alt="Profile image"
+      loading="lazy"
+    />
+    <div
+      data-testid="statusNode"
+      class="absolute bottom-0 right-0 rounded-md bg-green-500 w-1.5 h-1.5"
+    />
+    <div
+      class="absolute inset-0 rounded-full shadow-inner"
+      aria-hidden="true"
+    />
+  </div>
+
+  <div
+    class="relative rounded-full inline-block w-8 h-8"
+    role="img"
+    aria-label="Avatar of Unknown "
+  >
+    <img
+      class="object-cover w-full h-full rounded-full"
+      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
+      alt="Profile image"
+      loading="lazy"
+    />
+    <div
+      data-testid="statusNode"
+      class="absolute bottom-0 right-0 rounded-md bg-green-500 w-2 h-2"
+    />
+    <div
+      class="absolute inset-0 rounded-full shadow-inner"
+      aria-hidden="true"
+    />
+  </div>
+
+  <div
+    class="relative rounded-full inline-block w-10 h-10"
+    role="img"
+    aria-label="Avatar of Unknown "
+  >
+    <img
+      class="object-cover w-full h-full rounded-full"
+      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
+      alt="Profile image"
+      loading="lazy"
+    />
+    <div
+      data-testid="statusNode"
+      class="absolute bottom-0 right-0 rounded-md bg-green-500 w-3 h-3"
+    />
+    <div
+      class="absolute inset-0 rounded-full shadow-inner"
+      aria-hidden="true"
+    />
+  </div>
+</div>`
+};
+
+export const avatarStatusVariantData = {
+    jsx: `<div className="layout">
+  <div
+    className="relative rounded-full inline-block w-10 h-10"
+    role="img"
+    aria-label="Avatar of Unknown "
+  >
+    <img
+      className="object-cover w-full h-full rounded-full"
+      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
+      alt="Profile image"
+      loading="lazy"
+    />
+    <div
+      data-testid="statusNode"
+      className="absolute bottom-0 right-0 rounded-md bg-green-500 w-3 h-3"
+    />
+    <div
+      className="absolute inset-0 rounded-full shadow-inner"
+      aria-hidden="true"
+    />
+  </div>
+  <div
+    className="relative rounded-full inline-block w-10 h-10"
+    role="img"
+    aria-label="Avatar of Unknown "
+  >
+    <img
+      className="object-cover w-full h-full rounded-full"
+      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
+      alt="Profile image"
+      loading="lazy"
+    />
+    <div
+      data-testid="statusNode"
+      className="absolute bottom-0 right-0 rounded-md bg-yellow-500 w-3 h-3"
+    />
+    <div
+      className="absolute inset-0 rounded-full shadow-inner"
+      aria-hidden="true"
+    />
+  </div>
+
+  <div
+    className="relative rounded-full inline-block w-10 h-10"
+    role="img"
+    aria-label="Avatar of Unknown "
+  >
+    <img
+      className="object-cover w-full h-full rounded-full"
+      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
+      alt="Profile image"
+      loading="lazy"
+    />
+    <div
+      data-testid="statusNode"
+      className="absolute bottom-0 right-0 rounded-md bg-red-500 w-3 h-3"
+    />
+    <div
+      className="absolute inset-0 rounded-full shadow-inner"
+      aria-hidden="true"
+    />
+  </div>
+
+  <div
+    className="relative rounded-full inline-block w-10 h-10"
+    role="img"
+    aria-label="Avatar of Unknown "
+  >
+    <img
+      className="object-cover w-full h-full rounded-full"
+      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
+      alt="Profile image"
+      loading="lazy"
+    />
+    <div
+      data-testid="statusNode"
+      className="absolute bottom-0 right-0 rounded-md bg-gray-500 w-3 h-3"
+    />
+    <div
+      className="absolute inset-0 rounded-full shadow-inner"
+      aria-hidden="true"
+    />
+  </div>
+</div>`,
+    html: `<div class="layout">
+  <div
+    class="relative rounded-full inline-block w-10 h-10"
+    role="img"
+    aria-label="Avatar of Unknown "
+  >
+    <img
+      class="object-cover w-full h-full rounded-full"
+      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
+      alt="Profile image"
+      loading="lazy"
+    />
+    <div
+      data-testid="statusNode"
+      class="absolute bottom-0 right-0 rounded-md bg-green-500 w-3 h-3"
+    />
+    <div
+      class="absolute inset-0 rounded-full shadow-inner"
+      aria-hidden="true"
+    />
+  </div>
+  <div
+    class="relative rounded-full inline-block w-10 h-10"
+    role="img"
+    aria-label="Avatar of Unknown "
+  >
+    <img
+      class="object-cover w-full h-full rounded-full"
+      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
+      alt="Profile image"
+      loading="lazy"
+    />
+    <div
+      data-testid="statusNode"
+      class="absolute bottom-0 right-0 rounded-md bg-yellow-500 w-3 h-3"
+    />
+    <div
+      class="absolute inset-0 rounded-full shadow-inner"
+      aria-hidden="true"
+    />
+  </div>
+
+  <div
+    class="relative rounded-full inline-block w-10 h-10"
+    role="img"
+    aria-label="Avatar of Unknown "
+  >
+    <img
+      class="object-cover w-full h-full rounded-full"
+      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
+      alt="Profile image"
+      loading="lazy"
+    />
+    <div
+      data-testid="statusNode"
+      class="absolute bottom-0 right-0 rounded-md bg-red-500 w-3 h-3"
+    />
+    <div
+      class="absolute inset-0 rounded-full shadow-inner"
+      aria-hidden="true"
+    />
+  </div>
+
+  <div
+    class="relative rounded-full inline-block w-10 h-10"
+    role="img"
+    aria-label="Avatar of Unknown "
+  >
+    <img
+      class="object-cover w-full h-full rounded-full"
+      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
+      alt="Profile image"
+      loading="lazy"
+    />
+    <div
+      data-testid="statusNode"
+      class="absolute bottom-0 right-0 rounded-md bg-gray-500 w-3 h-3"
+    />
+    <div
+      class="absolute inset-0 rounded-full shadow-inner"
+      aria-hidden="true"
+    />
+  </div>
+</div>`
+}
+
+export const avatarInitialWithStatus = {
+    jsx: `<div className="layout">
+  <div
+    className="relative rounded-full inline-block w-8 h-8"
+    role="img"
+    aria-label="Avatar of John Doe "
+  >
+    <div
+      data-testid="initialNode"
+      className="flex items-center justify-center w-full h-full rounded-full bg-gray-200 text-sm"
+    >
+      JD
+    </div>
+    <div
+      className="absolute inset-0 rounded-full shadow-inner"
+      aria-hidden="true"
+    ></div>
+  </div>
+  <div
+    className="relative rounded-full inline-block w-8 h-8"
+    role="img"
+    aria-label="Avatar of John Doe "
+  >
+    <div
+      data-testid="initialNode"
+      className="flex items-center justify-center w-full h-full rounded-full bg-pink-200 text-primary text-sm"
+    >
+      JD
+    </div>
+    <div
+      className="absolute inset-0 rounded-full shadow-inner"
+      aria-hidden="true"
+    ></div>
+  </div>
+</div>`,
+    html: `<div class="layout">
+  <div
+    class="relative rounded-full inline-block w-8 h-8"
+    role="img"
+    aria-label="Avatar of John Doe "
+  >
+    <div
+      data-testid="initialNode"
+      class="flex items-center justify-center w-full h-full rounded-full bg-gray-200 text-sm"
+    >
+      JD
+    </div>
+    <div
+      class="absolute inset-0 rounded-full shadow-inner"
+      aria-hidden="true"
+    ></div>
+  </div>
+  <div
+    class="relative rounded-full inline-block w-8 h-8"
+    role="img"
+    aria-label="Avatar of John Doe "
+  >
+    <div
+      data-testid="initialNode"
+      class="flex items-center justify-center w-full h-full rounded-full bg-pink-200 text-primary text-sm"
+    >
+      JD
+    </div>
+    <div
+      class="absolute inset-0 rounded-full shadow-inner"
+      aria-hidden="true"
+    ></div>
+  </div>
+</div>`,
+}

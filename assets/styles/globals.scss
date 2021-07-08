@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+//basic typography layout
 @layer base {
   h1 {
     @apply font-sans font-black text-6xl text-gray-800 my-6
@@ -30,14 +31,17 @@
   .rest-shadow-classes {
     @apply bg-white h-36 w-36 rounded-md flex items-center justify-center
   }
-  .button-layout {
+  .layout {
     @apply max-w-3xl mx-auto space-y-4 flex flex-col items-center justify-start sm:space-y-0 sm:flex-row sm:items-end sm:justify-around
   }
  }
 
+//fallback for jit
 .h-\[calc\(100vh-4rem\)\] {
   height: calc(100vh - 4rem);
 }
+
+//react live code editor layout
 .code-snippet {
   @apply flex shadow rounded-lg flex-wrap;
 
