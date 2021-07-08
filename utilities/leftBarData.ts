@@ -52,9 +52,14 @@ const data:leftBarDataProps[] = [
                 slug: 'buttons'
             },
             {
-                id: 0,
+                id: 1,
                 title: 'Avatar',
                 slug: 'avatar'
+            },
+            {
+                id: 2,
+                title: 'Badge',
+                slug: 'badge'
             }
         ]
     }
