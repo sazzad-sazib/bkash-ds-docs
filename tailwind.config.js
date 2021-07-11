@@ -1,5 +1,3 @@
-const colors =require('tailwindcss/colors');
-const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   // mode: 'jit',
   // jit is off due to we need all the classes to show in live preview however
@@ -9,13 +7,26 @@ module.exports = {
     './utilities/**/*.{js,ts,jsx,tsx}',
     './assets/**/*.{js,ts,jsx,tsx,scss,css}',
   ],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
-    colors: {
-      primary: '#d82a77',
-      ...colors,
+    extend: {
+      colors: {
+        primary: {
+          DEFAULT: '#d82a77',
+          100: '#FBE4E4',
+          300: '#FAA6C4',
+          400: '#F56EA1',
+          500: '#d82a77',
+          700: '#C21663',
+        },
+        green: {
+          DEFAULT: '#22C55E',
+          100: '#DCFCE7',
+          500: '#22C55E',
+          700: '#15803D',
+        }
+      },
     },
-    extend: {},
   },
   variants: {
     extend: {
@@ -23,7 +34,9 @@ module.exports = {
       flex: ['group-hover'],
       alignItems: ['group-hover'],
       justifyContent: ['group-hover'],
-      ringOpacity: ['focus']
+      ringOpacity: ['focus'],
+      backgroundColor: ['active'],
+      textColor: ['active'],
     },
   },
   plugins: [

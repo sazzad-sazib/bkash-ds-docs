@@ -21,8 +21,8 @@ export const typographySnippet = {
 
 export const typographyExactSnippet = {
     jsx: `<div>
-\t<p className="font-sans font-black text-6xl text-gray-800 my-6">h1 - bKash</p>
-\t<p className="font-sans font-extrabold text-5xl text-gray-800 my-5">h2 - bKash</p>
+\t<p className="font-sans font-black text-6xl text-gray-700 my-6">h1 - bKash</p>
+\t<p className="font-sans font-extrabold text-5xl text-gray-700 my-5">h2 - bKash</p>
 \t<p className="font-sans font-bold text-4xl text-gray-700 my-4">h3 - bKash</p>
 \t<p className="font-sans font-semibold text-3xl text-gray-700 my-3">h4 - bKash</p>
 \t<p className="font-sans font-medium text-2xl text-gray-700 my-2">h5 - bKash</p>
@@ -33,8 +33,8 @@ export const typographyExactSnippet = {
 \t</a>
 </div>`,
     html: `<div>
-\t<p class="font-sans font-black text-6xl text-gray-800 my-6">h1 - bKash</p>
-\t<p class="font-sans font-extrabold text-5xl text-gray-800 my-5">h2 - bKash</p>
+\t<p class="font-sans font-black text-6xl text-gray-700 my-6">h1 - bKash</p>
+\t<p class="font-sans font-extrabold text-5xl text-gray-700 my-5">h2 - bKash</p>
 \t<p class="font-sans font-bold text-4xl text-gray-700 my-4">h3 - bKash</p>
 \t<p class="font-sans font-semibold text-3xl text-gray-700 my-3">h4 - bKash</p>
 \t<p class="font-sans font-medium text-2xl text-gray-700 my-2">h5 - bKash</p>
@@ -48,10 +48,10 @@ export const typographyExactSnippet = {
 
 export const tailwindLayerExtention = `@layer base {
   h1 {
-    @apply font-sans font-black text-6xl text-gray-800 my-6
+    @apply font-sans font-black text-6xl text-gray-700 my-6
   }
   h2 {
-    @apply font-sans font-extrabold text-5xl text-gray-800 my-5
+    @apply font-sans font-extrabold text-5xl text-gray-700 my-5
   }
   h3 {
     @apply font-sans font-bold text-4xl text-gray-700 my-4
@@ -68,18 +68,30 @@ export const tailwindLayerExtention = `@layer base {
   a {
     @apply font-medium underline text-primary
   }
-  p ,div {
+  p,div {
     @apply text-gray-700
   }
 }`
 
-export const tailwindFontColorImport = `const colors =require('tailwindcss/colors');
-theme: {
-    colors: {
-      primary: '#d82a77',
-      ...colors,
+export const tailwindFontColorImport = `theme: {
+    extend: {
+      colors: {
+        primary: {
+          DEFAULT: '#d82a77',
+          100: '#FBE4E4',
+          300: '#FAA6C4',
+          400: '#F56EA1',
+          500: '#d82a77',
+          700: '#C21663',
+        },
+        green: {
+          DEFAULT: '#22C55E',
+          100: '#DCFCE7',
+          500: '#22C55E',
+          700: '#15803D',
+        }
+      },
     },
-    extend: {},
   },`
 
 
@@ -96,31 +108,31 @@ export const buttonDataSizes = {
     jsx: `<div className="layout">
   <button
     type="button"
-    className="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-3 py-1 rounded text-xs text-white bg-primary border border-transparent active:bg-primary hover:bg-pink-700 focus:ring focus:ring-opacity-40 focus:ring-primary"
+    className="btn btn-primary btn-small"
   >
     Small
   </button>
   <button
     type="button"
-    className="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-3 py-1 rounded text-xs text-white bg-primary border border-transparent active:bg-primary hover:bg-pink-700 focus:ring focus:ring-opacity-40 focus:ring-primary"
+    className="btn btn-primary btn-pagination"
   >
     pagination
   </button>
   <button
     type="button"
-    className="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-4 py-2 rounded-md text-sm text-white bg-primary border border-transparent active:bg-primary hover:bg-pink-700 focus:ring focus:ring-opacity-40 focus:ring-primary"
+    className="btn btn-primary btn-regular"
   >
     regular
   </button>
   <button
     type="button"
-    className="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-5 py-3 rounded-lg text-white bg-primary border border-transparent active:bg-primary hover:bg-pink-700 focus:ring focus:ring-opacity-40 focus:ring-primary"
+    className="btn btn-primary btn-large"
   >
     large
   </button>
   <button
     type="button"
-    className="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-10 py-4 rounded-lg text-white bg-primary border border-transparent active:bg-primary hover:bg-pink-700 focus:ring focus:ring-opacity-40 focus:ring-primary"
+    className="btn btn-primary btn-larger"
   >
     extra large
   </button>
@@ -128,31 +140,31 @@ export const buttonDataSizes = {
     html: `<div class="layout">
   <button
     type="button"
-    class="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-3 py-1 rounded text-xs text-white bg-primary border border-transparent active:bg-primary hover:bg-pink-700 focus:ring focus:ring-opacity-40 focus:ring-primary"
+    class="btn btn-primary btn-small"
   >
     Small
   </button>
   <button
     type="button"
-    className="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-3 py-1 rounded text-xs text-white bg-primary border border-transparent active:bg-primary hover:bg-pink-700 focus:ring focus:ring-opacity-40 focus:ring-primary"
+    class="btn btn-primary btn-pagination"
   >
     pagination
   </button>
   <button
     type="button"
-    class="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-4 py-2 rounded-md text-sm text-white bg-primary border border-transparent active:bg-primary hover:bg-pink-700 focus:ring focus:ring-opacity-40 focus:ring-primary"
+    className="btn btn-primary btn-regular"
   >
     regular
   </button>
   <button
     type="button"
-    class="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-5 py-3 rounded-lg text-white bg-primary border border-transparent active:bg-primary hover:bg-pink-700 focus:ring focus:ring-opacity-40 focus:ring-primary"
+    class="btn btn-primary btn-large"
   >
     large
   </button>
   <button
     type="button"
-    class="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-10 py-4 rounded-lg text-white bg-primary border border-transparent active:bg-primary hover:bg-pink-700 focus:ring focus:ring-opacity-40 focus:ring-primary"
+    class="btn btn-primary btn-larger"
   >
     extra large
   </button>
@@ -163,49 +175,43 @@ export const buttonDataVariant = {
     jsx: `<div className="layout">
     <button
       type="button"
-      className="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-4 py-2 rounded-md text-sm text-primary border-primary border focus:outline-none active:bg-transparent hover:border-primary-700 focus:ring focus:ring-opacity-40 focus:ring-primary"
+      className="btn btn-regular btn-outline"
     >
       outline
     </button>
     <button
       type="button"
-      className="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-4 py-2 rounded-md text-sm text-gray-700 border-gray-500 border focus:outline-none active:bg-transparent hover:border-gray-700 focus:ring focus:ring-opacity-40 focus:ring-gray-600"
+      className="btn btn-regular btn-default"
     >
       default
     </button>
     <button
       type="button"
-      className="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-4 py-2 rounded-md text-sm text-white bg-green-600 hover:bg-green-700 border border-transparent active:bg-green-700 focus:ring focus:ring-opacity-40 focus:ring-green-300"
+      className="btn btn-regular btn-success"
     >
       success
     </button>
     <button
       type="button"
-      className="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-4 py-2 rounded-md text-sm text-white bg-red-600 hover:bg-red-700 border border-transparent active:bg-red-700 focus:ring focus:ring-opacity-40 focus:ring-red-300"
+      className="btn btn-regular btn-danger"
     >
       danger
     </button>
     <button
       type="button"
-      className="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-4 py-2 rounded-md text-sm text-white bg-yellow-500 hover:bg-yellow-600 border border-transparent active:bg-yellow-600 focus:ring focus:ring-opacity-40 focus:ring-yellow-400"
-    >
-      alert
-    </button>
-    <button
-      type="button"
-      className="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-4 py-2 rounded-md text-sm text-white bg-orange-600 hover:bg-orange-700 border border-transparent active:bg-orange-700 focus:ring focus:ring-opacity-40 focus:ring-orange-300"
+      className="btn btn-regular btn-warning"
     >
       warning
     </button>
     <button
       type="button"
-      className="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-4 py-2 rounded-md text-sm text-white bg-primary border border-transparent active:bg-primary hover:bg-pink-700 focus:ring focus:ring-opacity-40 focus:ring-primary"
+      className="btn btn-regular btn-primary"
     >
       primary
     </button>
     <button
       type="button"
-      className="align-bottom inline-flex items-center justify-center cursor-pointer transition-colors duration-150 font-medium focus:outline-none px-3 py-2 rounded-md text-sm text-primary focus:outline-none active:bg-transparent hover:bg-pink-100 focus:ring focus:ring-opacity-40 focus:ring-primary"
+      className="btn btn-regular btn-link"
     >
       link
     </button>
@@ -213,53 +219,47 @@ export const buttonDataVariant = {
     html: `<div class="layout">
     <button
       type="button"
-      class="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-4 py-2 rounded-md text-sm text-primary border-primary border focus:outline-none active:bg-transparent hover:border-primary-700 focus:ring focus:ring-opacity-40 focus:ring-primary"
+      class="btn btn-regular btn-outline"
     >
       outline
     </button>
     <button
       type="button"
-      class="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-4 py-2 rounded-md text-sm text-gray-700 border-gray-500 border focus:outline-none active:bg-transparent hover:border-gray-700 focus:ring focus:ring-opacity-40 focus:ring-gray-600"
+      class="btn btn-regular btn-default"
     >
       default
     </button>
     <button
       type="button"
-      class="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-4 py-2 rounded-md text-sm text-white bg-green-600 hover:bg-green-700 border border-transparent active:bg-green-700 focus:ring focus:ring-opacity-40 focus:ring-green-300"
+      class="btn btn-regular btn-success"
     >
       success
     </button>
     <button
       type="button"
-      class="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-4 py-2 rounded-md text-sm text-white bg-red-600 hover:bg-red-700 border border-transparent active:bg-red-700 focus:ring focus:ring-opacity-40 focus:ring-red-300"
+      class="btn btn-regular btn-danger"
     >
       danger
     </button>
     <button
       type="button"
-      class="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-4 py-2 rounded-md text-sm text-white bg-yellow-500 hover:bg-yellow-600 border border-transparent active:bg-yellow-600 focus:ring focus:ring-opacity-40 focus:ring-yellow-400"
-    >
-      alert
-    </button>
-    <button
-      type="button"
-      class="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-4 py-2 rounded-md text-sm text-white bg-orange-600 hover:bg-orange-700 border border-transparent active:bg-orange-700 focus:ring focus:ring-opacity-40 focus:ring-orange-300"
+      class="btn btn-regular btn-warning"
     >
       warning
     </button>
     <button
       type="button"
-      class="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-4 py-2 rounded-md text-sm text-white bg-primary border border-transparent active:bg-primary hover:bg-pink-700 focus:ring focus:ring-opacity-40 focus:ring-primary"
+      class="btn btn-regular btn-primary"
     >
       primary
     </button>
     <button
       type="button"
-      class="align-bottom inline-flex items-center justify-center cursor-pointer transition-colors duration-150 font-medium focus:outline-none px-3 py-2 rounded-md text-sm text-primary focus:outline-none active:bg-transparent hover:bg-pink-100 focus:ring focus:ring-opacity-40 focus:ring-primary"
+      class="btn btn-regular btn-link"
     >
       link
     </button>
-  </div>`,
+  </div>`
 }
 
 export const buttonDataIconVariants = {
@@ -286,68 +286,120 @@ export const buttonDataIconVariants = {
   return (<div className="layout">
   <button
     type="button"
-    className="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-4 py-2 rounded-md text-sm text-white bg-primary border border-transparent active:bg-primary hover:bg-pink-700 focus:ring focus:ring-opacity-40 focus:ring-primary"
+    className="btn btn-regular btn-primary btn-disabled"
   >
-    <Icon className="h-6 w-6 mr-2" /> btn icon left
+    <Icon className="btn-icon-regular btn-icon-left" /> btn icon left
   </button>
 
   <button
     type="button"
-    className="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-4 py-2 rounded-md text-sm text-white bg-primary border border-transparent active:bg-primary hover:bg-pink-700 focus:ring focus:ring-opacity-40 focus:ring-primary"
+    className="btn btn-regular btn-primary"
   >
-    btn icon right <Icon className="h-6 w-6 ml-2" />
+    btn icon right <Icon className="btn-icon-regular btn-icon-right" />
   </button>
   <button
     type="button"
-    className="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-3 py-2 rounded-md text-sm text-white bg-primary border border-transparent active:bg-primary hover:bg-pink-700 focus:ring focus:ring-opacity-40 focus:ring-primary"
+    className="btn btn-regular btn-primary"
   >
-    <Icon className="h-6 w-6" />
+    <Icon className="btn-icon-larger" />
   </button>
   <button
     type="button"
-    className="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-2.5 py-2.5 rounded-full text-sm text-white bg-primary border border-transparent active:bg-primary hover:bg-pink-700 focus:ring focus:ring-opacity-40 focus:ring-primary"
+    className="btn btn-regular btn-primary btn-rounded"
   >
-    <Icon className="h-6 w-6" />
+    <Icon className="btn-icon-larger" />
   </button>
   <button
     type="button"
-    className="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-2.5 py-2.5 rounded-md text-sm text-primary bg-transparent focus:ring focus:ring-opacity-40 focus:ring-pink-300"
+    className="btn btn-regular btn-link"
   >
-    <Icon className="h-6 w-6" />
+    <Icon className="btn-icon-large" />
   </button>
-</div>);
+</div>)
 }`,
     html: `<div className="layout">
-  <button
-    type="button"
-    className="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-4 py-2 rounded-md text-sm text-white bg-primary border border-transparent active:bg-primary hover:bg-pink-700 focus:ring focus:ring-opacity-40 focus:ring-primary"
-  >
-     <img src="/taka.svg" class="h-6 w-6 mr-2" /> btn icon left
+  <button type="button" className="btn btn-regular btn-primary btn-disabled">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="btn-icon-regular btn-icon-left"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="#fff"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M11 11V9a2 2 0 00-2-2m2 4v4a2 2 0 104 0v-1m-4-3H9m2 0h4m6 1a9 9 0 11-18 0 9 9 0 0118 0z"
+      />
+    </svg>
+    <span>btn icon left</span>
   </button>
 
-  <button
-    type="button"
-    className="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-4 py-2 rounded-md text-sm text-white bg-primary border border-transparent active:bg-primary hover:bg-pink-700 focus:ring focus:ring-opacity-40 focus:ring-primary"
-  >
-    btn icon right  <img src="/taka.svg" class="h-6 w-6 ml-2" />
+  <button type="button" className="btn btn-regular btn-primary">
+    <span>btn icon right</span>{" "}
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="btn-icon-regular btn-icon-right"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="#fff"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M11 11V9a2 2 0 00-2-2m2 4v4a2 2 0 104 0v-1m-4-3H9m2 0h4m6 1a9 9 0 11-18 0 9 9 0 0118 0z"
+      />
+    </svg>
   </button>
-  <button
-    type="button"
-    className="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-4 py-2 rounded-md text-sm text-white bg-primary border border-transparent active:bg-primary hover:bg-pink-700 focus:ring focus:ring-opacity-40 focus:ring-primary"
-  >
-     <img src="/taka.svg" class="h-6 w-6" />
+  <button type="button" className="btn btn-primary btn-regular">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="btn-icon-regular"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="#fff"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M11 11V9a2 2 0 00-2-2m2 4v4a2 2 0 104 0v-1m-4-3H9m2 0h4m6 1a9 9 0 11-18 0 9 9 0 0118 0z"
+      />
+    </svg>
   </button>
-  <button
-    type="button"
-    className="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-2.5 py-2.5 rounded-full text-sm text-white bg-primary border border-transparent active:bg-primary hover:bg-pink-700 focus:ring focus:ring-opacity-40 focus:ring-primary"
-  >
-    <img src="/taka.svg" class="h-6 w-6" />
+  <button type="button" className="btn btn-primary btn-regular btn-rounded">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="btn-icon-regular"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="#fff"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M11 11V9a2 2 0 00-2-2m2 4v4a2 2 0 104 0v-1m-4-3H9m2 0h4m6 1a9 9 0 11-18 0 9 9 0 0118 0z"
+      />
+    </svg>
   </button>
-  <button
-    type="button"
-    className="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-2.5 py-2.5 rounded-md text-sm text-primary bg-transparent focus:ring focus:ring-opacity-40 focus:ring-pink-300"
-  >
-    <img src="/taka.svg" class="h-6 w-6" />
+  <button type="button" className="btn btn-link btn-regular">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="btn-icon-regular"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="#d82a77"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M11 11V9a2 2 0 00-2-2m2 4v4a2 2 0 104 0v-1m-4-3H9m2 0h4m6 1a9 9 0 11-18 0 9 9 0 0118 0z"
+      />
+    </svg>
   </button>
 </div>`
 }
@@ -855,37 +907,120 @@ export const avatarInitialWithStatus = {
 
 export const badgeData = {
     jsx: `<div className="layout">
-  <span className="inline-flex px-3 py-0.5 text-xs font-medium leading-5 rounded-full text-gray-700 bg-gray-100 dark:text-gray-100 dark:bg-gray-700">
+  <span className="badge badge-neutral">
     Neutral
   </span>
-  <span className="inline-flex px-3 py-0.5 text-xs font-medium leading-5 rounded-full text-white bg-primary mx-4">
+  <span className="badge badge-primary">
     Primary
   </span>
-  <span className="inline-flex px-3 py-0.5 text-xs font-medium leading-5 rounded-full text-green-700 bg-green-100 dark:bg-green-700 dark:text-green-100">
+  <span className="badge badge-success">
     Success
   </span>
-  <span className="inline-flex px-3 py-0.5 text-xs font-medium leading-5 rounded-full text-yellow-700 bg-yellow-100 dark:text-white dark:bg-yellow-600 mx-4">
+  <span className="badge badge-warning">
     Warning
   </span>
-  <span className="inline-flex px-3 py-0.5 text-xs font-medium leading-5 rounded-full text-red-700 bg-red-100 dark:text-red-100 dark:bg-red-700">
+  <span className="badge badge-danger">
     Danger
   </span>
 </div>`,
     html: `<div class="layout">
-  <span class="inline-flex px-3 py-0.5 text-xs font-medium leading-5 rounded-full text-gray-700 bg-gray-100 dark:text-gray-100 dark:bg-gray-700">
+  <span class="badge badge-neutral">
     Neutral
   </span>
-  <span class="inline-flex px-3 py-0.5 text-xs font-medium leading-5 rounded-full text-white bg-primary mx-4">
+  <span class="badge badge-primary">
     Primary
   </span>
-  <span class="inline-flex px-3 py-0.5 text-xs font-medium leading-5 rounded-full text-green-700 bg-green-100 dark:bg-green-700 dark:text-green-100">
+  <span class="badge badge-success">
     Success
   </span>
-  <span class="inline-flex px-3 py-0.5 text-xs font-medium leading-5 rounded-full text-yellow-700 bg-yellow-100 dark:text-white dark:bg-yellow-600 mx-4">
+  <span class="badge badge-warning">
     Warning
   </span>
-  <span class="inline-flex px-3 py-0.5 text-xs font-medium leading-5 rounded-full text-red-700 bg-red-100 dark:text-red-100 dark:bg-red-700">
+  <span class="badge badge-danger">
     Danger
   </span>
 </div>`
 }
+
+export const badgeLayerSnippet = `//badge
+@layer base {
+  .badge{
+    @apply inline-flex px-3 py-0.5 text-xs font-medium leading-5 rounded-full
+  }
+  .badge-neutral {
+    @apply text-gray-700 bg-gray-100 dark:text-gray-100 dark:bg-gray-700
+  }
+  .badge-primary {
+    @apply text-white bg-primary
+  }
+  .badge-success {
+    @apply  text-green-700 bg-green-100 dark:bg-green-700 dark:text-green-100
+  }
+  .badge-danger {
+    @apply  text-red-700 bg-red-100 dark:bg-red-700 dark:text-red-100
+  }
+  .badge-warning {
+    @apply  text-yellow-700 bg-yellow-100 dark:bg-yellow-700 dark:text-yellow-100
+  }
+}`
+
+export const buttonLayerSnippet = `//button
+@layer base {
+  .btn {
+    @apply align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none
+  }
+  .btn-block {
+    @apply w-full
+  }
+  .btn-larger {
+    @apply px-10 py-4 rounded-lg
+  }
+  .btn-large {
+    @apply px-5 py-3 rounded-lg
+  }
+  .btn-regular {
+    @apply px-4 py-2 rounded-md text-sm
+  }
+  .btn-small, .btn-pagination {
+    @apply px-3 py-1 rounded text-xs
+  }
+  .btn-icon-larger, .btn-icon-large, .btn-icon-regular{
+    @apply h-5 w-5
+  }
+  .btn-icon-small {
+    @apply h-3 w-3
+  }
+  .btn-icon-left {
+    @apply mr-2 -ml-1
+  }
+  .btn-icon-right {
+    @apply ml-2 -mr-1
+  }
+  .btn-primary {
+    @apply text-white bg-primary border border-primary active:bg-primary hover:bg-primary-700 focus:ring focus:ring-opacity-40 focus:ring-primary-300
+  }
+  .btn-outline {
+    @apply text-primary border-primary bg-transparent border focus:outline-none active:bg-transparent hover:border-primary-700 hover:bg-transparent focus:ring focus:ring-opacity-40 focus:ring-primary-300
+  }
+  .btn-default {
+    @apply text-gray-700 border-gray-500 bg-transparent border focus:outline-none active:bg-transparent hover:border-gray-700 hover:bg-transparent focus:ring focus:ring-opacity-40 focus:ring-gray-300
+  }
+  .btn-success {
+    @apply text-white bg-green-500 border border-green-500 active:bg-green-700 hover:bg-green-700 focus:ring focus:ring-opacity-40 focus:ring-green-300
+  }
+  .btn-danger {
+    @apply text-white bg-red-500 border border-red-500 active:bg-red-700 hover:bg-red-700 focus:ring focus:ring-opacity-40 focus:ring-red-300
+  }
+  .btn-warning {
+    @apply text-white bg-yellow-500 border border-yellow-500 active:bg-yellow-700 hover:bg-yellow-700 focus:ring focus:ring-opacity-40 focus:ring-yellow-300
+  }
+  .btn-link {
+    @apply text-primary border-none focus:outline-none active:bg-transparent hover:bg-transparent focus:ring focus:ring-opacity-40 focus:ring-primary-300
+  }
+  .btn-rounded {
+    @apply rounded-full
+  }
+  .btn-disabled {
+    @apply opacity-50 cursor-not-allowed
+  }
+}`

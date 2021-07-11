@@ -22,9 +22,9 @@ const Color:React.FC<Props> =() => {
                 <ColorTable />
                 <p className='my-6'>
                     We Will be using these colors for the whole system. Also Note <strong>primay color need to be added in {getPrimaryColor('`tailwind.config.js`')} to use.</strong>
-                    see the snippet below
+                     see the snippet below
                 </p>
-                <CodeSnippet language={'JSON'}>
+                <CodeSnippet language={'JavaScript'}>
                     {tailwindFontColorImport}
                 </CodeSnippet>
             </div>

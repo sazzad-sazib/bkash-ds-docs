@@ -44,7 +44,7 @@ const Icon: React.FC<Props> = () => {
                     {iconPackSvgSample}
                 </CodeSnippet>
                 <p className={'pt-4 pb-4'}>
-                    <strong>Please Note,</strong> your default icon size is {getPrimaryColor('`16x16`')} if you are using different svg icons please keep the same ratio and
+                    <strong>Please Note, if you are using other icons please make it component or use in-line, Don't use it with {getPrimaryColor('`<img />`')} tag, </strong> your default icon size is {getPrimaryColor('`16x16`')} if you are using different svg icons please keep the same ratio and
                     pass proper classes like given sample.
                 </p>
             </div>

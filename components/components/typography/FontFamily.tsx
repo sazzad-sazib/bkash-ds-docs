@@ -9,7 +9,7 @@ const FontFamily:React.FC<Props> =() => {
   return (
     <div className='my-12'>
      <h4>Font Family</h4>
-     <div className="mt-2 mb-4">
+     <div className="my-6">
          We are Going to use Font {getPrimaryColor('`Inter`')} for Primary Font. It may change system to system
          please check guide on<br/>
          <a href={'https://github.com/tailwindlabs/tailwindcss/discussions/2060'} target={"_blank"} rel="noreferrer noopenner">

@@ -3,7 +3,8 @@ import DocumentationLayout from "../../../components/docs/DocumentationLayout";
 import CustomHead from "../../../components/global/CustomHead";
 import {getPrimaryColor} from "../../../utilities/utilFunction";
 import CodeLiveEditor from "../../../components/global/CodeLiveEditor";
-import {badgeData,avatarSizesData} from "../../../utilities/codeSnippetData";
+import {badgeData,badgeLayerSnippet} from "../../../utilities/codeSnippetData";
+import CodeSnippet from "../../../components/global/CodeSnippet";
 
 
 const Badge:React.FC<{}> =() => {
@@ -20,6 +21,12 @@ const Badge:React.FC<{}> =() => {
                 <p className='my-6'>
                     Variant names as follows, {getPrimaryColor('`neutral`')}, {getPrimaryColor('`primary`')}, {getPrimaryColor('`success`')}, {getPrimaryColor('`warning`')}, {getPrimaryColor('`danger`')}.
                 </p>
+                <p className='my-6'>
+                    To apply that style please add the snippet below to {getPrimaryColor('`global.css`')}
+                </p>
+                <CodeSnippet language={'scss'}>
+                    {badgeLayerSnippet}
+                </CodeSnippet>
             </div>
         </DocumentationLayout>
     )

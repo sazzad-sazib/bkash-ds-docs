@@ -2,8 +2,9 @@ import React from 'react';
 import DocumentationLayout from "../../../components/docs/DocumentationLayout";
 import CustomHead from "../../../components/global/CustomHead";
 import CodeLiveEditor from "../../../components/global/CodeLiveEditor";
-import {buttonDataSizes,buttonDataVariant,buttonDataIconVariants} from "../../../utilities/codeSnippetData";
+import {buttonDataSizes,buttonDataVariant,buttonDataIconVariants,buttonLayerSnippet} from "../../../utilities/codeSnippetData";
 import {getPrimaryColor} from "../../../utilities/utilFunction";
+import CodeSnippet from "../../../components/global/CodeSnippet";
 
 
 const Buttons:React.FC<{}> =() => {
@@ -21,6 +22,13 @@ const Buttons:React.FC<{}> =() => {
                 <CodeLiveEditor hasCopy code={buttonDataVariant} />
                 <h6 className='mt-10 mb-4'>{getPrimaryColor('`Button with Icon`')} &nbsp;live example</h6>
                 <CodeLiveEditor hasCopy code={buttonDataIconVariants} />
+                <p className='py-6'>
+                    Please Copy the snippet in {getPrimaryColor('`global.css`')} to apply these style
+                </p>
+                <CodeSnippet language={'scss'} >
+                    {buttonLayerSnippet}
+                </CodeSnippet>
+
                 <p className='py-6'>
                     <strong>Additionally,</strong>{getPrimaryColor('`Button with Icon`')}  and {getPrimaryColor('`Button with Variant`')}  also available for different sizes provided
                     in first snippet.
