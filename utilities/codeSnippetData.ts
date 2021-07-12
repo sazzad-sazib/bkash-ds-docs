@@ -1024,3 +1024,145 @@ export const buttonLayerSnippet = `//button
     @apply opacity-50 cursor-not-allowed
   }
 }`
+
+export const inputVariant = {
+    jsx: `<div>
+  <div className="layout">
+    <label className="input-label">
+      <span>Name</span>
+      <input className="input input-active" type="text" />
+    </label>
+    <label className="input-label">
+      <span>Password</span>
+      <input
+        className="input input-active input-disabled"
+        type="password"
+        value="123456"
+        disabled
+      />
+    </label>
+    <label className="relative input-label">
+      <span>Search</span>
+      <input className="input input-active pl-8" type="search" />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-4 h-4 absolute bottom-3 left-2.5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+        />
+      </svg>
+    </label>
+  </div>
+  <div className="layout mt-2">
+    <label className="input-label">
+      <span>email</span>
+      <input
+        className="input input-active input-valid"
+        type="email"
+      />
+      <span className="helper helper-valid">Email Available</span>
+    </label>
+    <label className="input-label">
+      <span>Password</span>
+      <input
+        className="input input-active input-invalid"
+        type="password"
+      />
+      <span className="helper helper-invalid">Password too short</span>
+    </label>
+  </div>
+</div>`,
+    html: `<div>
+  <div class="layout">
+    <label class="input-label">
+      <span>Name</span>
+      <input class="input input-active" type="text" />
+    </label>
+    <label class="input-label">
+      <span>Password</span>
+      <input
+        class="input input-active input-disabled"
+        type="password"
+        value="123456"
+        disabled
+      />
+    </label>
+    <label class="relative input-label">
+      <span>Search</span>
+      <input class="input input-active pl-8" type="search" />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="w-4 h-4 absolute bottom-3 left-2.5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+        />
+      </svg>
+    </label>
+  </div>
+  <div class="layout mt-2">
+    <label class="input-label">
+      <span>email</span>
+      <input
+        class="input input-active input-valid"
+        type="email"
+      />
+      <span class="helper helper-valid">Email Available</span>
+    </label>
+    <label class="input-label">
+      <span>Password</span>
+      <input
+        class="input input-active input-invalid"
+        type="password"
+      />
+      <span class="helper helper-invalid">Password too short</span>
+    </label>
+  </div>
+</div>`
+}
+
+export const inputLayerSnippet = `@layer base {
+  .input {
+    @apply block w-full text-sm rounded-md focus:outline-none dark:text-gray-300 leading-5 shadow-sm
+  }
+  .input-active {
+    @apply focus:border-primary-400 dark:border-gray-600 focus:ring focus:ring-opacity-40 focus:ring-primary-300 dark:focus:border-gray-600 dark:focus:ring-gray-100 dark:bg-gray-700
+  }
+  .input-disabled {
+    @apply cursor-not-allowed opacity-50 bg-gray-300 dark:bg-gray-800
+  }
+  .input-valid {
+    @apply border-green-600 dark:bg-gray-700 focus:border-green-400 dark:focus:border-green-400 focus:ring focus:ring-opacity-40 focus:ring-green-300 dark:focus:ring-green-700
+  }
+  .input-invalid {
+    @apply border-red-600 dark:bg-gray-700 focus:border-red-400 dark:focus:border-red-400 focus:ring focus:ring-opacity-40 focus:ring-red-300 dark:focus:ring-red-700
+  }
+  .input-radio {
+    @apply text-primary-700 focus:border-primary-400 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-offset-0 focus:ring-primary-300 dark:focus:ring-gray-100
+  }
+  .input-checkbox {
+    @apply rounded text-primary-700 focus:border-primary-400 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-offset-0 focus:ring-primary-300 dark:focus:ring-gray-100
+  }
+  .helper {
+    @apply text-xs
+  }
+  .helper-valid {
+    @apply text-green-600 dark:text-green-400
+  }
+  .helper-invalid {
+    @apply text-red-600 dark:text-red-400
+  }
+}`

@@ -16,7 +16,7 @@ export const colorData = [
                 hex: '#F56EA1'
             },
             {
-                name: 'primary[500]',
+                name: '500[primary]',
                 hex: '#D82A77'
             },
             {
@@ -43,7 +43,7 @@ export const colorData = [
                 hex: '#9CA3AF'
             },
             {
-                name: 'primary[500]',
+                name: '500[primary]',
                 hex: '#6B7280'
             },
             {
@@ -61,7 +61,7 @@ export const colorData = [
                 hex: '#FEE2E2'
             },
             {
-                name: '500',
+                name: '500[primary]',
                 hex: '#EF4444'
             },
             {
@@ -79,7 +79,7 @@ export const colorData = [
                 hex: '#FEF3C7'
             },
             {
-                name: '500',
+                name: '500[primary]',
                 hex: '#F59E0B'
             },
             {
@@ -97,7 +97,7 @@ export const colorData = [
                 hex: '#DCFCE7',
             },
             {
-                name: '500',
+                name: '500[primary]',
                 hex: '#22C55E'
             },
             {

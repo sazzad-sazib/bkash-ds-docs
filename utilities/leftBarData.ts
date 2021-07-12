@@ -60,6 +60,11 @@ const data:leftBarDataProps[] = [
                 id: 2,
                 title: 'Badge',
                 slug: 'badge'
+            },
+            {
+                id: 3,
+                title: 'Input',
+                slug: 'input'
             }
         ]
     }
