@@ -1166,3 +1166,70 @@ export const inputLayerSnippet = `@layer base {
     @apply text-red-600 dark:text-red-400
   }
 }`
+
+export const inputVariantType = {
+    jsx: `<div className="layout">
+  <label className="input-label">
+    <span>Select Your Gender</span>
+    <label className="input-label">
+      <input name="radio-group" className="input-radio" type="radio" />
+      <span className="ml-2">Male</span>
+    </label>
+    <label className="input-label">
+      <input name="radio-group" className="input-radio" type="radio" />
+      <span className="ml-2">Female</span>
+    </label>
+    <label className="input-label">
+      <input name="radio-group" className="input-radio" type="radio" />
+      <span className="ml-2">Other</span>
+    </label>
+  </label>
+  <label className="input-label">
+    <span>Please Mark one from the list below</span>
+    <label className="input-label">
+      <input name="checkbox-group" className="input-checkbox" type="checkbox" />
+      <span className="ml-2">Male</span>
+    </label>
+    <label className="input-label">
+      <input name="checkbox-group" className="input-checkbox" type="checkbox" />
+      <span className="ml-2">Female</span>
+    </label>
+    <label className="input-label">
+      <input name="checkbox-group" className="input-checkbox" type="checkbox" />
+      <span className="ml-2">Other</span>
+    </label>
+  </label>
+</div>`,
+    html: `<div class="layout">
+  <label class="input-label">
+    <span>Select Your Gender</span>
+    <label class="input-label">
+      <input name="radio-group" class="input-radio" type="radio" />
+      <span class="ml-2">Male</span>
+    </label>
+    <label class="input-label">
+      <input name="radio-group" class="input-radio" type="radio" />
+      <span class="ml-2">Female</span>
+    </label>
+    <label class="input-label">
+      <input name="radio-group" class="input-radio" type="radio" />
+      <span class="ml-2">Other</span>
+    </label>
+  </label>
+  <label class="input-label">
+    <span>Please Mark one from the list below</span>
+    <label class="input-label">
+      <input name="checkbox-group" class="input-checkbox" type="checkbox" />
+      <span class="ml-2">Male</span>
+    </label>
+    <label class="input-label">
+      <input name="checkbox-group" class="input-checkbox" type="checkbox" />
+      <span class="ml-2">Female</span>
+    </label>
+    <label class="input-label">
+      <input name="checkbox-group" class="input-checkbox" type="checkbox" />
+      <span class="ml-2">Other</span>
+    </label>
+  </label>
+</div>`
+}

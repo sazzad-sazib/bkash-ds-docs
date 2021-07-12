@@ -4,7 +4,8 @@ import {getPrimaryColor} from "../../../utilities/utilFunction";
 import CodeLiveEditor from "../../../components/global/CodeLiveEditor";
 import {
     inputVariant,
-    inputLayerSnippet
+    inputLayerSnippet,
+    inputVariantType,
 } from "../../../utilities/codeSnippetData";
 import CodeSnippet from "../../../components/global/CodeSnippet";
 import DocumentationLayout from "../../../components/docs/DocumentationLayout";
@@ -23,6 +24,10 @@ const Input:React.FC<Props> =() => {
               </p>
               <h6 className='mt-10 mb-4'>{getPrimaryColor('`Input with variant`')} &nbsp;live example</h6>
               <CodeLiveEditor hasCopy code={inputVariant} />
+
+              <h6 className='mt-10 mb-4'>{getPrimaryColor('`Radio & Checkbox`')} &nbsp;live example</h6>
+              <CodeLiveEditor hasCopy code={inputVariantType} />
+
               <p className='py-6'>
                   Please Copy the snippet in {getPrimaryColor('`global.css`')} to apply these style
               </p>
