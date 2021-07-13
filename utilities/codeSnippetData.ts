@@ -1233,3 +1233,119 @@ export const inputVariantType = {
   </label>
 </div>`
 }
+
+export const dropdownSample = {
+    jsx: `<div className="relative mb-40 block w-min pl-32">
+  <button className="btn btn-primary btn-regular"> Dropdown </button>
+  <ul
+    className="dropdown-list dropdown-right"
+    role="menu"
+  >
+    <li role="none">
+      <a
+        className="dropdown-item__link"
+        role="menuitem"
+        href="/?path=/story/dropdown--default"
+      >
+        Anchor as an item
+      </a>
+    </li>
+    <li role="none">
+      <button
+        className="dropdown-item__button"
+        role="menuitem"
+      >
+        Button as an item
+      </button>
+    </li>
+    <li role="none">
+      <button
+        className="dropdown-item__button justify-between"
+        role="menuitem"
+      >
+        <span>Custom design</span>
+        <span className="badge badge-primary">
+          13
+        </span>
+      </button>
+    </li>
+    <li role="none">
+      <button
+        aria-disabled="true"
+        className="dropdown-item__disabled"
+        disabled
+        role="menuitem"
+      >
+        Disabled item
+      </button>
+    </li>
+  </ul>
+</div>`,
+    html: `<div className="relative mb-40 pr-20">
+  <button className="btn btn-primary btn-regular"> Dropdown </button>
+  <ul
+    className="dropdown-list dropdown-left"
+    role="menu"
+  >
+    <li role="none">
+      <a
+        className="dropdown-item__link"
+        role="menuitem"
+        href="/?path=/story/dropdown--default"
+      >
+        Anchor as an item
+      </a>
+    </li>
+    <li role="none">
+      <button
+        className="dropdown-item__button"
+        role="menuitem"
+      >
+        Button as an item
+      </button>
+    </li>
+    <li role="none">
+      <button
+        className="dropdown-item__button justify-between"
+        role="menuitem"
+      >
+        <span>Custom design</span>
+        <span className="badge badge-primary">
+          13
+        </span>
+      </button>
+    </li>
+    <li role="none">
+      <button
+        aria-disabled="true"
+        className="dropdown-item__disabled"
+        disabled
+        role="menuitem"
+      >
+        Disabled item
+      </button>
+    </li>
+  </ul>
+</div>`
+}
+
+export const dropdwonCodeSnippet = `@layer base {
+  .dropdown-list {
+    @apply absolute w-56 mt-2 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5
+  }
+  .dropdown-right {
+    @apply right-0 origin-top-right
+  }
+  .dropdown-left {
+    @apply left-0 origin-top-left
+  }
+  .dropdown-item__link {
+    @apply inline-flex no-underline font-normal items-center cursor-pointer w-full px-4 py-2 text-sm text-gray-700 focus:outline-none focus:bg-gray-100 focus:text-gray-900 hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-800 dark:hover:text-gray-200
+  }
+  .dropdown-item__button {
+    @apply inline-flex items-center cursor-pointer w-full px-4 py-2 text-sm text-gray-700 focus:outline-none focus:bg-gray-100 focus:text-gray-900 hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-800 dark:hover:text-gray-200
+  }
+  .dropdown-item__disabled {
+    @apply inline-flex items-center cursor-pointer w-full px-4 py-2 text-sm text-gray-700 focus:outline-none focus:bg-gray-100 focus:text-gray-900 opacity-50 cursor-not-allowed
+  }
+}`
