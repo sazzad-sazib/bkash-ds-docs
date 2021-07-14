@@ -1,7 +1,5 @@
 module.exports = {
   mode: 'jit',
-  // jit is off due to we need all the classes to show in live preview however
-  // jit only compiles classes we are using. so site maybe little slow on first load
   purge: ['./pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
     './utilities/**/*.{js,ts,jsx,tsx}',

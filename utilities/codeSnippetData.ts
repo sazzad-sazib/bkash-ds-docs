@@ -1349,3 +1349,321 @@ export const dropdwonCodeSnippet = `@layer base {
     @apply inline-flex items-center cursor-pointer w-full px-4 py-2 text-sm text-gray-700 focus:outline-none focus:bg-gray-100 focus:text-gray-900 opacity-50 cursor-not-allowed
   }
 }`
+
+export const alertNeutralExample = {
+    jsx: `<div>
+  <div className="alert alert-neutral" role="alert">
+    <button className="alert-close" aria-label="close">
+      <svg
+        className="alert-close-icon alert-icon-neutral"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        role="img"
+        aria-hidden="true"
+      >
+        <path
+          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+          clipRule="evenodd"
+          fillRule="evenodd"
+        ></path>
+      </svg>
+    </button>
+    <svg
+      className="alert-icon alert-icon-neutral"
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+    </svg>
+    This is a neutral alert.
+  </div>
+</div>`,
+    html: `<div>
+  <div
+  class="alert alert-neutral"
+  role="alert"
+>
+  <button class="alert-close" aria-label="close">
+    <svg
+      class="alert-close-icon alert-icon-neutral""
+      fill="currentColor"
+      viewBox="0 0 20 20"
+      role="img"
+      aria-hidden="true"
+    >
+      <path
+        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+        clipRule="evenodd"
+        fillRule="evenodd"
+      ></path>
+    </svg>
+  </button>
+  <svg
+    class="alert-icon alert-icon-neutral"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+  </svg>
+  This is a neutral alert.
+</div>
+</div>`
+}
+export const alertSuccessExample = {
+    jsx: `<div>
+  <div className="alert alert-success" role="alert">
+    <button className="alert-close" aria-label="close">
+      <svg
+        className="alert-close-icon alert-icon-success"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        role="img"
+        aria-hidden="true"
+      >
+        <path
+          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+          clipRule="evenodd"
+          fillRule="evenodd"
+        ></path>
+      </svg>
+    </button>
+    <svg
+      className="alert-icon alert-icon-success"
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+     <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+    </svg>
+    This is a success alert.
+  </div>
+</div>`,
+    html: `<div>
+  <div
+  class="alert alert-success"
+  role="alert"
+>
+  <button class="alert-close" aria-label="close">
+    <svg
+      class="alert-close-icon alert-icon-success"
+      fill="currentColor"
+      viewBox="0 0 20 20"
+      role="img"
+      aria-hidden="true"
+    >
+      <path
+        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+        clipRule="evenodd"
+        fillRule="evenodd"
+      ></path>
+    </svg>
+  </button>
+  <svg
+    class="alert-icon alert-icon-success"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+  </svg>
+  This is a success alert.
+</div>
+</div>`
+}
+
+export const alertDangerExample = {
+    jsx: `<div>
+  <div className="alert alert-danger" role="alert">
+    <button className="alert-close" aria-label="close">
+      <svg
+        className="alert-close-icon alert-icon-danger"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        role="img"
+        aria-hidden="true"
+      >
+        <path
+          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+          clipRule="evenodd"
+          fillRule="evenodd"
+        ></path>
+      </svg>
+    </button>
+    <svg
+      className="alert-icon alert-icon-danger"
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+     <path d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+    </svg>
+    This is a danger alert.
+  </div>
+</div>`,
+    html: `<div>
+  <div
+  class="alert alert-danger"
+  role="alert"
+>
+  <button class="alert-close" aria-label="close">
+    <svg
+      class="alert-close-icon alert-icon-danger"
+      fill="currentColor"
+      viewBox="0 0 20 20"
+      role="img"
+      aria-hidden="true"
+    >
+      <path
+        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+        clipRule="evenodd"
+        fillRule="evenodd"
+      ></path>
+    </svg>
+  </button>
+  <svg
+    class="alert-icon alert-icon-danger"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+  </svg>
+  This is a danger alert.
+</div>
+</div>`
+}
+
+export const alertWarningExample = {
+    jsx: `<div>
+  <div className="alert alert-warning" role="alert">
+    <button className="alert-close" aria-label="close">
+      <svg
+        className="alert-close-icon alert-icon-warning"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        role="img"
+        aria-hidden="true"
+      >
+        <path
+          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+          clipRule="evenodd"
+          fillRule="evenodd"
+        ></path>
+      </svg>
+    </button>
+    <svg
+      className="alert-icon alert-icon-warning"
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+    <path d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+    </svg>
+    This is a warning alert.
+  </div>
+</div>`,
+    html: `<div>
+  <div
+  class="alert alert-warning"
+  role="alert"
+>
+  <button class="alert-close" aria-label="close">
+    <svg
+      class="alert-close-icon alert-icon-warning"
+      fill="currentColor"
+      viewBox="0 0 20 20"
+      role="img"
+      aria-hidden="true"
+    >
+      <path
+        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+        clipRule="evenodd"
+        fillRule="evenodd"
+      ></path>
+    </svg>
+  </button>
+  <svg
+    class="alert-icon alert-icon-warning"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+  </svg>
+  This is a warning alert.
+</div>
+</div>`
+}
+
+export const alertLayerSnippet = `
+//alert
+@layer base {
+  .alert {
+    @apply w-full p-4 pl-12 relative rounded-lg leading-5
+  }
+  .alert-close {
+    @apply absolute top-0 right-0 mt-4 mr-4
+  }
+  .alert-close-icon{
+    @apply h-5 w-5
+  }
+  .alert-icon {
+    @apply h-5 w-5 text-gray-400 dark:text-gray-500 absolute left-0 top-0 ml-4 mt-4
+  }
+  .alert-neutral {
+    @apply bg-gray-50 text-gray-800 dark:bg-gray-700 dark:text-gray-300
+  }
+  .alert-icon-neutral {
+    @apply text-gray-400 dark:text-gray-500
+  }
+  .alert-success {
+    @apply bg-green-100 text-green-700 dark:bg-green-700 dark:text-green-300
+  }
+  .alert-icon-success {
+    @apply text-green-400 dark:text-green-500
+  }
+  .alert-danger {
+    @apply bg-red-100 text-red-700 dark:bg-red-700 dark:text-red-300
+  }
+  .alert-icon-danger {
+    @apply text-red-400 dark:text-red-500
+  }
+  .alert-warning {
+    @apply bg-yellow-100 text-yellow-700 dark:bg-yellow-700 dark:text-yellow-300
+  }
+  .alert-icon-warning {
+    @apply text-yellow-400 dark:text-yellow-500
+  }
+  .alert-info {
+    @apply bg-blue-100 text-blue-700 dark:bg-blue-700 dark:text-blue-300
+  }
+  .alert-icon-info {
+    @apply text-blue-400 dark:text-blue-500
+  }
+}`

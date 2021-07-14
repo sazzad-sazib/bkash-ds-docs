@@ -70,6 +70,11 @@ const data:leftBarDataProps[] = [
                 id: 4,
                 title: 'Dropdown',
                 slug: 'dropdown'
+            },
+            {
+                id: 5,
+                title: 'Alert',
+                slug: 'alert'
             }
         ]
     }

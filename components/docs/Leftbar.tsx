@@ -34,7 +34,7 @@ const LeftBar:React.FC<Props> =({data, parentSlug,childSlug}) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     },[router.query])
 
-console.log(parentSlug,childSlug);
+
   return (
          <div className='hidden lg:block col-span-2 h-full overflow-auto no-scrollbar'>
              <div className="flex flex-col flex-grow h-full border-r border-gray-200 pt-2 pb-4 bg-white overflow-y-auto">
