@@ -428,12 +428,12 @@ export const iconPackSvgSample = `<svg class="h-6 w-6 text-gray-500" fill="none"
 export const avatarSizesData = {
     jsx: `<div className="layout">
   <div
-    className="relative rounded-full inline-block w-6 h-6"
+    className="avatar-container w-6 h-6"
     role="img"
     aria-label="Avatar of Unknown "
   >
     <img
-      className="object-cover w-full h-full rounded-full"
+      className="avatar-img"
       src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
       alt="Profile image"
       loading="lazy"
@@ -445,12 +445,12 @@ export const avatarSizesData = {
   </div>
 
   <div
-    className="relative rounded-full inline-block w-8 h-8"
+    className="avatar-container w-8 h-8"
     role="img"
     aria-label="Avatar of Unknown "
   >
     <img
-      className="object-cover w-full h-full rounded-full"
+      className="avatar-img"
       src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
       alt="Profile image"
       loading="lazy"
@@ -462,12 +462,12 @@ export const avatarSizesData = {
   </div>
 
   <div
-    className="relative rounded-full inline-block w-10 h-10"
+    className="avatar-container w-10 h-10"
     role="img"
     aria-label="Avatar of Unknown "
   >
     <img
-      className="object-cover w-full h-full rounded-full"
+      className="avatar-img"
       src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
       alt="Profile image"
       loading="lazy"
@@ -480,12 +480,12 @@ export const avatarSizesData = {
 </div>`,
     html: `<div class="layout">
   <div
-    class="relative rounded-full inline-block w-6 h-6"
+    class="avatar-container w-6 h-6"
     role="img"
     aria-label="Avatar of Unknown "
   >
     <img
-      class="object-cover w-full h-full rounded-full"
+      class="avatar-img"
       src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
       alt="Profile image"
       loading="lazy"
@@ -497,12 +497,12 @@ export const avatarSizesData = {
   </div>
 
   <div
-    class="relative rounded-full inline-block w-8 h-8"
+    class="avatar-container w-8 h-8"
     role="img"
     aria-label="Avatar of Unknown "
   >
     <img
-      class="object-cover w-full h-full rounded-full"
+      class="avatar-img"
       src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
       alt="Profile image"
       loading="lazy"
@@ -514,12 +514,12 @@ export const avatarSizesData = {
   </div>
 
   <div
-    class="relative rounded-full inline-block w-10 h-10"
+    class="avatar-container w-10 h-10"
     role="img"
     aria-label="Avatar of Unknown "
   >
     <img
-      class="object-cover w-full h-full rounded-full"
+      class="avatar-img"
       src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
       alt="Profile image"
       loading="lazy"
@@ -535,19 +535,19 @@ export const avatarSizesData = {
 export const avatarSizesWithStatusData = {
     jsx: `<div className="layout">
   <div
-    className="relative rounded-full inline-block w-6 h-6"
+    className="avatar-container w-6 h-6"
     role="img"
     aria-label="Avatar of Unknown "
   >
     <img
-      className="object-cover w-full h-full rounded-full"
+      className="avatar-img"
       src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
       alt="Profile image"
       loading="lazy"
     />
     <div
       data-testid="statusNode"
-      className="absolute bottom-0 right-0 rounded-md bg-green-500 w-1.5 h-1.5"
+      className="avatar-status bg-green-500 w-1.5 h-1.5"
     />
     <div
       className="absolute inset-0 rounded-full shadow-inner"
@@ -556,19 +556,19 @@ export const avatarSizesWithStatusData = {
   </div>
 
   <div
-    className="relative rounded-full inline-block w-8 h-8"
+    className="avatar-container w-8 h-8"
     role="img"
     aria-label="Avatar of Unknown "
   >
     <img
-      className="object-cover w-full h-full rounded-full"
+      className="avatar-img"
       src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
       alt="Profile image"
       loading="lazy"
     />
     <div
       data-testid="statusNode"
-      className="absolute bottom-0 right-0 rounded-md bg-green-500 w-2 h-2"
+      className="avatar-status bg-green-500 w-2 h-2"
     />
     <div
       className="absolute inset-0 rounded-full shadow-inner"
@@ -577,19 +577,19 @@ export const avatarSizesWithStatusData = {
   </div>
 
   <div
-    className="relative rounded-full inline-block w-10 h-10"
+    className="avatar-container w-10 h-10"
     role="img"
     aria-label="Avatar of Unknown "
   >
     <img
-      className="object-cover w-full h-full rounded-full"
+      className="avatar-img"
       src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
       alt="Profile image"
       loading="lazy"
     />
     <div
       data-testid="statusNode"
-      className="absolute bottom-0 right-0 rounded-md bg-green-500 w-3 h-3"
+      className="avatar-status bg-green-500 w-3 h-3"
     />
     <div
       className="absolute inset-0 rounded-full shadow-inner"
@@ -599,19 +599,19 @@ export const avatarSizesWithStatusData = {
 </div>`,
     html: `<div class="layout">
   <div
-    class="relative rounded-full inline-block w-6 h-6"
+    class="avatar-container w-6 h-6"
     role="img"
     aria-label="Avatar of Unknown "
   >
     <img
-      class="object-cover w-full h-full rounded-full"
+      class="avatar-img"
       src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
       alt="Profile image"
       loading="lazy"
     />
     <div
       data-testid="statusNode"
-      class="absolute bottom-0 right-0 rounded-md bg-green-500 w-1.5 h-1.5"
+      class="avatar-status bg-green-500 w-1.5 h-1.5"
     />
     <div
       class="absolute inset-0 rounded-full shadow-inner"
@@ -620,19 +620,19 @@ export const avatarSizesWithStatusData = {
   </div>
 
   <div
-    class="relative rounded-full inline-block w-8 h-8"
+    class="avatar-container w-8 h-8"
     role="img"
     aria-label="Avatar of Unknown "
   >
     <img
-      class="object-cover w-full h-full rounded-full"
+      class="avatar-img"
       src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
       alt="Profile image"
       loading="lazy"
     />
     <div
       data-testid="statusNode"
-      class="absolute bottom-0 right-0 rounded-md bg-green-500 w-2 h-2"
+      class="avatar-status bg-green-500 w-2 h-2"
     />
     <div
       class="absolute inset-0 rounded-full shadow-inner"
@@ -641,19 +641,19 @@ export const avatarSizesWithStatusData = {
   </div>
 
   <div
-    class="relative rounded-full inline-block w-10 h-10"
+    class="avatar-container w-10 h-10"
     role="img"
     aria-label="Avatar of Unknown "
   >
     <img
-      class="object-cover w-full h-full rounded-full"
+      class="avatar-img"
       src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
       alt="Profile image"
       loading="lazy"
     />
     <div
       data-testid="statusNode"
-      class="absolute bottom-0 right-0 rounded-md bg-green-500 w-3 h-3"
+      class="avatar-status bg-green-500 w-3 h-3"
     />
     <div
       class="absolute inset-0 rounded-full shadow-inner"
@@ -666,60 +666,39 @@ export const avatarSizesWithStatusData = {
 export const avatarStatusVariantData = {
     jsx: `<div className="layout">
   <div
-    className="relative rounded-full inline-block w-10 h-10"
+    className="avatar-container w-10 h-10"
     role="img"
     aria-label="Avatar of Unknown "
   >
     <img
-      className="object-cover w-full h-full rounded-full"
+      className="avatar-img"
       src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
       alt="Profile image"
       loading="lazy"
     />
     <div
       data-testid="statusNode"
-      className="absolute bottom-0 right-0 rounded-md bg-green-500 w-3 h-3"
+      className="avatar-status bg-green-500 w-3 h-3"
     />
     <div
-      className="absolute inset-0 rounded-full shadow-inner"
+      className="avatar-shadow"
       aria-hidden="true"
     />
   </div>
   <div
-    className="relative rounded-full inline-block w-10 h-10"
+    className="avatar-container w-10 h-10"
     role="img"
     aria-label="Avatar of Unknown "
   >
     <img
-      className="object-cover w-full h-full rounded-full"
+      className="avatar-img"
       src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
       alt="Profile image"
       loading="lazy"
     />
     <div
       data-testid="statusNode"
-      className="absolute bottom-0 right-0 rounded-md bg-yellow-500 w-3 h-3"
-    />
-    <div
-      className="absolute inset-0 rounded-full shadow-inner"
-      aria-hidden="true"
-    />
-  </div>
-
-  <div
-    className="relative rounded-full inline-block w-10 h-10"
-    role="img"
-    aria-label="Avatar of Unknown "
-  >
-    <img
-      className="object-cover w-full h-full rounded-full"
-      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
-      alt="Profile image"
-      loading="lazy"
-    />
-    <div
-      data-testid="statusNode"
-      className="absolute bottom-0 right-0 rounded-md bg-red-500 w-3 h-3"
+      className="avatar-status bg-yellow-500 w-3 h-3"
     />
     <div
       className="absolute inset-0 rounded-full shadow-inner"
@@ -728,19 +707,40 @@ export const avatarStatusVariantData = {
   </div>
 
   <div
-    className="relative rounded-full inline-block w-10 h-10"
+    className="avatar-container w-10 h-10"
     role="img"
     aria-label="Avatar of Unknown "
   >
     <img
-      className="object-cover w-full h-full rounded-full"
+      className="avatar-img"
       src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
       alt="Profile image"
       loading="lazy"
     />
     <div
       data-testid="statusNode"
-      className="absolute bottom-0 right-0 rounded-md bg-gray-500 w-3 h-3"
+      className="avatar-status bg-red-500 w-3 h-3"
+    />
+    <div
+      className="absolute inset-0 rounded-full shadow-inner"
+      aria-hidden="true"
+    />
+  </div>
+
+  <div
+    className="avatar-container w-10 h-10"
+    role="img"
+    aria-label="Avatar of Unknown "
+  >
+    <img
+      className="avatar-img"
+      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
+      alt="Profile image"
+      loading="lazy"
+    />
+    <div
+      data-testid="statusNode"
+      className="avatar-status bg-gray-500 w-3 h-3"
     />
     <div
       className="absolute inset-0 rounded-full shadow-inner"
@@ -750,19 +750,19 @@ export const avatarStatusVariantData = {
 </div>`,
     html: `<div class="layout">
   <div
-    class="relative rounded-full inline-block w-10 h-10"
+    class="avatar-container w-10 h-10"
     role="img"
     aria-label="Avatar of Unknown "
   >
     <img
-      class="object-cover w-full h-full rounded-full"
+      class="avatar-img"
       src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
       alt="Profile image"
       loading="lazy"
     />
     <div
       data-testid="statusNode"
-      class="absolute bottom-0 right-0 rounded-md bg-green-500 w-3 h-3"
+      class="avatar-status bg-green-500 w-3 h-3"
     />
     <div
       class="absolute inset-0 rounded-full shadow-inner"
@@ -770,40 +770,19 @@ export const avatarStatusVariantData = {
     />
   </div>
   <div
-    class="relative rounded-full inline-block w-10 h-10"
+    class="avatar-container w-10 h-10"
     role="img"
     aria-label="Avatar of Unknown "
   >
     <img
-      class="object-cover w-full h-full rounded-full"
+      class="avatar-img"
       src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
       alt="Profile image"
       loading="lazy"
     />
     <div
       data-testid="statusNode"
-      class="absolute bottom-0 right-0 rounded-md bg-yellow-500 w-3 h-3"
-    />
-    <div
-      class="absolute inset-0 rounded-full shadow-inner"
-      aria-hidden="true"
-    />
-  </div>
-
-  <div
-    class="relative rounded-full inline-block w-10 h-10"
-    role="img"
-    aria-label="Avatar of Unknown "
-  >
-    <img
-      class="object-cover w-full h-full rounded-full"
-      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
-      alt="Profile image"
-      loading="lazy"
-    />
-    <div
-      data-testid="statusNode"
-      class="absolute bottom-0 right-0 rounded-md bg-red-500 w-3 h-3"
+      class="avatar-status bg-yellow-500 w-3 h-3"
     />
     <div
       class="absolute inset-0 rounded-full shadow-inner"
@@ -812,22 +791,43 @@ export const avatarStatusVariantData = {
   </div>
 
   <div
-    class="relative rounded-full inline-block w-10 h-10"
+    class="avatar-container w-10 h-10"
     role="img"
     aria-label="Avatar of Unknown "
   >
     <img
-      class="object-cover w-full h-full rounded-full"
+      class="avatar-img"
       src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
       alt="Profile image"
       loading="lazy"
     />
     <div
       data-testid="statusNode"
-      class="absolute bottom-0 right-0 rounded-md bg-gray-500 w-3 h-3"
+      class="avatar-status bg-red-500 w-3 h-3"
     />
     <div
-      class="absolute inset-0 rounded-full shadow-inner"
+      class="avatar-shadow"
+      aria-hidden="true"
+    />
+  </div>
+
+  <div
+    class="avatar-container w-10 h-10"
+    role="img"
+    aria-label="Avatar of Unknown "
+  >
+    <img
+      class="avatar-img"
+      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
+      alt="Profile image"
+      loading="lazy"
+    />
+    <div
+      data-testid="statusNode"
+      class="avatar-status bg-gray-500 w-3 h-3"
+    />
+    <div
+      class="avatar-shadow"
       aria-hidden="true"
     />
   </div>
@@ -837,7 +837,7 @@ export const avatarStatusVariantData = {
 export const avatarInitialWithStatus = {
     jsx: `<div className="layout">
   <div
-    className="relative rounded-full inline-block w-8 h-8"
+    className="avatar-container w-8 h-8"
     role="img"
     aria-label="Avatar of John Doe "
   >
@@ -848,12 +848,12 @@ export const avatarInitialWithStatus = {
       JD
     </div>
     <div
-      className="absolute inset-0 rounded-full shadow-inner"
+      className="avatar-shadow"
       aria-hidden="true"
     ></div>
   </div>
   <div
-    className="relative rounded-full inline-block w-8 h-8"
+    className="avatar-container w-8 h-8"
     role="img"
     aria-label="Avatar of John Doe "
   >
@@ -864,14 +864,14 @@ export const avatarInitialWithStatus = {
       JD
     </div>
     <div
-      className="absolute inset-0 rounded-full shadow-inner"
+      className="avatar-shadow"
       aria-hidden="true"
     ></div>
   </div>
 </div>`,
     html: `<div class="layout">
   <div
-    class="relative rounded-full inline-block w-8 h-8"
+    class="avatar-container w-8 h-8"
     role="img"
     aria-label="Avatar of John Doe "
   >
@@ -882,12 +882,12 @@ export const avatarInitialWithStatus = {
       JD
     </div>
     <div
-      class="absolute inset-0 rounded-full shadow-inner"
+      class="avatar-shadow"
       aria-hidden="true"
     ></div>
   </div>
   <div
-    class="relative rounded-full inline-block w-8 h-8"
+    class="avatar-container w-8 h-8"
     role="img"
     aria-label="Avatar of John Doe "
   >
@@ -898,7 +898,7 @@ export const avatarInitialWithStatus = {
       JD
     </div>
     <div
-      class="absolute inset-0 rounded-full shadow-inner"
+      class="avatar-shadow"
       aria-hidden="true"
     ></div>
   </div>

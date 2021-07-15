@@ -77,6 +77,17 @@ const data:leftBarDataProps[] = [
                 slug: 'alert'
             }
         ]
+    },
+    {
+        name: 'Layout',
+        slug: 'layout',
+        data: [
+            {
+                id: 0,
+                title: 'Navbar',
+                slug: 'navbar'
+            }
+        ]
     }
 ]
 

@@ -8,7 +8,7 @@ import {leftBarDataProps} from "../../utilities/leftBarData";
 
 export interface Props {
     data: leftBarDataProps[];
-    parentSlug: 'components' | 'contents' | 'principles';
+    parentSlug: 'components' | 'contents' | 'principles' | 'layout';
     childSlug?: string;
 }
 

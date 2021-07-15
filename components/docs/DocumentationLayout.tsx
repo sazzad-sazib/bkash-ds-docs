@@ -6,7 +6,7 @@ import leftBarData, {leftBarDataElemProps} from "../../utilities/leftBarData";
 
 interface Props {
   children: React.ReactNode;
-  parentSlug: 'components' | 'contents' | 'principles';
+  parentSlug: 'components' | 'contents' | 'principles' | 'layout';
   childSlug?: string;
 }
 
