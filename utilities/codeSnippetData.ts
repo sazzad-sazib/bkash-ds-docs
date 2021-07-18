@@ -1965,3 +1965,112 @@ export const cardLayerSnippet = `@layer base {
   }
 }
 `
+
+export const modalSampleData = {
+  jsx: `() => {
+    const [isShown, setIsShown] = React.useState(false);
+  
+    const CloeButton = () => (
+      <svg
+        class="w-4 h-4"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        role="img"
+        aria-hidden="true"
+      >
+        <path
+          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+          clip-rule="evenodd"
+          fill-rule="evenodd"
+        ></path>
+      </svg>
+    );
+  
+    return (
+      <div className="grid grid-cols-2 gap-4">
+        <button
+          onClick={() => setIsShown(!isShown)}
+          className="btn btn-regular btn-primary"
+        >
+          Click here
+        </button>
+        {isShown && (
+          <div class="modal__backdrop">
+            <div class="modal__container" role="dialog">
+              <div data-focus-guard="true" tabindex="1"></div>
+              <div data-focus-lock-disabled="false">
+                <header class="flex justify-end">
+                  <button
+                    onClick={() => setIsShown(!isShown)}
+                    class="modal__close-button"
+                    aria-label="close"
+                  >
+                    <CloeButton />
+                  </button>
+                </header>
+                <div class="modal__content">
+                  <img src="/modal_sample.svg" class="h-44 mb-8 mt-4" />
+                  <h1 class="text-2xl text-center">OTP Validation Successful</h1>
+                  <p class="text-xl mt-3 mb-6 text-center">
+                    Your Bank Account has been linked to your saved Bank list
+                  </p>
+                  <button class="btn btn-primary btn-large">
+                    Go to Saved Bank
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  }`,
+  html: `
+  <div class="modal__container" role="dialog">
+      <header class="flex justify-end">
+        <button
+          class="modal__close-button"
+          aria-label="close"
+        >
+        <svg
+        class="w-4 h-4"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        role="img"
+        aria-hidden="true"
+      >
+        <path
+          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+          clip-rule="evenodd"
+          fill-rule="evenodd"
+        ></path>
+      </svg>
+        </button>
+      </header>
+      <div class="modal__content">
+        <img src="/modal_sample.svg" class="h-44 mb-8 mt-4" />
+        <h1 class="text-2xl text-center">OTP Validation Successful</h1>
+        <p class="text-xl mt-3 mb-6 text-center">
+          Your Bank Account has been linked to your saved Bank list
+        </p>
+        <button class="btn btn-primary btn-large">
+          Go to Saved Bank
+        </button>
+        </div>
+  </div>`
+}
+
+export const modalLayerData = `@layer base {
+  .modal__backdrop {
+    @apply fixed inset-0 z-40 h-screen w-screen flex items-end bg-black bg-opacity-50 sm:items-center sm:justify-center
+  }
+  .modal__container {
+    @apply w-full px-6 py-4 overflow-hidden bg-white rounded-t-lg dark:bg-gray-800 sm:rounded-lg sm:m-4 sm:max-w-xl 
+  }
+  .modal__close-button {
+    @apply inline-flex items-center justify-center w-6 h-6 text-gray-400 transition-colors duration-150 rounded dark:hover:text-gray-200 hover:text-gray-700
+  }
+  .modal__content {
+    @apply mb-6 text-sm text-gray-700 dark:text-gray-400 flex flex-col items-center
+  }
+}`
