@@ -249,15 +249,50 @@
 //avatar
 @layer base {
   .avatar-container {
-    @apply relative rounded-full inline-block
+    @apply relative rounded-full inline-block;
   }
   .avatar-img {
-    @apply object-cover w-full h-full rounded-full
+    @apply object-cover w-full h-full rounded-full;
   }
   .avatar-status {
-    @apply absolute bottom-0 right-0 rounded-md
+    @apply absolute bottom-0 right-0 rounded-md;
   }
   .avatar-shadow {
-    @apply absolute inset-0 rounded-full shadow-inner
+    @apply absolute inset-0 rounded-full shadow-inner;
   }
+  .avatar-initial {
+    @apply flex items-center justify-center w-full h-full rounded-full text-sm;
+  }
+}
+
+//card 
+@layer base {
+  .card {
+    @apply shadow-md rounded-md
+  }
+  .card-cover {
+    @apply object-cover w-1/3 rounded-l-md
+  }
+  .stat-card__container {
+    @apply relative bg-white pt-5 px-4 sm:pt-6 sm:px-6 shadow-md rounded-lg overflow-hidden
+  }
+  .stat-card__icon {
+    @apply absolute bg-primary rounded-md p-3
+  }
+  .stat-card__title {
+    @apply ml-16 text-sm font-medium text-gray-500 truncate
+  }
+  .stat-card__info-container {
+    @apply ml-16 pb-6 flex items-baseline sm:pb-7
+  }
+  .stat-card__info {
+    @apply text-2xl font-semibold text-gray-900
+  }
+  .stat-card__icon-info-container {
+    @apply ml-2 flex items-baseline text-sm font-semibold
+  }
+  .stat-card__icon-info {
+    @apply self-center flex-shrink-0
+  }
+
 }

@@ -843,7 +843,7 @@ export const avatarInitialWithStatus = {
   >
     <div
       data-testid="initialNode"
-      className="flex items-center justify-center w-full h-full rounded-full bg-gray-200 text-sm"
+      className="avatar-initial bg-gray-200"
     >
       JD
     </div>
@@ -859,7 +859,7 @@ export const avatarInitialWithStatus = {
   >
     <div
       data-testid="initialNode"
-      className="flex items-center justify-center w-full h-full rounded-full bg-pink-200 text-primary text-sm"
+      className="avatar-initial bg-primary-100 text-primary"
     >
       JD
     </div>
@@ -877,7 +877,7 @@ export const avatarInitialWithStatus = {
   >
     <div
       data-testid="initialNode"
-      class="flex items-center justify-center w-full h-full rounded-full bg-gray-200 text-sm"
+      class="avatar-initial bg-gray-200"
     >
       JD
     </div>
@@ -893,7 +893,7 @@ export const avatarInitialWithStatus = {
   >
     <div
       data-testid="initialNode"
-      class="flex items-center justify-center w-full h-full rounded-full bg-pink-200 text-primary text-sm"
+      class="avatar-initial bg-primary-100 text-primary"
     >
       JD
     </div>
@@ -904,6 +904,24 @@ export const avatarInitialWithStatus = {
   </div>
 </div>`,
 }
+
+export const avatarLayerSnippet = `@layer base {
+  .avatar-container {
+    @apply relative rounded-full inline-block;
+  }
+  .avatar-img {
+    @apply object-cover w-full h-full rounded-full;
+  }
+  .avatar-status {
+    @apply absolute bottom-0 right-0 rounded-md;
+  }
+  .avatar-shadow {
+    @apply absolute inset-0 rounded-full shadow-inner;
+  }
+  .avatar-initial {
+    @apply flex items-center justify-center w-full h-full rounded-full text-sm;
+  }
+}`
 
 export const badgeData = {
     jsx: `<div className="layout">
@@ -1667,3 +1685,283 @@ export const alertLayerSnippet = `
     @apply text-blue-400 dark:text-blue-500
   }
 }`
+
+export const cardBasic = {
+  jsx: `<div>
+  <div className="card bg-white p-4 mb-4">
+    <p className="text-md font-bold mb-2">Revenue</p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, cum
+      commodi a omnis numquam quod? Totam exercitationem quos hic ipsam at qui
+      cum numquam, sed amet ratione! Ratione, nihil dolorum.
+    </p>
+  </div>
+  <div className="card flex bg-white mb-4">
+  <img
+  className="card-cover"
+  src="https://images.unsplash.com/photo-1545593169-527754e9edd3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80"
+/>
+<div className="ml-2 p-4">
+<p className="text-md font-bold mb-2">Revenue</p>
+<p>
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, cum
+  commodi a omnis numquam quod? Totam exercitationem quos hic ipsam at qui
+  cum numquam, sed amet ratione! Ratione, nihil dolorum.
+</p>
+</div>
+  </div>
+  <div className="card bg-primary p-4">
+    <p className="text-md font-bold mb-2 text-white">Revenue</p>
+    <p className="text-white">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, cum
+      commodi a omnis numquam quod? Totam exercitationem quos hic ipsam at qui
+      cum numquam, sed amet ratione! Ratione, nihil dolorum.
+    </p>
+  </div>
+</div>`,
+html: `<div>
+<div class="card bg-white p-4 mb-4">
+  <p class="text-md font-bold mb-2">Revenue</p>
+  <p>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, cum
+    commodi a omnis numquam quod? Totam exercitationem quos hic ipsam at qui
+    cum numquam, sed amet ratione! Ratione, nihil dolorum.
+  </p>
+</div>
+<div class="card flex bg-white mb-4">
+<img
+class="card-cover"
+src="https://images.unsplash.com/photo-1545593169-527754e9edd3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80"
+/>
+<div class="ml-2 p-4">
+<p class="text-md font-bold mb-2">Revenue</p>
+<p>
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, cum
+commodi a omnis numquam quod? Totam exercitationem quos hic ipsam at qui
+cum numquam, sed amet ratione! Ratione, nihil dolorum.
+</p>
+</div>
+</div>
+<div class="card bg-primary p-4">
+  <p class="text-md font-bold mb-2 text-white">Revenue</p>
+  <p class="text-white">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, cum
+    commodi a omnis numquam quod? Totam exercitationem quos hic ipsam at qui
+    cum numquam, sed amet ratione! Ratione, nihil dolorum.
+  </p>
+</div>
+</div>`
+}
+
+export const cardStat = {
+  jsx: `() => {
+    const Icon = ({ className }) => {
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className={className}
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M11 11V9a2 2 0 00-2-2m2 4v4a2 2 0 104 0v-1m-4-3H9m2 0h4m6 1a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+      );
+    };
+    const ArrowUp = ({ className }) => {
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className={className}
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M7 11l5-5m0 0l5 5m-5-5v12"
+          />
+        </svg>
+      );
+    };
+  
+    return (
+      <div className="grid grid-cols-2 gap-4">
+      <div className="col-span-1 stat-card__container">
+          <dt>
+            <div className="stat-card__icon">
+              <Icon className="h-6 w-6 text-white" aria-hidden="true" />
+            </div>
+            <p className="stat-card__title">
+              Cash In
+            </p>
+          </dt>
+          <dd className="stat-card__info-container">
+            <p className="stat-card__info">5000 BDT</p>
+            <p
+              className={
+                "stat-card__icon-info-container text-green-500"
+              }
+            >
+              <ArrowUp
+                className="stat-card__icon-info h-5 w-5 text-green-500"
+                aria-hidden="true"
+              />
+              <span className="sr-only"> 'Decreased' by</span>
+              10%
+            </p>
+          </dd>
+        </div>
+        <div className="col-span-1 stat-card__container">
+          <dt>
+            <div className="stat-card__icon">
+              <Icon className="h-6 w-6 text-white" aria-hidden="true" />
+            </div>
+            <p className="stat-card__title">
+              Send Money
+            </p>
+          </dt>
+          <dd className="stat-card__info-container">
+            <p className="stat-card__info">100 BDT</p>
+            <p
+              className={
+                "stat-card__icon-info-container text-red-500"
+              }
+            >
+              <ArrowUp
+                className="stat-card__icon-info h-5 w-5 text-red-500"
+                aria-hidden="true"
+              />
+              <span className="sr-only"> 'Decreased' by</span>
+              10%
+            </p>
+          </dd>
+        </div>
+      </div>
+    );
+  }`,
+  html: `<div className="grid grid-cols-2 gap-4">
+  <div className="col-span-1 stat-card__container">
+    <dt>
+      <div className="stat-card__icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 text-white"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M11 11V9a2 2 0 00-2-2m2 4v4a2 2 0 104 0v-1m-4-3H9m2 0h4m6 1a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+      </div>
+      <p className="stat-card__title">Cash In</p>
+    </dt>
+    <dd className="stat-card__info-container">
+      <p className="stat-card__info">5000 BDT</p>
+      <p className="stat-card__icon-info-container text-green-500">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="stat-card__icon-info h-5 w-5 text-green-500"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M7 11l5-5m0 0l5 5m-5-5v12"
+          />
+        </svg>
+        <span className="sr-only"> 'Decreased' by</span>
+        10%
+      </p>
+    </dd>
+  </div>
+  <div className="col-span-1 stat-card__container">
+    <dt>
+      <div className="stat-card__icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 text-white"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M11 11V9a2 2 0 00-2-2m2 4v4a2 2 0 104 0v-1m-4-3H9m2 0h4m6 1a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+      </div>
+      <p className="stat-card__title">Send Money</p>
+    </dt>
+    <dd className="stat-card__info-container">
+      <p className="stat-card__info">100 BDT</p>
+      <p className="stat-card__icon-info-container text-red-500">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="stat-card__icon-info h-5 w-5 text-red-500"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M7 11l5-5m0 0l5 5m-5-5v12"
+          />
+        </svg>
+        <span className="sr-only"> 'Decreased' by</span>
+        10%
+      </p>
+    </dd>
+  </div>
+</div>`,
+}
+
+export const cardLayerSnippet = `@layer base {
+  .card {
+    @apply shadow-md p-4 rounded-md
+  }
+  .card-cover {
+    @apply object-cover w-1/3 rounded-l-md
+  }
+  .stat-card__container {
+    @apply relative bg-white pt-5 px-4 sm:pt-6 sm:px-6 shadow-md rounded-lg overflow-hidden
+  }
+  .stat-card__icon {
+    @apply absolute bg-primary rounded-md p-3
+  }
+  .stat-card__title {
+    @apply ml-16 text-sm font-medium text-gray-500 truncate
+  }
+  .stat-card__info-container {
+    @apply ml-16 pb-6 flex items-baseline sm:pb-7
+  }
+  .stat-card__info {
+    @apply text-2xl font-semibold text-gray-900
+  }
+  .stat-card__icon-info-container {
+    @apply ml-2 flex items-baseline text-sm font-semibold
+  }
+  .stat-card__icon-info {
+    @apply self-center flex-shrink-0
+  }
+}
+`
