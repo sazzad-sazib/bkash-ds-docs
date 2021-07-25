@@ -311,3 +311,19 @@
     @apply mb-6 text-sm text-gray-700 dark:text-gray-400 flex flex-col items-center
   }
 }
+
+//navbar
+@layer base {
+  .nav-container {
+    @apply sticky top-0 z-30 h-[70px] mx-auto bg-white shadow w-full p-5
+  }
+  .nav-container-layout {
+    @apply flex items-center justify-between h-full max-w-6xl mx-auto
+  }
+  .nav-list {
+    @apply flex items-center space-x-6
+  }
+  .nav-link {
+    @apply flex items-center cursor-pointer
+  }
+}

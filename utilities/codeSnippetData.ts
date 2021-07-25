@@ -1,3 +1,4 @@
+
 export const typographySnippet = {
     jsx: `<div>
   <h1>h1 - bKash</h1>
@@ -2074,3 +2075,131 @@ export const modalLayerData = `@layer base {
     @apply mb-6 text-sm text-gray-700 dark:text-gray-400 flex flex-col items-center
   }
 }`
+
+
+export const navbarDataJSX = `<header className="nav-container">
+<div className="nav-container-layout">
+  <Link href="/" passHref>
+    <Image
+      src={bkashLogo}
+      alt="bKash Logo"
+      width={98}
+      height={45}
+    />
+  </Link>
+  <ul className="nav-list">
+    <li>
+      <Link href="/dashboard" passHref>
+        <span className="nav-link text-primary font-medium">
+          <DashboardIcon className="mr-2 text-primary" />
+          <span>Dashboard</span>
+        </span>
+      </Link>
+    </li>
+
+    <li>
+      <Link href="/send-money" passHref>
+        <span className="nav-link">
+          <AddMoney className="mr-2" />
+          <span>Send Money</span>
+        </span>
+      </Link>
+    </li>
+
+    <li>
+      <Link href="/notification" passHref>
+        <span className="nav-link">
+          <span className='relative mr-2'>
+          <span className="absolute block w-2 h-2 rounded bg-primary -right-0 -top-1" />
+          <NotificationIcon />
+          </span>
+          <span>Notification</span>
+        </span>
+      </Link>
+    </li>
+
+    <li>
+      <button className="flex items-center focus:outline-none">
+        <span>Alam Haq</span>
+        <span className="flex items-center justify-center ml-2 text-lg text-white bg-pink-500 rounded-full w-9 h-9">
+          AH
+        </span>
+      </button>
+    </li>
+  </ul>
+</div>
+</header>`
+
+export const navbarDataHTML = `<header class="nav-container">
+<div class="nav-container-layout">
+  <a rel="noreferrer noopener" href="/" target="_blank">
+    <img src={bkashLogo} alt="bKash Logo" width={98} height={45} />
+  </a>
+  <ul class="nav-list">
+    <li>
+      <a rel="noreferrer noopener" href="/dashboard" target="_blank">
+        <span class="nav-link text-primary font-medium">
+          <DashboardIcon class="mr-2 text-primary" />
+          <span>Dashboard</span>
+        </span>
+      </a>
+    </li>
+
+    <li>
+      <a rel="noreferrer noopener" href="/send-money" target="_blank">
+        <span class="nav-link">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
+            />
+          </svg>
+          <span>Send Money</span>
+        </span>
+      </a>
+    </li>
+
+    <li>
+      <a rel="noreferrer noopener" href="/notification" target="_blank">
+        <span class="nav-link">
+          <span class="relative mr-2">
+            <span class="absolute block w-2 h-2 rounded bg-primary -right-0 -top-1" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+              />
+            </svg>
+          </span>
+          <span>Notification</span>
+        </span>
+      </a>
+    </li>
+
+    <li>
+      <button class="flex items-center focus:outline-none">
+        <span>Alam Haq</span>
+        <span class="flex items-center justify-center ml-2 text-lg text-white bg-pink-500 rounded-full w-9 h-9">
+          AH
+        </span>
+      </button>
+    </li>
+  </ul>
+</div>
+</header>`
