@@ -2,7 +2,11 @@ import React from "react";
 import DocumentationLayout from "../../../components/docs/DocumentationLayout";
 import CustomHead from "../../../components/global/CustomHead";
 import { getPrimaryColor } from "../../../utilities/utilFunction";
-import {navbarDataJSX,  navbarDataHTML} from './../../../utilities/codeSnippetData';
+import {
+  navbarDataJSX,
+  navbarDataHTML,
+  navLayerData,
+} from "./../../../utilities/codeSnippetData";
 import Link from "next/link";
 import Image from "next/image";
 import bkashLogo from "./../../../public/bkash.svg";
@@ -28,17 +32,43 @@ const DashboardIcon: React.FC<{ className: string }> = ({ className }) => {
   );
 };
 
-const AddMoney:React.FC<{className?: string}> = ({className}) => {
-    return <svg xmlns="http://www.w3.org/2000/svg" className={`h-6 w-6 ${className}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
-  </svg>
-}
+const AddMoney: React.FC<{ className?: string }> = ({ className }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={`h-6 w-6 ${className}`}
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={1}
+        d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
+      />
+    </svg>
+  );
+};
 
-const NotificationIcon:React.FC<{className?:string}> = ({className}) => {
-    return <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-  </svg>
-}
+const NotificationIcon: React.FC<{ className?: string }> = ({ className }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-6 w-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={1}
+        d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+      />
+    </svg>
+  );
+};
 
 const Navbar: React.FC<{}> = () => {
   return (
@@ -83,9 +113,9 @@ const Navbar: React.FC<{}> = () => {
                 <li>
                   <Link href="/notification" passHref>
                     <span className="nav-link">
-                      <span className='relative mr-2'>
-                      <span className="absolute block w-2 h-2 rounded bg-primary -right-0 -top-1" />
-                      <NotificationIcon />
+                      <span className="relative mr-2">
+                        <span className="absolute block w-2 h-2 rounded bg-primary -right-0 -top-1" />
+                        <NotificationIcon />
                       </span>
                       <span>Notification</span>
                     </span>
@@ -105,18 +135,18 @@ const Navbar: React.FC<{}> = () => {
           </header>
         </div>
         <h6 className="mt-10 mb-4">
-            Example of &nbsp; {getPrimaryColor("`Navbar JSX`")}
+          Example of &nbsp; {getPrimaryColor("`Navbar JSX`")}
         </h6>
-        <CodeSnippet language={'jsx'}>
-            {navbarDataJSX}
-        </CodeSnippet>
+        <CodeSnippet language={"jsx"}>{navbarDataJSX}</CodeSnippet>
         <h6 className="mt-10 mb-4">
-            Example of &nbsp; {getPrimaryColor("`Navbar HTML`")}
+          Example of &nbsp; {getPrimaryColor("`Navbar HTML`")}
         </h6>
-        <CodeSnippet language={'jsx'}>
-            {navbarDataHTML}
-        </CodeSnippet>
-        
+        <CodeSnippet language={"jsx"}>{navbarDataHTML}</CodeSnippet>
+        <p className="my-6">
+          To apply that style please add the snippet below to{" "}
+          {getPrimaryColor("`global.css`")}
+        </p>
+        <CodeSnippet language={"scss"}>{navLayerData}</CodeSnippet>
       </div>
     </DocumentationLayout>
   );

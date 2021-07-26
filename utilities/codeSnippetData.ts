@@ -2203,3 +2203,19 @@ export const navbarDataHTML = `<header class="nav-container">
   </ul>
 </div>
 </header>`
+
+export const navLayerData = `//navbar
+@layer base {
+  .nav-container {
+    @apply sticky top-0 z-30 h-[70px] mx-auto bg-white shadow w-full
+  }
+  .nav-container-layout {
+    @apply flex items-center justify-between h-full max-w-6xl mx-auto
+  }
+  .nav-list {
+    @apply flex items-center space-x-6
+  }
+  .nav-link {
+    @apply flex items-center cursor-pointer
+  }
+}`
