@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import React from "react";
 import DocumentationLayout from "../../../components/docs/DocumentationLayout";
 import CustomHead from "../../../components/global/CustomHead";
@@ -71,6 +72,8 @@ const NotificationIcon: React.FC<{ className?: string }> = ({ className }) => {
 };
 
 const Navbar: React.FC<{}> = () => {
+  const [show, setShow] = React.useState(false);
+  
   return (
     <DocumentationLayout parentSlug="layout" childSlug="navbar">
       <div>
@@ -80,7 +83,7 @@ const Navbar: React.FC<{}> = () => {
         <h6 className="mt-10 mb-4">
           {getPrimaryColor("`Navbar`")} &nbsp; example
         </h6>
-        <div className="bg-primary-100 rounded-md p-4 mt-2">
+        <div className="bg-primary-100 rounded-md p-4 mt-2 relative">
           <header className="nav-container">
             <div className="nav-container-layout">
               <Link href="/" passHref>
@@ -123,7 +126,10 @@ const Navbar: React.FC<{}> = () => {
                 </li>
 
                 <li>
-                  <button className="flex items-center focus:outline-none">
+                  <button
+                    className="flex items-center focus:outline-none"
+                    onClick={() => setShow(!show)}
+                  >
                     <span>Alam Haq</span>
                     <span className="flex items-center justify-center ml-2 text-lg text-white bg-pink-500 rounded-full w-9 h-9">
                       AH
@@ -132,6 +138,43 @@ const Navbar: React.FC<{}> = () => {
                 </li>
               </ul>
             </div>
+            {show && (
+            <ul className="dropdown-list dropdown-right mt-6" role="menu">
+            <li role="none">
+              <a
+                className="dropdown-item__link"
+                role="menuitem"
+                href="/?path=/story/dropdown--default"
+              >
+                Anchor as an item
+              </a>
+            </li>
+            <li role="none">
+              <button className="dropdown-item__button" role="menuitem">
+                Button as an item
+              </button>
+            </li>
+            <li role="none">
+              <button
+                className="dropdown-item__button justify-between"
+                role="menuitem"
+              >
+                <span>Custom design</span>
+                <span className="badge badge-primary">13</span>
+              </button>
+            </li>
+            <li role="none">
+              <button
+                aria-disabled="true"
+                className="dropdown-item__disabled"
+                disabled
+                role="menuitem"
+              >
+                Disabled item
+              </button>
+            </li>
+          </ul>
+          )}
           </header>
         </div>
         <h6 className="mt-10 mb-4">

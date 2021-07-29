@@ -2,7 +2,7 @@ import React from 'react';
 import DocumentationLayout from "../../../components/docs/DocumentationLayout";
 import CustomHead from "../../../components/global/CustomHead";
 import CodeLiveEditor from "../../../components/global/CodeLiveEditor";
-import {buttonDataSizes,buttonDataVariant,buttonDataIconVariants,buttonLayerSnippet} from "../../../utilities/codeSnippetData";
+import {buttonDataSizes,buttonDataVariant,buttonDataIconVariants,buttonLayerSnippet,buttonDataBlockElement} from "../../../utilities/codeSnippetData";
 import {getPrimaryColor} from "../../../utilities/utilFunction";
 import CodeSnippet from "../../../components/global/CodeSnippet";
 
@@ -22,6 +22,9 @@ const Buttons:React.FC<{}> =() => {
                 <CodeLiveEditor hasCopy code={buttonDataVariant} />
                 <h6 className='mt-10 mb-4'>{getPrimaryColor('`Button with Icon`')} &nbsp;live example</h6>
                 <CodeLiveEditor hasCopy code={buttonDataIconVariants} />
+                <h6 className='mt-10 mb-4'>{getPrimaryColor('`Button with Icon`')} &nbsp;live example</h6>
+                <CodeLiveEditor hasCopy code={buttonDataBlockElement} />
+
                 <p className='py-6'>
                     Please Copy the snippet in {getPrimaryColor('`global.css`')} to apply these style
                 </p>
