@@ -1,6 +1,5 @@
-
 export const typographySnippet = {
-    jsx: `<div>
+  jsx: `<div>
   <h1>h1 - bKash</h1>
   <h2>h2 - bKash</h2>
   <h3>h3 - bKash</h3>
@@ -9,7 +8,7 @@ export const typographySnippet = {
   <h6>h6 - bKash</h6>
   <p>p - bKash</p>
 </div>`,
-    html: `<div>
+  html: `<div>
   <h1>h1 - bKash</h1>
   <h2>h2 - bKash</h2>
   <h3>h3 - bKash</h3>
@@ -18,10 +17,10 @@ export const typographySnippet = {
   <h6>h6 - bKash</h6>
   <p>p - bKash</p>
 </div>`,
-}
+};
 
 export const typographyExactSnippet = {
-    jsx: `<div>
+  jsx: `<div>
 \t<p className="font-sans font-black text-6xl text-gray-700 my-6">h1 - bKash</p>
 \t<p className="font-sans font-extrabold text-5xl text-gray-700 my-5">h2 - bKash</p>
 \t<p className="font-sans font-bold text-4xl text-gray-700 my-4">h3 - bKash</p>
@@ -33,7 +32,7 @@ export const typographyExactSnippet = {
 \t\ta link
 \t</a>
 </div>`,
-    html: `<div>
+  html: `<div>
 \t<p class="font-sans font-black text-6xl text-gray-700 my-6">h1 - bKash</p>
 \t<p class="font-sans font-extrabold text-5xl text-gray-700 my-5">h2 - bKash</p>
 \t<p class="font-sans font-bold text-4xl text-gray-700 my-4">h3 - bKash</p>
@@ -45,7 +44,7 @@ export const typographyExactSnippet = {
 \t\ta link
 \t</a>
 </div>;`,
-}
+};
 
 export const tailwindLayerExtention = `@layer base {
   h1 {
@@ -72,7 +71,7 @@ export const tailwindLayerExtention = `@layer base {
   p,div {
     @apply text-gray-700
   }
-}`
+}`;
 
 export const tailwindFontColorImport = `theme: {
     extend: {
@@ -93,20 +92,19 @@ export const tailwindFontColorImport = `theme: {
         }
       },
     },
-  },`
-
+  },`;
 
 export const shadowExampleLive = {
-    jsx: `<div className="shadow-sm rest-shadow-classes">
+  jsx: `<div className="shadow-sm rest-shadow-classes">
   Shadow Sample
 </div>`,
-    html: `<div class="shadow-sm rest-shadow-classes">
+  html: `<div class="shadow-sm rest-shadow-classes">
   Shadow Sample
-</div>`
-}
+</div>`,
+};
 
 export const buttonDataSizes = {
-    jsx: `<div className="layout">
+  jsx: `<div className="layout">
   <button
     type="button"
     className="btn btn-primary btn-small"
@@ -138,7 +136,7 @@ export const buttonDataSizes = {
     extra large
   </button>
 </div>`,
-    html: `<div class="layout">
+  html: `<div class="layout">
   <button
     type="button"
     class="btn btn-primary btn-small"
@@ -169,11 +167,11 @@ export const buttonDataSizes = {
   >
     extra large
   </button>
-</div>`
-}
+</div>`,
+};
 
 export const buttonDataVariant = {
-    jsx: `<div className="layout">
+  jsx: `<div className="layout">
     <button
       type="button"
       className="btn btn-regular btn-outline"
@@ -217,7 +215,7 @@ export const buttonDataVariant = {
       link
     </button>
   </div>`,
-    html: `<div class="layout">
+  html: `<div class="layout">
     <button
       type="button"
       class="btn btn-regular btn-outline"
@@ -260,11 +258,11 @@ export const buttonDataVariant = {
     >
       link
     </button>
-  </div>`
-}
+  </div>`,
+};
 
 export const buttonDataIconVariants = {
-    jsx: `() => {
+  jsx: `() => {
   const Icon = ({ className }) => {
     return (
       <svg
@@ -318,7 +316,7 @@ export const buttonDataIconVariants = {
   </button>
 </div>)
 }`,
-    html: `<div className="layout">
+  html: `<div className="layout">
   <button type="button" className="btn btn-regular btn-primary btn-disabled">
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -402,8 +400,64 @@ export const buttonDataIconVariants = {
       />
     </svg>
   </button>
-</div>`
-}
+</div>`,
+};
+
+export const buttonDataBlockElement = {
+  jsx: `() => {
+    const Icon = ({ className }) => {
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className={className}
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M14 5l7 7m0 0l-7 7m7-7H3"
+          />
+        </svg>
+      );
+    };
+  
+    return (
+      <div className="w-96  mx-auto">
+        <button
+          type="button"
+          className="btn btn-regular btn-primary btn-block justify-between"
+        >
+          Login <Icon className="btn-icon-regular btn-icon-right" />
+        </button>
+      </div>
+    );
+  }`,
+  html: `<div className="w-96  mx-auto">
+  <button
+    type="button"
+    className="btn btn-regular btn-primary btn-block justify-between"
+  >
+    Login 
+    <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="btn-icon-regular btn-icon-right"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width={2}
+            d="M14 5l7 7m0 0l-7 7m7-7H3"
+          />
+    </svg>
+  </button>
+</div>`,
+};
 
 export const iconPackReactSample = `import { BeakerIcon } from '@heroicons/react/solid'
 
@@ -414,7 +468,7 @@ function MyComponent() {
       <p>...</p>
     </div>
   )
-}`
+}`;
 
 export const iconPackSvgSample = `<svg class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
   <path
@@ -425,9 +479,8 @@ export const iconPackSvgSample = `<svg class="h-6 w-6 text-gray-500" fill="none"
   />
 </svg>`;
 
-
 export const avatarSizesData = {
-    jsx: `<div className="layout">
+  jsx: `<div className="layout">
   <div
     className="avatar-container w-6 h-6"
     role="img"
@@ -479,7 +532,7 @@ export const avatarSizesData = {
     />
   </div>
 </div>`,
-    html: `<div class="layout">
+  html: `<div class="layout">
   <div
     class="avatar-container w-6 h-6"
     role="img"
@@ -531,10 +584,10 @@ export const avatarSizesData = {
     />
   </div>
 </div>`,
-}
+};
 
 export const avatarSizesWithStatusData = {
-    jsx: `<div className="layout">
+  jsx: `<div className="layout">
   <div
     className="avatar-container w-6 h-6"
     role="img"
@@ -598,7 +651,7 @@ export const avatarSizesWithStatusData = {
     />
   </div>
 </div>`,
-    html: `<div class="layout">
+  html: `<div class="layout">
   <div
     class="avatar-container w-6 h-6"
     role="img"
@@ -661,11 +714,11 @@ export const avatarSizesWithStatusData = {
       aria-hidden="true"
     />
   </div>
-</div>`
+</div>`,
 };
 
 export const avatarStatusVariantData = {
-    jsx: `<div className="layout">
+  jsx: `<div className="layout">
   <div
     className="avatar-container w-10 h-10"
     role="img"
@@ -749,7 +802,7 @@ export const avatarStatusVariantData = {
     />
   </div>
 </div>`,
-    html: `<div class="layout">
+  html: `<div class="layout">
   <div
     class="avatar-container w-10 h-10"
     role="img"
@@ -832,11 +885,11 @@ export const avatarStatusVariantData = {
       aria-hidden="true"
     />
   </div>
-</div>`
-}
+</div>`,
+};
 
 export const avatarInitialWithStatus = {
-    jsx: `<div className="layout">
+  jsx: `<div className="layout">
   <div
     className="avatar-container w-8 h-8"
     role="img"
@@ -870,7 +923,7 @@ export const avatarInitialWithStatus = {
     ></div>
   </div>
 </div>`,
-    html: `<div class="layout">
+  html: `<div class="layout">
   <div
     class="avatar-container w-8 h-8"
     role="img"
@@ -904,7 +957,7 @@ export const avatarInitialWithStatus = {
     ></div>
   </div>
 </div>`,
-}
+};
 
 export const avatarLayerSnippet = `@layer base {
   .avatar-container {
@@ -922,10 +975,10 @@ export const avatarLayerSnippet = `@layer base {
   .avatar-initial {
     @apply flex items-center justify-center w-full h-full rounded-full text-sm;
   }
-}`
+}`;
 
 export const badgeData = {
-    jsx: `<div className="layout">
+  jsx: `<div className="layout">
   <span className="badge badge-neutral">
     Neutral
   </span>
@@ -942,7 +995,7 @@ export const badgeData = {
     Danger
   </span>
 </div>`,
-    html: `<div class="layout">
+  html: `<div class="layout">
   <span class="badge badge-neutral">
     Neutral
   </span>
@@ -958,8 +1011,8 @@ export const badgeData = {
   <span class="badge badge-danger">
     Danger
   </span>
-</div>`
-}
+</div>`,
+};
 
 export const badgeLayerSnippet = `//badge
 @layer base {
@@ -981,7 +1034,7 @@ export const badgeLayerSnippet = `//badge
   .badge-warning {
     @apply  text-yellow-700 bg-yellow-100 dark:bg-yellow-700 dark:text-yellow-100
   }
-}`
+}`;
 
 export const buttonLayerSnippet = `//button
 @layer base {
@@ -1042,10 +1095,10 @@ export const buttonLayerSnippet = `//button
   .btn-disabled {
     @apply opacity-50 cursor-not-allowed
   }
-}`
+}`;
 
 export const inputVariant = {
-    jsx: `<div>
+  jsx: `<div>
   <div className="layout">
     <label className="input-label">
       <span>Name</span>
@@ -1079,7 +1132,25 @@ export const inputVariant = {
       </svg>
     </label>
   </div>
-  <div className="layout mt-2">
+  <div className="layout mt-2 flex items-start">
+  <label className="relative input-label">
+      <span>Search</span>
+      <input className="input input-active pr-8" type="text" />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-4 h-4 absolute bottom-3 right-2.5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+        />
+      </svg>
+    </label>
     <label className="input-label">
       <span>email</span>
       <input
@@ -1097,8 +1168,16 @@ export const inputVariant = {
       <span className="helper helper-invalid">Password too short</span>
     </label>
   </div>
+  <div className="layout mt-2">
+  <label className="input-label">
+     <span>Description</span>
+     <textarea
+      className="input input-active"
+     />
+  </label>
+  </div>
 </div>`,
-    html: `<div>
+  html: `<div>
   <div class="layout">
     <label class="input-label">
       <span>Name</span>
@@ -1132,7 +1211,25 @@ export const inputVariant = {
       </svg>
     </label>
   </div>
-  <div class="layout mt-2">
+  <div class="layout mt-2 flex items-start">
+  <label class="relative input-label">
+      <span>Search</span>
+      <input class="input input-active pr-8" type="text" />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="w-4 h-4 absolute bottom-3 right-2.5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+        />
+      </svg>
+    </label>
     <label class="input-label">
       <span>email</span>
       <input
@@ -1150,8 +1247,16 @@ export const inputVariant = {
       <span class="helper helper-invalid">Password too short</span>
     </label>
   </div>
-</div>`
-}
+  <div class="layout mt-2">
+  <label class="input-label">
+     <span>Description</span>
+     <textarea
+      class="input input-active"
+     />
+  </label>
+  </div>
+</div>`,
+};
 
 export const inputLayerSnippet = `@layer base {
   .input {
@@ -1184,10 +1289,10 @@ export const inputLayerSnippet = `@layer base {
   .helper-invalid {
     @apply text-red-600 dark:text-red-400
   }
-}`
+}`;
 
 export const inputVariantType = {
-    jsx: `<div className="layout">
+  jsx: `<div className="layout">
   <label className="input-label">
     <span>Select Your Gender</span>
     <label className="input-label">
@@ -1219,7 +1324,7 @@ export const inputVariantType = {
     </label>
   </label>
 </div>`,
-    html: `<div class="layout">
+  html: `<div class="layout">
   <label class="input-label">
     <span>Select Your Gender</span>
     <label class="input-label">
@@ -1250,11 +1355,11 @@ export const inputVariantType = {
       <span class="ml-2">Other</span>
     </label>
   </label>
-</div>`
-}
+</div>`,
+};
 
 export const dropdownSample = {
-    jsx: `<div className="relative mb-40 block w-min pl-32">
+  jsx: `<div className="relative mb-40 block w-min pl-32">
   <button className="btn btn-primary btn-regular"> Dropdown </button>
   <ul
     className="dropdown-list dropdown-right"
@@ -1300,7 +1405,7 @@ export const dropdownSample = {
     </li>
   </ul>
 </div>`,
-    html: `<div className="relative mb-40 pr-20">
+  html: `<div className="relative mb-40 pr-20">
   <button className="btn btn-primary btn-regular"> Dropdown </button>
   <ul
     className="dropdown-list dropdown-left"
@@ -1345,8 +1450,8 @@ export const dropdownSample = {
       </button>
     </li>
   </ul>
-</div>`
-}
+</div>`,
+};
 
 export const dropdwonCodeSnippet = `@layer base {
   .dropdown-list {
@@ -1367,10 +1472,10 @@ export const dropdwonCodeSnippet = `@layer base {
   .dropdown-item__disabled {
     @apply inline-flex items-center cursor-pointer w-full px-4 py-2 text-sm text-gray-700 focus:outline-none focus:bg-gray-100 focus:text-gray-900 opacity-50 cursor-not-allowed
   }
-}`
+}`;
 
 export const alertNeutralExample = {
-    jsx: `<div>
+  jsx: `<div>
   <div className="alert alert-neutral" role="alert">
     <button className="alert-close" aria-label="close">
       <svg
@@ -1401,7 +1506,7 @@ export const alertNeutralExample = {
     This is a neutral alert.
   </div>
 </div>`,
-    html: `<div>
+  html: `<div>
   <div
   class="alert alert-neutral"
   role="alert"
@@ -1434,10 +1539,10 @@ export const alertNeutralExample = {
   </svg>
   This is a neutral alert.
 </div>
-</div>`
-}
+</div>`,
+};
 export const alertSuccessExample = {
-    jsx: `<div>
+  jsx: `<div>
   <div className="alert alert-success" role="alert">
     <button className="alert-close" aria-label="close">
       <svg
@@ -1468,7 +1573,7 @@ export const alertSuccessExample = {
     This is a success alert.
   </div>
 </div>`,
-    html: `<div>
+  html: `<div>
   <div
   class="alert alert-success"
   role="alert"
@@ -1501,11 +1606,11 @@ export const alertSuccessExample = {
   </svg>
   This is a success alert.
 </div>
-</div>`
-}
+</div>`,
+};
 
 export const alertDangerExample = {
-    jsx: `<div>
+  jsx: `<div>
   <div className="alert alert-danger" role="alert">
     <button className="alert-close" aria-label="close">
       <svg
@@ -1536,7 +1641,7 @@ export const alertDangerExample = {
     This is a danger alert.
   </div>
 </div>`,
-    html: `<div>
+  html: `<div>
   <div
   class="alert alert-danger"
   role="alert"
@@ -1569,11 +1674,11 @@ export const alertDangerExample = {
   </svg>
   This is a danger alert.
 </div>
-</div>`
-}
+</div>`,
+};
 
 export const alertWarningExample = {
-    jsx: `<div>
+  jsx: `<div>
   <div className="alert alert-warning" role="alert">
     <button className="alert-close" aria-label="close">
       <svg
@@ -1604,7 +1709,7 @@ export const alertWarningExample = {
     This is a warning alert.
   </div>
 </div>`,
-    html: `<div>
+  html: `<div>
   <div
   class="alert alert-warning"
   role="alert"
@@ -1637,8 +1742,8 @@ export const alertWarningExample = {
   </svg>
   This is a warning alert.
 </div>
-</div>`
-}
+</div>`,
+};
 
 export const alertLayerSnippet = `
 //alert
@@ -1685,7 +1790,7 @@ export const alertLayerSnippet = `
   .alert-icon-info {
     @apply text-blue-400 dark:text-blue-500
   }
-}`
+}`;
 
 export const cardBasic = {
   jsx: `<div>
@@ -1720,7 +1825,7 @@ export const cardBasic = {
     </p>
   </div>
 </div>`,
-html: `<div>
+  html: `<div>
 <div class="card bg-white p-4 mb-4">
   <p class="text-md font-bold mb-2">Revenue</p>
   <p>
@@ -1751,8 +1856,8 @@ cum numquam, sed amet ratione! Ratione, nihil dolorum.
     cum numquam, sed amet ratione! Ratione, nihil dolorum.
   </p>
 </div>
-</div>`
-}
+</div>`,
+};
 
 export const cardStat = {
   jsx: `() => {
@@ -1934,7 +2039,7 @@ export const cardStat = {
     </dd>
   </div>
 </div>`,
-}
+};
 
 export const cardLayerSnippet = `@layer base {
   .card {
@@ -1965,7 +2070,7 @@ export const cardLayerSnippet = `@layer base {
     @apply self-center flex-shrink-0
   }
 }
-`
+`;
 
 export const modalSampleData = {
   jsx: `() => {
@@ -2058,8 +2163,8 @@ export const modalSampleData = {
           Go to Saved Bank
         </button>
         </div>
-  </div>`
-}
+  </div>`,
+};
 
 export const modalLayerData = `@layer base {
   .modal__backdrop {
@@ -2074,8 +2179,7 @@ export const modalLayerData = `@layer base {
   .modal__content {
     @apply mb-6 text-sm text-gray-700 dark:text-gray-400 flex flex-col items-center
   }
-}`
-
+}`;
 
 export const navbarDataJSX = `<header className="nav-container">
 <div className="nav-container-layout">
@@ -2128,81 +2232,120 @@ export const navbarDataJSX = `<header className="nav-container">
     </li>
   </ul>
 </div>
-</header>`
+<ul className="dropdown-list dropdown-right mt-6" role="menu">
+  <li role="none">
+    <a
+      className="dropdown-item__link"
+      role="menuitem"
+      href="/?path=/story/dropdown--default"
+    >
+      Anchor as an item
+    </a>
+  </li>
+  <li role="none">
+    <button className="dropdown-item__button" role="menuitem">
+      Button as an item
+    </button>
+  </li>
+  <li role="none">
+    <button className="dropdown-item__button justify-between" role="menuitem">
+      <span>Custom design</span>
+      <span className="badge badge-primary">13</span>
+    </button>
+  </li>
+  <li role="none">
+    <button
+      aria-disabled="true"
+      className="dropdown-item__disabled"
+      disabled
+      role="menuitem"
+    >
+      Disabled item
+    </button>
+  </li>
+</ul>
+</header>`;
 
-export const navbarDataHTML = `<header class="nav-container">
-<div class="nav-container-layout">
-  <a rel="noreferrer noopener" href="/" target="_blank">
-    <img src={bkashLogo} alt="bKash Logo" width={98} height={45} />
-  </a>
-  <ul class="nav-list">
+export const navbarDataHTML = `<header className="nav-container">
+<div className="nav-container-layout">
+  <Link href="/" passHref>
+    <Image src={bkashLogo} alt="bKash Logo" width={98} height={45} />
+  </Link>
+  <ul className="nav-list">
     <li>
-      <a rel="noreferrer noopener" href="/dashboard" target="_blank">
-        <span class="nav-link text-primary font-medium">
-          <DashboardIcon class="mr-2 text-primary" />
+      <Link href="/dashboard" passHref>
+        <span className="nav-link text-primary font-medium">
+          <DashboardIcon className="mr-2 text-primary" />
           <span>Dashboard</span>
         </span>
-      </a>
+      </Link>
     </li>
 
     <li>
-      <a rel="noreferrer noopener" href="/send-money" target="_blank">
-        <span class="nav-link">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
-            />
-          </svg>
+      <Link href="/send-money" passHref>
+        <span className="nav-link">
+          <AddMoney className="mr-2" />
           <span>Send Money</span>
         </span>
-      </a>
+      </Link>
     </li>
 
     <li>
-      <a rel="noreferrer noopener" href="/notification" target="_blank">
-        <span class="nav-link">
-          <span class="relative mr-2">
-            <span class="absolute block w-2 h-2 rounded bg-primary -right-0 -top-1" />
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-              />
-            </svg>
+      <Link href="/notification" passHref>
+        <span className="nav-link">
+          <span className="relative mr-2">
+            <span className="absolute block w-2 h-2 rounded bg-primary -right-0 -top-1" />
+            <NotificationIcon />
           </span>
           <span>Notification</span>
         </span>
-      </a>
+      </Link>
     </li>
 
     <li>
-      <button class="flex items-center focus:outline-none">
+      <button className="flex items-center focus:outline-none">
         <span>Alam Haq</span>
-        <span class="flex items-center justify-center ml-2 text-lg text-white bg-pink-500 rounded-full w-9 h-9">
+        <span className="flex items-center justify-center ml-2 text-lg text-white bg-pink-500 rounded-full w-9 h-9">
           AH
         </span>
       </button>
     </li>
   </ul>
 </div>
-</header>`
+//dropdown
+<ul class="dropdown-list dropdown-right mt-6" role="menu">
+  <li role="none">
+    <a
+      class="dropdown-item__link"
+      role="menuitem"
+      href="/?path=/story/dropdown--default"
+    >
+      Anchor as an item
+    </a>
+  </li>
+  <li role="none">
+    <button class="dropdown-item__button" role="menuitem">
+      Button as an item
+    </button>
+  </li>
+  <li role="none">
+    <button class="dropdown-item__button justify-between" role="menuitem">
+      <span>Custom design</span>
+      <span className="badge badge-primary">13</span>
+    </button>
+  </li>
+  <li role="none">
+    <button
+      aria-disabled="true"
+      class="dropdown-item__disabled"
+      disabled
+      role="menuitem"
+    >
+      Disabled item
+    </button>
+  </li>
+</ul>
+</header>`;
 
 export const navLayerData = `//navbar
 @layer base {
@@ -2218,4 +2361,4 @@ export const navLayerData = `//navbar
   .nav-link {
     @apply flex items-center cursor-pointer
   }
-}`
+}`;

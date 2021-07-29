@@ -181,7 +181,7 @@
 
 @layer base {
   .dropdown-list {
-    @apply absolute w-56 mt-2 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5;
+    @apply absolute w-56 mt-2 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-40;
   }
   .dropdown-right {
     @apply right-0 origin-top-right;
