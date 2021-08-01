@@ -26,7 +26,7 @@ const CodeLiveEditor:React.FC<CodeEditorProps> =({code,className,hasCopy=false, 
 
     const Header = () => (
         <div className='flex justify-end items-center'>
-            <div className='mr-2 mt-2'>
+            <div>
             <img src={`${prefix}/bkash-small.svg`} loading={'lazy'} width={30} height={30} alt='bkash Branding' />
             </div>
             <div>

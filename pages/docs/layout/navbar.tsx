@@ -88,7 +88,7 @@ const Navbar: React.FC<{}> = () => {
             <div className="nav-container-layout">
               <Link href="/" passHref>
                 <img
-                  src={`${prefix}/bkash-small.svg`}
+                  src={`${prefix}/bkash.svg`}
                   alt="bKash Logo"
                   width={98}
                   height={45}
