@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
@@ -6,8 +7,8 @@ import Link from 'next/link';
 import {useRouter} from "next/router";
 import clsx from "clsx";
 import bkashLogo from './../../public/bkash.svg';
-import bkashSmall from './../../public/bkash-small.svg';
 import Image from 'next/image';
+import { prefix } from '../../utilities/prefix';
 
 
 export interface Props {
@@ -23,23 +24,21 @@ const IconComponent = () => {
             <div className="flex-shrink-0">
                 <Link href={'/'} passHref>
                     <div className="block lg:hidden h-8 w-auto cursor-pointer">
-                    <Image
+                    <img
                         width={40}
                         height={40}
-                        src={bkashSmall.src}
+                        src={`${prefix}/bkash-small.svg`}
                         alt="bkash Small Logo"
                     />
                     </div>
                 </Link>
                 <Link href={'/'} passHref>
                     <div className="hidden lg:block h-8 w-auto lg:cursor-pointer" >
-                     <Image
-                        placeholder={'blur'}
-                        blurDataURL={bkashLogo.src}
+                     <img
                         width={100}
                         height={40}
-                        src={bkashLogo.src}
-                        alt="bkash Small Logo"
+                        src={`${prefix}/bkash.svg`}
+                        alt="bkash Logo"
                      />
                     </div>
                 </Link>

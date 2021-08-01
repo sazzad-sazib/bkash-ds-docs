@@ -1,11 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable @next/next/no-html-link-for-pages */
 import React from 'react';
 import {LiveProvider,LiveEditor,LiveError,LivePreview} from "react-live";
 import dracula from 'prism-react-renderer/themes/dracula'
 import CodeSwitcher from "./CodeSwitcher";
-import Image from 'next/image';
-import bKashImage from './../../public/bkash-small.svg';
-import {ClipboardCheckIcon, ClipboardCopyIcon} from "@heroicons/react/solid";
 import {copyTextToClipboard} from "../../utilities/utilFunction";
+import { prefix } from '../../utilities/prefix';
 
 interface codeType {
     jsx: string;
@@ -27,7 +27,7 @@ const CodeLiveEditor:React.FC<CodeEditorProps> =({code,className,hasCopy=false, 
     const Header = () => (
         <div className='flex justify-end items-center'>
             <div className='mr-2 mt-2'>
-            <Image src={bKashImage} loading={'lazy'} width={30} height={30} alt='bkash Branding' />
+            <img src={`${prefix}/bkash-small.svg`} loading={'lazy'} width={30} height={30} alt='bkash Branding' />
             </div>
             <div>
                 <CodeSwitcher options={options} active={activeType} onChange={setActiveType} hasCopy={hasCopy} handleCopy={()=>copyTextToClipboard(code[activeType])} />

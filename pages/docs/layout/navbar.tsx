@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable @next/next/no-html-link-for-pages */
 import React from "react";
 import DocumentationLayout from "../../../components/docs/DocumentationLayout";
@@ -9,9 +10,8 @@ import {
   navLayerData,
 } from "./../../../utilities/codeSnippetData";
 import Link from "next/link";
-import Image from "next/image";
-import bkashLogo from "./../../../public/bkash.svg";
 import CodeSnippet from "./../../../components/global/CodeSnippet";
+import { prefix } from "../../../utilities/prefix";
 
 const DashboardIcon: React.FC<{ className: string }> = ({ className }) => {
   return (
@@ -87,8 +87,8 @@ const Navbar: React.FC<{}> = () => {
           <header className="nav-container">
             <div className="nav-container-layout">
               <Link href="/" passHref>
-                <Image
-                  src={bkashLogo}
+                <img
+                  src={`${prefix}/bkash-small.svg`}
                   alt="bKash Logo"
                   width={98}
                   height={45}

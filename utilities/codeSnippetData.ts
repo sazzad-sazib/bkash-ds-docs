@@ -2184,7 +2184,7 @@ export const modalLayerData = `@layer base {
 export const navbarDataJSX = `<header className="nav-container">
 <div className="nav-container-layout">
   <Link href="/" passHref>
-    <Image
+    <img
       src={bkashLogo}
       alt="bKash Logo"
       width={98}
@@ -2269,7 +2269,7 @@ export const navbarDataJSX = `<header className="nav-container">
 export const navbarDataHTML = `<header className="nav-container">
 <div className="nav-container-layout">
   <Link href="/" passHref>
-    <Image src={bkashLogo} alt="bKash Logo" width={98} height={45} />
+    <img src={bkashLogo} alt="bKash Logo" width={98} height={45} />
   </Link>
   <ul className="nav-list">
     <li>

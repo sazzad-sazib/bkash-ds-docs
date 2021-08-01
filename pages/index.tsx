@@ -1,9 +1,9 @@
 import React from "react";
-import cover from './../assets/images/cover.webp';
 import Link from 'next/link';
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { prefix } from "../utilities/prefix";
 
 interface ctaProps {
     name: string;
@@ -75,7 +75,7 @@ const RightSideContent = () => {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
                 className="h-full w-full object-cover sm:h-full md:h-full lg:w-full lg:h-full"
-                src={`${cover.src}`}
+                src={`${prefix}/cover.webp`}
                 alt="cover"
             />
         </div>
