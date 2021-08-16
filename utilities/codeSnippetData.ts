@@ -21,12 +21,12 @@ export const typographySnippet = {
 
 export const typographyExactSnippet = {
   jsx: `<div>
-\t<p className="font-sans font-black text-6xl text-gray-700 my-6">h1 - bKash</p>
-\t<p className="font-sans font-extrabold text-5xl text-gray-700 my-5">h2 - bKash</p>
-\t<p className="font-sans font-bold text-4xl text-gray-700 my-4">h3 - bKash</p>
-\t<p className="font-sans font-semibold text-3xl text-gray-700 my-3">h4 - bKash</p>
-\t<p className="font-sans font-medium text-2xl text-gray-700 my-2">h5 - bKash</p>
-\t<p className="font-sans font-medium text-xl text-gray-700 my-2">h6 - bKash</p>
+\t<p className="my-6 font-sans text-6xl font-black text-gray-700">h1 - bKash</p>
+\t<p className="my-5 font-sans text-5xl font-extrabold text-gray-700">h2 - bKash</p>
+\t<p className="my-4 font-sans text-4xl font-bold text-gray-700">h3 - bKash</p>
+\t<p className="my-3 font-sans text-3xl font-semibold text-gray-700">h4 - bKash</p>
+\t<p className="my-2 font-sans text-2xl font-medium text-gray-700">h5 - bKash</p>
+\t<p className="my-2 font-sans text-xl font-medium text-gray-700">h6 - bKash</p>
 \t<p className="text-gray-700">p - bKash</p>
 \t<a className="font-medium underline text-primary" href="www.bkash.com">
 \t\ta link
@@ -425,20 +425,20 @@ export const buttonDataBlockElement = {
     };
   
     return (
-      <div className="w-96  mx-auto">
+      <div className="mx-auto w-96">
         <button
           type="button"
-          className="btn btn-regular btn-primary btn-block justify-between"
+          className="justify-between btn btn-regular btn-primary btn-block"
         >
           Login <Icon className="btn-icon-regular btn-icon-right" />
         </button>
       </div>
     );
   }`,
-  html: `<div className="w-96  mx-auto">
+  html: `<div className="mx-auto w-96">
   <button
     type="button"
-    className="btn btn-regular btn-primary btn-block justify-between"
+    className="justify-between btn btn-regular btn-primary btn-block"
   >
     Login 
     <svg
@@ -464,7 +464,7 @@ export const iconPackReactSample = `import { BeakerIcon } from '@heroicons/react
 function MyComponent() {
   return (
     <div>
-      <BeakerIcon className="h-5 w-5 text-blue-500"/>
+      <BeakerIcon className="w-5 h-5 text-blue-500"/>
       <p>...</p>
     </div>
   )
@@ -482,7 +482,7 @@ export const iconPackSvgSample = `<svg class="h-6 w-6 text-gray-500" fill="none"
 export const avatarSizesData = {
   jsx: `<div className="layout">
   <div
-    className="avatar-container w-6 h-6"
+    className="w-6 h-6 avatar-container"
     role="img"
     aria-label="Avatar of Unknown "
   >
@@ -499,7 +499,7 @@ export const avatarSizesData = {
   </div>
 
   <div
-    className="avatar-container w-8 h-8"
+    className="w-8 h-8 avatar-container"
     role="img"
     aria-label="Avatar of Unknown "
   >
@@ -516,7 +516,7 @@ export const avatarSizesData = {
   </div>
 
   <div
-    className="avatar-container w-10 h-10"
+    className="w-10 h-10 avatar-container"
     role="img"
     aria-label="Avatar of Unknown "
   >
@@ -589,7 +589,7 @@ export const avatarSizesData = {
 export const avatarSizesWithStatusData = {
   jsx: `<div className="layout">
   <div
-    className="avatar-container w-6 h-6"
+    className="w-6 h-6 avatar-container"
     role="img"
     aria-label="Avatar of Unknown "
   >
@@ -610,7 +610,7 @@ export const avatarSizesWithStatusData = {
   </div>
 
   <div
-    className="avatar-container w-8 h-8"
+    className="w-8 h-8 avatar-container"
     role="img"
     aria-label="Avatar of Unknown "
   >
@@ -622,7 +622,7 @@ export const avatarSizesWithStatusData = {
     />
     <div
       data-testid="statusNode"
-      className="avatar-status bg-green-500 w-2 h-2"
+      className="w-2 h-2 bg-green-500 avatar-status"
     />
     <div
       className="absolute inset-0 rounded-full shadow-inner"
@@ -631,7 +631,7 @@ export const avatarSizesWithStatusData = {
   </div>
 
   <div
-    className="avatar-container w-10 h-10"
+    className="w-10 h-10 avatar-container"
     role="img"
     aria-label="Avatar of Unknown "
   >
@@ -643,7 +643,7 @@ export const avatarSizesWithStatusData = {
     />
     <div
       data-testid="statusNode"
-      className="avatar-status bg-green-500 w-3 h-3"
+      className="w-3 h-3 bg-green-500 avatar-status"
     />
     <div
       className="absolute inset-0 rounded-full shadow-inner"
@@ -720,7 +720,7 @@ export const avatarSizesWithStatusData = {
 export const avatarStatusVariantData = {
   jsx: `<div className="layout">
   <div
-    className="avatar-container w-10 h-10"
+    className="w-10 h-10 avatar-container"
     role="img"
     aria-label="Avatar of Unknown "
   >
@@ -732,7 +732,7 @@ export const avatarStatusVariantData = {
     />
     <div
       data-testid="statusNode"
-      className="avatar-status bg-green-500 w-3 h-3"
+      className="w-3 h-3 bg-green-500 avatar-status"
     />
     <div
       className="avatar-shadow"
@@ -740,7 +740,7 @@ export const avatarStatusVariantData = {
     />
   </div>
   <div
-    className="avatar-container w-10 h-10"
+    className="w-10 h-10 avatar-container"
     role="img"
     aria-label="Avatar of Unknown "
   >
@@ -752,7 +752,7 @@ export const avatarStatusVariantData = {
     />
     <div
       data-testid="statusNode"
-      className="avatar-status bg-yellow-500 w-3 h-3"
+      className="w-3 h-3 bg-yellow-500 avatar-status"
     />
     <div
       className="absolute inset-0 rounded-full shadow-inner"
@@ -761,7 +761,7 @@ export const avatarStatusVariantData = {
   </div>
 
   <div
-    className="avatar-container w-10 h-10"
+    className="w-10 h-10 avatar-container"
     role="img"
     aria-label="Avatar of Unknown "
   >
@@ -773,7 +773,7 @@ export const avatarStatusVariantData = {
     />
     <div
       data-testid="statusNode"
-      className="avatar-status bg-red-500 w-3 h-3"
+      className="w-3 h-3 bg-red-500 avatar-status"
     />
     <div
       className="absolute inset-0 rounded-full shadow-inner"
@@ -782,7 +782,7 @@ export const avatarStatusVariantData = {
   </div>
 
   <div
-    className="avatar-container w-10 h-10"
+    className="w-10 h-10 avatar-container"
     role="img"
     aria-label="Avatar of Unknown "
   >
@@ -794,7 +794,7 @@ export const avatarStatusVariantData = {
     />
     <div
       data-testid="statusNode"
-      className="avatar-status bg-gray-500 w-3 h-3"
+      className="w-3 h-3 bg-gray-500 avatar-status"
     />
     <div
       className="absolute inset-0 rounded-full shadow-inner"
@@ -891,13 +891,13 @@ export const avatarStatusVariantData = {
 export const avatarInitialWithStatus = {
   jsx: `<div className="layout">
   <div
-    className="avatar-container w-8 h-8"
+    className="w-8 h-8 avatar-container"
     role="img"
     aria-label="Avatar of John Doe "
   >
     <div
       data-testid="initialNode"
-      className="avatar-initial bg-gray-200"
+      className="bg-gray-200 avatar-initial"
     >
       JD
     </div>
@@ -907,7 +907,7 @@ export const avatarInitialWithStatus = {
     ></div>
   </div>
   <div
-    className="avatar-container w-8 h-8"
+    className="w-8 h-8 avatar-container"
     role="img"
     aria-label="Avatar of John Doe "
   >
@@ -1115,7 +1115,7 @@ export const inputVariant = {
     </label>
     <label className="relative input-label">
       <span>Search</span>
-      <input className="input input-active pl-8" type="search" />
+      <input className="pl-8 input input-active" type="search" />
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="w-4 h-4 absolute bottom-3 left-2.5"
@@ -1132,10 +1132,10 @@ export const inputVariant = {
       </svg>
     </label>
   </div>
-  <div className="layout mt-2 flex items-start">
+  <div className="flex items-start mt-2 layout">
   <label className="relative input-label">
       <span>Search</span>
-      <input className="input input-active pr-8" type="text" />
+      <input className="pr-8 input input-active" type="text" />
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="w-4 h-4 absolute bottom-3 right-2.5"
@@ -1168,7 +1168,7 @@ export const inputVariant = {
       <span className="helper helper-invalid">Password too short</span>
     </label>
   </div>
-  <div className="layout mt-2">
+  <div className="mt-2 layout">
   <label className="input-label">
      <span>Description</span>
      <textarea
@@ -1359,7 +1359,7 @@ export const inputVariantType = {
 };
 
 export const dropdownSample = {
-  jsx: `<div className="relative mb-40 block w-min pl-32">
+  jsx: `<div className="relative block pl-32 mb-40 w-min">
   <button className="btn btn-primary btn-regular"> Dropdown </button>
   <ul
     className="dropdown-list dropdown-right"
@@ -1384,7 +1384,7 @@ export const dropdownSample = {
     </li>
     <li role="none">
       <button
-        className="dropdown-item__button justify-between"
+        className="justify-between dropdown-item__button"
         role="menuitem"
       >
         <span>Custom design</span>
@@ -1405,7 +1405,7 @@ export const dropdownSample = {
     </li>
   </ul>
 </div>`,
-  html: `<div className="relative mb-40 pr-20">
+  html: `<div className="relative pr-20 mb-40">
   <button className="btn btn-primary btn-regular"> Dropdown </button>
   <ul
     className="dropdown-list dropdown-left"
@@ -1430,7 +1430,7 @@ export const dropdownSample = {
     </li>
     <li role="none">
       <button
-        className="dropdown-item__button justify-between"
+        className="justify-between dropdown-item__button"
         role="menuitem"
       >
         <span>Custom design</span>
@@ -1794,21 +1794,21 @@ export const alertLayerSnippet = `
 
 export const cardBasic = {
   jsx: `<div>
-  <div className="card bg-white p-4 mb-4">
-    <p className="text-md font-bold mb-2">Revenue</p>
+  <div className="p-4 mb-4 bg-white card">
+    <p className="mb-2 font-bold text-md">Revenue</p>
     <p>
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, cum
       commodi a omnis numquam quod? Totam exercitationem quos hic ipsam at qui
       cum numquam, sed amet ratione! Ratione, nihil dolorum.
     </p>
   </div>
-  <div className="card flex bg-white mb-4">
+  <div className="flex mb-4 bg-white card">
   <img
   className="card-cover"
   src="https://images.unsplash.com/photo-1545593169-527754e9edd3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80"
 />
-<div className="ml-2 p-4">
-<p className="text-md font-bold mb-2">Revenue</p>
+<div className="p-4 ml-2">
+<p className="mb-2 font-bold text-md">Revenue</p>
 <p>
   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, cum
   commodi a omnis numquam quod? Totam exercitationem quos hic ipsam at qui
@@ -1816,8 +1816,8 @@ export const cardBasic = {
 </p>
 </div>
   </div>
-  <div className="card bg-primary p-4">
-    <p className="text-md font-bold mb-2 text-white">Revenue</p>
+  <div className="p-4 card bg-primary">
+    <p className="mb-2 font-bold text-white text-md">Revenue</p>
     <p className="text-white">
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, cum
       commodi a omnis numquam quod? Totam exercitationem quos hic ipsam at qui
@@ -1903,7 +1903,7 @@ export const cardStat = {
       <div className="col-span-1 stat-card__container">
           <dt>
             <div className="stat-card__icon">
-              <Icon className="h-6 w-6 text-white" aria-hidden="true" />
+              <Icon className="w-6 h-6 text-white" aria-hidden="true" />
             </div>
             <p className="stat-card__title">
               Cash In
@@ -1917,7 +1917,7 @@ export const cardStat = {
               }
             >
               <ArrowUp
-                className="stat-card__icon-info h-5 w-5 text-green-500"
+                className="w-5 h-5 text-green-500 stat-card__icon-info"
                 aria-hidden="true"
               />
               <span className="sr-only"> 'Decreased' by</span>
@@ -1928,7 +1928,7 @@ export const cardStat = {
         <div className="col-span-1 stat-card__container">
           <dt>
             <div className="stat-card__icon">
-              <Icon className="h-6 w-6 text-white" aria-hidden="true" />
+              <Icon className="w-6 h-6 text-white" aria-hidden="true" />
             </div>
             <p className="stat-card__title">
               Send Money
@@ -1942,7 +1942,7 @@ export const cardStat = {
               }
             >
               <ArrowUp
-                className="stat-card__icon-info h-5 w-5 text-red-500"
+                className="w-5 h-5 text-red-500 stat-card__icon-info"
                 aria-hidden="true"
               />
               <span className="sr-only"> 'Decreased' by</span>
@@ -1976,7 +1976,7 @@ export const cardStat = {
     </dt>
     <dd className="stat-card__info-container">
       <p className="stat-card__info">5000 BDT</p>
-      <p className="stat-card__icon-info-container text-green-500">
+      <p className="text-green-500 stat-card__icon-info-container">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="stat-card__icon-info h-5 w-5 text-green-500"
@@ -2018,7 +2018,7 @@ export const cardStat = {
     </dt>
     <dd className="stat-card__info-container">
       <p className="stat-card__info">100 BDT</p>
-      <p className="stat-card__icon-info-container text-red-500">
+      <p className="text-red-500 stat-card__icon-info-container">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="stat-card__icon-info h-5 w-5 text-red-500"
@@ -2115,7 +2115,7 @@ export const modalSampleData = {
                   </button>
                 </header>
                 <div class="modal__content">
-                  <img src="/modal_sample.svg" class="h-44 mb-8 mt-4" />
+                  <img src="../..//modal_sample.svg" class="h-44 mb-8 mt-4" />
                   <h1 class="text-2xl text-center">OTP Validation Successful</h1>
                   <p class="text-xl mt-3 mb-6 text-center">
                     Your Bank Account has been linked to your saved Bank list
@@ -2154,7 +2154,7 @@ export const modalSampleData = {
         </button>
       </header>
       <div class="modal__content">
-        <img src="/modal_sample.svg" class="h-44 mb-8 mt-4" />
+        <img src="../../modal_sample.svg" class="h-44 mb-8 mt-4" />
         <h1 class="text-2xl text-center">OTP Validation Successful</h1>
         <p class="text-xl mt-3 mb-6 text-center">
           Your Bank Account has been linked to your saved Bank list
@@ -2194,7 +2194,7 @@ export const navbarDataJSX = `<header className="nav-container">
   <ul className="nav-list">
     <li>
       <Link href="/dashboard" passHref>
-        <span className="nav-link text-primary font-medium">
+        <span className="font-medium nav-link text-primary">
           <DashboardIcon className="mr-2 text-primary" />
           <span>Dashboard</span>
         </span>
@@ -2232,7 +2232,7 @@ export const navbarDataJSX = `<header className="nav-container">
     </li>
   </ul>
 </div>
-<ul className="dropdown-list dropdown-right mt-6" role="menu">
+<ul className="mt-6 dropdown-list dropdown-right" role="menu">
   <li role="none">
     <a
       className="dropdown-item__link"
@@ -2248,7 +2248,7 @@ export const navbarDataJSX = `<header className="nav-container">
     </button>
   </li>
   <li role="none">
-    <button className="dropdown-item__button justify-between" role="menuitem">
+    <button className="justify-between dropdown-item__button" role="menuitem">
       <span>Custom design</span>
       <span className="badge badge-primary">13</span>
     </button>
@@ -2274,7 +2274,7 @@ export const navbarDataHTML = `<header className="nav-container">
   <ul className="nav-list">
     <li>
       <Link href="/dashboard" passHref>
-        <span className="nav-link text-primary font-medium">
+        <span className="font-medium nav-link text-primary">
           <DashboardIcon className="mr-2 text-primary" />
           <span>Dashboard</span>
         </span>
