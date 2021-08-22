@@ -1,9 +1,11 @@
+/* eslint-disable react/jsx-no-undef */
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable @next/next/no-html-link-for-pages */
-import React from "react";
+import React, { useState } from "react";
 import DocumentationLayout from "../../../components/docs/DocumentationLayout";
 import CustomHead from "../../../components/global/CustomHead";
 import { getPrimaryColor } from "../../../utilities/utilFunction";
+import clsx from "clsx";
 import {
   navbarDataJSX,
   navbarDataHTML,
@@ -70,14 +72,31 @@ const NotificationIcon: React.FC<{ className?: string }> = ({ className }) => {
     </svg>
   );
 };
+const MenuIcon: React.FC<{ className?: string }> = ({ className }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-6 h-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M4 6h16M4 12h16M4 18h16"
+      />
+    </svg>
+  );
+};
 
 const Navbar: React.FC<{}> = () => {
-  const [show, setShow] = React.useState(false);
-  const [showMenu, setShowMenu] = React.useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+  const [profileShow, setProfileShow] = useState(false);
   const hideMenu = () => setShowMenu(false);
   const toggle = () => setShowMenu((open) => !open);
 
-  
   return (
     <DocumentationLayout parentSlug="layout" childSlug="navbar">
       <div>
@@ -98,95 +117,103 @@ const Navbar: React.FC<{}> = () => {
                   height={45}
                 />
               </Link>
-              <div className="flex">
-          <button
-            className="flex items-center justify-center p-1 border border-gray-500 rounded focus:outline-none lg:hidden"
-            onClick={toggle}
-          >
-            <NotificationIcon />
-          </button>
-          <ul className="nav-list">
-                <li>
-                  <Link href="/dashboard" passHref>
-                    <span className="font-medium nav-link text-primary">
-                      <DashboardIcon className="mr-2 text-primary" />
-                      <span>Dashboard</span>
-                    </span>
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/send-money" passHref>
-                    <span className="nav-link">
-                      <AddMoney className="mr-2" />
-                      <span>Send Money</span>
-                    </span>
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/notification" passHref>
-                    <span className="nav-link">
-                      <span className="relative mr-2">
-                        <span className="absolute block w-2 h-2 rounded bg-primary -right-0 -top-1" />
-                        <NotificationIcon />
+              <div className="relative flex">
+                <button
+                  className="nav-menu-icon"
+                  onClick={toggle}
+                >
+                  <MenuIcon />
+                </button>
+                <ul
+                  className={clsx(
+                    "fixed right-0 flex flex-col divide-y bg-white shadow-md top-[71px] w-screen",
+                    "lg:static lg:flex lg:flex-row lg:items-center lg:space-x-6 lg:divide-y-0 lg:bg-transparent lg:shadow-none lg:top-0 lg:w-auto",
+                    {
+                      hidden: !showMenu,
+                    }
+                  )}
+                >
+                  <li>
+                    <Link href="/dashboard" passHref>
+                      <span className="font-medium nav-link text-primary">
+                        <DashboardIcon className="mr-2 text-primary" />
+                        <span>Dashboard</span>
                       </span>
-                      <span>Notification</span>
-                    </span>
-                  </Link>
-                </li>
+                    </Link>
+                  </li>
 
-                <li>
-                  <button
-                    className="flex items-center focus:outline-none"
-                    onClick={() => setShow(!show)}
-                  >
-                    <span>Alam Haq</span>
-                    <span className="flex items-center justify-center ml-2 text-lg text-white bg-pink-500 rounded-full w-9 h-9">
-                      AH
-                    </span>
-                  </button>
-                </li>
-              </ul>
+                  <li>
+                    <Link href="/send-money" passHref>
+                      <span className="nav-link">
+                        <AddMoney className="mr-2" />
+                        <span>Send Money</span>
+                      </span>
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link href="/notification" passHref>
+                      <span className="nav-link">
+                        <span className="relative mr-2">
+                          <span className="absolute block w-2 h-2 rounded bg-primary -right-0 -top-1" />
+                          <NotificationIcon />
+                        </span>
+                        <span>Notification</span>
+                      </span>
+                    </Link>
+                  </li>
+
+                  <li>
+                    <button
+                      className="flex items-center px-4 py-3 focus:outline-none lg:px-0 lg:py-0"
+                      onClick={() => setProfileShow(!profileShow)}
+                    >
+                      <span>Alam Haq</span>
+                      <span className="flex items-center justify-center ml-2 text-lg text-white bg-pink-500 rounded-full w-9 h-9">
+                        AH
+                      </span>
+                    </button>
+                  </li>
+                </ul>
+                {profileShow && (
+                  <ul className="mt-10 dropdown-list dropdown-right" role="menu">
+                    <li role="none">
+                      <a
+                        className="dropdown-item__link"
+                        role="menuitem"
+                        href="/?path=/story/dropdown--default"
+                      >
+                        Anchor as an item
+                      </a>
+                    </li>
+                    <li role="none">
+                      <button className="dropdown-item__button" role="menuitem">
+                        Button as an item
+                      </button>
+                    </li>
+                    <li role="none">
+                      <button
+                        className="justify-between dropdown-item__button"
+                        role="menuitem"
+                      >
+                        <span>Custom design</span>
+                        <span className="badge badge-primary">13</span>
+                      </button>
+                    </li>
+                    <li role="none">
+                      <button
+                        aria-disabled="true"
+                        className="dropdown-item__disabled"
+                        disabled
+                        role="menuitem"
+                      >
+                        Disabled item
+                      </button>
+                    </li>
+                  </ul>
+                )}
+              </div>
             </div>
-            </div>
-            {show && (
-            <ul className="mt-6 dropdown-list dropdown-right" role="menu">
-            <li role="none">
-              <a
-                className="dropdown-item__link"
-                role="menuitem"
-                href="/?path=/story/dropdown--default"
-              >
-                Anchor as an item
-              </a>
-            </li>
-            <li role="none">
-              <button className="dropdown-item__button" role="menuitem">
-                Button as an item
-              </button>
-            </li>
-            <li role="none">
-              <button
-                className="justify-between dropdown-item__button"
-                role="menuitem"
-              >
-                <span>Custom design</span>
-                <span className="badge badge-primary">13</span>
-              </button>
-            </li>
-            <li role="none">
-              <button
-                aria-disabled="true"
-                className="dropdown-item__disabled"
-                disabled
-                role="menuitem"
-              >
-                Disabled item
-              </button>
-            </li>
-          </ul>
-          )}
           </header>
         </div>
         <h6 className="mt-10 mb-4">

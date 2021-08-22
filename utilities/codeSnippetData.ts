@@ -2185,181 +2185,232 @@ export const navbarDataJSX = `<header className="nav-container">
 <div className="nav-container-layout">
   <Link href="/" passHref>
     <img
-      src={bkashLogo}
+      src={'/bkash.svg'}
       alt="bKash Logo"
       width={98}
       height={45}
     />
   </Link>
-  <ul className="nav-list">
-    <li>
-      <Link href="/dashboard" passHref>
-        <span className="font-medium nav-link text-primary">
-          <DashboardIcon className="mr-2 text-primary" />
-          <span>Dashboard</span>
-        </span>
-      </Link>
-    </li>
-
-    <li>
-      <Link href="/send-money" passHref>
-        <span className="nav-link">
-          <AddMoney className="mr-2" />
-          <span>Send Money</span>
-        </span>
-      </Link>
-    </li>
-
-    <li>
-      <Link href="/notification" passHref>
-        <span className="nav-link">
-          <span className='relative mr-2'>
-          <span className="absolute block w-2 h-2 rounded bg-primary -right-0 -top-1" />
-          <NotificationIcon />
-          </span>
-          <span>Notification</span>
-        </span>
-      </Link>
-    </li>
-
-    <li>
-      <button className="flex items-center focus:outline-none">
-        <span>Alam Haq</span>
-        <span className="flex items-center justify-center ml-2 text-lg text-white bg-pink-500 rounded-full w-9 h-9">
-          AH
-        </span>
-      </button>
-    </li>
-  </ul>
-</div>
-<ul className="mt-6 dropdown-list dropdown-right" role="menu">
-  <li role="none">
-    <a
-      className="dropdown-item__link"
-      role="menuitem"
-      href="/?path=/story/dropdown--default"
-    >
-      Anchor as an item
-    </a>
-  </li>
-  <li role="none">
-    <button className="dropdown-item__button" role="menuitem">
-      Button as an item
-    </button>
-  </li>
-  <li role="none">
-    <button className="justify-between dropdown-item__button" role="menuitem">
-      <span>Custom design</span>
-      <span className="badge badge-primary">13</span>
-    </button>
-  </li>
-  <li role="none">
+  <div className="relative flex">
     <button
-      aria-disabled="true"
-      className="dropdown-item__disabled"
-      disabled
-      role="menuitem"
+      className="nav-menu-icon"
+      onClick={toggle}
     >
-      Disabled item
+      <MenuIcon />
     </button>
-  </li>
-</ul>
+    <ul
+      className={clsx(
+        "fixed right-0 flex flex-col divide-y bg-white shadow-md top-[71px] w-screen",
+        "lg:static lg:flex lg:flex-row lg:items-center lg:space-x-6 lg:divide-y-0 lg:bg-transparent lg:shadow-none lg:top-0 lg:w-auto",
+        {
+          hidden: !showMenu,
+        }
+      )}
+    >
+      <li>
+        <Link href="/dashboard" passHref>
+          <span className="font-medium nav-link text-primary">
+            <DashboardIcon className="mr-2 text-primary" />
+            <span>Dashboard</span>
+          </span>
+        </Link>
+      </li>
+
+      <li>
+        <Link href="/send-money" passHref>
+          <span className="nav-link">
+            <AddMoney className="mr-2" />
+            <span>Send Money</span>
+          </span>
+        </Link>
+      </li>
+
+      <li>
+        <Link href="/notification" passHref>
+          <span className="nav-link">
+            <span className="relative mr-2">
+              <span className="absolute block w-2 h-2 rounded bg-primary -right-0 -top-1" />
+              <NotificationIcon />
+            </span>
+            <span>Notification</span>
+          </span>
+        </Link>
+      </li>
+
+      <li>
+        <button
+          className="flex items-center px-4 py-3 focus:outline-none lg:px-0 lg:py-0"
+          onClick={() => setProfileShow(!profileShow)}
+        >
+          <span>Alam Haq</span>
+          <span className="flex items-center justify-center ml-2 text-lg text-white bg-pink-500 rounded-full w-9 h-9">
+            AH
+          </span>
+        </button>
+      </li>
+    </ul>
+      <ul className="mt-10 dropdown-list dropdown-right" role="menu">
+        <li role="none">
+          <a
+            className="dropdown-item__link"
+            role="menuitem"
+            href="/?path=/story/dropdown--default"
+          >
+            Anchor as an item
+          </a>
+        </li>
+        <li role="none">
+          <button className="dropdown-item__button" role="menuitem">
+            Button as an item
+          </button>
+        </li>
+        <li role="none">
+          <button
+            className="justify-between dropdown-item__button"
+            role="menuitem"
+          >
+            <span>Custom design</span>
+            <span className="badge badge-primary">13</span>
+          </button>
+        </li>
+        <li role="none">
+          <button
+            aria-disabled="true"
+            className="dropdown-item__disabled"
+            disabled
+            role="menuitem"
+          >
+            Disabled item
+          </button>
+        </li>
+      </ul>
+  </div>
+</div>
 </header>`;
 
-export const navbarDataHTML = `<header className="nav-container">
-<div className="nav-container-layout">
+export const navbarDataHTML = `<header class="nav-container">
+<div class="nav-container-layout">
   <Link href="/" passHref>
-    <img src={bkashLogo} alt="bKash Logo" width={98} height={45} />
+    <img
+      src={'/bkash.svg'}
+      alt="bKash Logo"
+      width={98}
+      height={45}
+    />
   </Link>
-  <ul className="nav-list">
-    <li>
-      <Link href="/dashboard" passHref>
-        <span className="font-medium nav-link text-primary">
-          <DashboardIcon className="mr-2 text-primary" />
-          <span>Dashboard</span>
-        </span>
-      </Link>
-    </li>
-
-    <li>
-      <Link href="/send-money" passHref>
-        <span className="nav-link">
-          <AddMoney className="mr-2" />
-          <span>Send Money</span>
-        </span>
-      </Link>
-    </li>
-
-    <li>
-      <Link href="/notification" passHref>
-        <span className="nav-link">
-          <span className="relative mr-2">
-            <span className="absolute block w-2 h-2 rounded bg-primary -right-0 -top-1" />
-            <NotificationIcon />
-          </span>
-          <span>Notification</span>
-        </span>
-      </Link>
-    </li>
-
-    <li>
-      <button className="flex items-center focus:outline-none">
-        <span>Alam Haq</span>
-        <span className="flex items-center justify-center ml-2 text-lg text-white bg-pink-500 rounded-full w-9 h-9">
-          AH
-        </span>
-      </button>
-    </li>
-  </ul>
-</div>
-//dropdown
-<ul class="dropdown-list dropdown-right mt-6" role="menu">
-  <li role="none">
-    <a
-      class="dropdown-item__link"
-      role="menuitem"
-      href="/?path=/story/dropdown--default"
-    >
-      Anchor as an item
-    </a>
-  </li>
-  <li role="none">
-    <button class="dropdown-item__button" role="menuitem">
-      Button as an item
-    </button>
-  </li>
-  <li role="none">
-    <button class="dropdown-item__button justify-between" role="menuitem">
-      <span>Custom design</span>
-      <span className="badge badge-primary">13</span>
-    </button>
-  </li>
-  <li role="none">
+  <div class="relative flex">
     <button
-      aria-disabled="true"
-      class="dropdown-item__disabled"
-      disabled
-      role="menuitem"
+      class="nav-menu-icon"
+      onClick={toggle}
     >
-      Disabled item
+      <MenuIcon />
     </button>
-  </li>
-</ul>
+    <ul
+      class={clsx(
+        "fixed right-0 flex flex-col divide-y bg-white shadow-md top-[71px] w-screen",
+        "lg:static lg:flex lg:flex-row lg:items-center lg:space-x-6 lg:divide-y-0 lg:bg-transparent lg:shadow-none lg:top-0 lg:w-auto",
+        {
+          hidden: !showMenu,
+        }
+      )}
+    >
+      <li>
+        <Link href="/dashboard" passHref>
+          <span class="font-medium nav-link text-primary">
+            <DashboardIcon class="mr-2 text-primary" />
+            <span>Dashboard</span>
+          </span>
+        </Link>
+      </li>
+
+      <li>
+        <Link href="/send-money" passHref>
+          <span class="nav-link">
+            <AddMoney class="mr-2" />
+            <span>Send Money</span>
+          </span>
+        </Link>
+      </li>
+
+      <li>
+        <Link href="/notification" passHref>
+          <span class="nav-link">
+            <span class="relative mr-2">
+              <span class="absolute block w-2 h-2 rounded bg-primary -right-0 -top-1" />
+              <NotificationIcon />
+            </span>
+            <span>Notification</span>
+          </span>
+        </Link>
+      </li>
+
+      <li>
+        <button
+          class="flex items-center px-4 py-3 focus:outline-none lg:px-0 lg:py-0"
+          onClick={() => setProfileShow(!profileShow)}
+        >
+          <span>Alam Haq</span>
+          <span class="flex items-center justify-center ml-2 text-lg text-white bg-pink-500 rounded-full w-9 h-9">
+            AH
+          </span>
+        </button>
+      </li>
+    </ul>
+      <ul class="mt-10 dropdown-list dropdown-right" role="menu">
+        <li role="none">
+          <a
+            class="dropdown-item__link"
+            role="menuitem"
+            href="/?path=/story/dropdown--default"
+          >
+            Anchor as an item
+          </a>
+        </li>
+        <li role="none">
+          <button class="dropdown-item__button" role="menuitem">
+            Button as an item
+          </button>
+        </li>
+        <li role="none">
+          <button
+            class="justify-between dropdown-item__button"
+            role="menuitem"
+          >
+            <span>Custom design</span>
+            <span class="badge badge-primary">13</span>
+          </button>
+        </li>
+        <li role="none">
+          <button
+            aria-disabled="true"
+            class="dropdown-item__disabled"
+            disabled
+            role="menuitem"
+          >
+            Disabled item
+          </button>
+        </li>
+      </ul>
+  </div>
+</div>
 </header>`;
 
 export const navLayerData = `//navbar
 @layer base {
   .nav-container {
-    @apply sticky top-0 z-30 h-[70px] mx-auto bg-white shadow w-full
+    @apply sticky top-0 z-30 h-[70px] mx-auto bg-white shadow w-full p-5
   }
   .nav-container-layout {
-    @apply flex items-center justify-between h-full max-w-6xl mx-auto
+    @apply flex items-center justify-between h-full max-w-6xl px-4 mx-auto xl:px-0
   }
   .nav-list {
-    @apply flex items-center space-x-6
+    @apply flex items-center space-x-6 
   }
   .nav-link {
-    @apply flex items-center cursor-pointer
+    @apply flex items-center cursor-pointer px-4 py-3 lg:px-0 lg:py-0
+  }
+  .nav-menu-icon {
+    @apply flex items-center justify-center p-1 border border-gray-500 rounded focus:outline-none lg:hidden
   }
 }`;
 
