@@ -20,10 +20,10 @@ export interface MobileToggleProps {
 
 const IconComponent = () => {
     return (
-        <div className="flex items-center px-2 lg:px-0">
-            <div className="flex-shrink-0">
+        <div className="flex items-center h-full px-2 lg:px-0">
+            <div className="flex items-center flex-shrink-0 h-full">
                 <Link href={'/'} passHref>
-                    <div className="block lg:hidden h-8 w-auto cursor-pointer">
+                    <div className="block w-auto h-auto cursor-pointer lg:hidden">
                     <img
                         width={40}
                         height={40}
@@ -33,7 +33,7 @@ const IconComponent = () => {
                     </div>
                 </Link>
                 <Link href={'/'} passHref>
-                    <div className="hidden lg:block h-8 w-auto lg:cursor-pointer" >
+                    <div className="hidden w-auto h-full lg:flex lg:cursor-pointer" >
                      <img
                         width={100}
                         height={40}
@@ -51,12 +51,12 @@ const MobileToggle:React.FC<MobileToggleProps> = ({open}) => {
     return (
         <div className="flex lg:hidden">
             {/* Mobile menu button */}
-            <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+            <Disclosure.Button className="inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                 <span className="sr-only">Open main menu</span>
                 {open ? (
-                    <XIcon className="block h-6 w-6" aria-hidden="true" />
+                    <XIcon className="block w-6 h-6" aria-hidden="true" />
                 ) : (
-                    <MenuIcon className="block h-6 w-6" aria-hidden="true" />
+                    <MenuIcon className="block w-6 h-6" aria-hidden="true" />
                 )}
             </Disclosure.Button>
         </div>
@@ -75,7 +75,7 @@ const NavList = () => {
                             rel={'noreferrer noopener'}
                             href={navLink.link}
                             target={'_blank'}
-                            className="text-gray-700 focus:text-gray-700 hover:bg-gray-50 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+                            className="px-3 py-2 text-sm font-medium text-gray-700 rounded-md focus:text-gray-700 hover:bg-gray-50 hover:text-gray-700"
                         >
                             {navLink.name}
                         </a>
@@ -104,7 +104,7 @@ const MobileNavList =  () => {
                         rel={'noreferrer noopener'}
                         href={navLink.link}
                         target={'_blank'}
-                        className="cursor-pointer text-gray-700 hover:bg-gray-50 hover:text-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+                        className="block px-3 py-2 text-base font-medium text-gray-700 rounded-md cursor-pointer hover:bg-gray-50 hover:text-gray-700"
                     >
                         {navLink.name}
                     </a>
@@ -124,10 +124,10 @@ const MobileNavList =  () => {
 const Navbar:React.FC<Props> =() => {
     const router= useRouter();
   return (
-      <Disclosure as="nav" className="bg-white shadow sticky top-0 z-40">
+      <Disclosure as="nav" className="sticky top-0 z-40 bg-white shadow">
           {({ open }) => (
               <>
-                  <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+                  <div className="px-2 mx-auto max-w-7xl sm:px-4 lg:px-8">
                       <div className="relative flex items-center justify-between h-16">
                          <IconComponent />
                           <MobileToggle open={open} />

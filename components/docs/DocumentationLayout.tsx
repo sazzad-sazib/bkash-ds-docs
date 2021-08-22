@@ -37,9 +37,9 @@ const DocumentLayout:React.FC<Props> =({children,parentSlug,childSlug}) => {
     return (
         <>
             <CustomHead title={'Documentation'}/>
-            <div className='h-[calc(100vh-4rem)] overflow-hidden block lg:grid lg:grid-cols-7 gap-4'>
+            <div className='h-[calc(100vh-4rem)] overflow-hidden block lg:grid lg:grid-cols-9 gap-4'>
                 <LeftBar data={newLeftBarData} childSlug={childSlug} parentSlug={parentSlug}/>
-                <div className='block lg:col-span-5 h-[calc(100vh-4rem)] overflow-auto p-4'>
+                <div className='block lg:col-span-7 h-[calc(100vh-4rem)] overflow-auto p-4'>
                     {children}
                 </div>
             </div>

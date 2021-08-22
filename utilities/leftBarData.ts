@@ -78,11 +78,6 @@ const data:leftBarDataProps[] = [
             },
             {
                 id: 6,
-                title: 'Card',
-                slug: 'card'
-            },
-            {
-                id: 7,
                 title: 'Modal',
                 slug: 'modal'
             }
@@ -96,6 +91,21 @@ const data:leftBarDataProps[] = [
                 id: 0,
                 title: 'Navbar',
                 slug: 'navbar'
+            },
+            {
+                id: 1,
+                title: 'Card',
+                slug: 'card'
+            },
+            {
+                id: 2,
+                title: 'Form',
+                slug: 'form'
+            },
+            {
+                id: 3,
+                title: 'Summary',
+                slug: 'summary'
             }
         ]
     }

@@ -56,7 +56,7 @@ const NotificationIcon: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="h-6 w-6"
+      className="w-6 h-6"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -73,17 +73,21 @@ const NotificationIcon: React.FC<{ className?: string }> = ({ className }) => {
 
 const Navbar: React.FC<{}> = () => {
   const [show, setShow] = React.useState(false);
+  const [showMenu, setShowMenu] = React.useState(false);
+  const hideMenu = () => setShowMenu(false);
+  const toggle = () => setShowMenu((open) => !open);
+
   
   return (
     <DocumentationLayout parentSlug="layout" childSlug="navbar">
       <div>
         <CustomHead title="Navbar" description={"Navbar Guideline for bKash"} />
-        <h3 className="text-primary mb-2">Navbar Layout</h3>
+        <h3 className="mb-2 text-primary">Navbar Layout</h3>
         <p>Here is a preview of all possible Navbar sample</p>
         <h6 className="mt-10 mb-4">
           {getPrimaryColor("`Navbar`")} &nbsp; example
         </h6>
-        <div className="bg-primary-100 rounded-md p-4 mt-2 relative">
+        <div className="relative p-4 mt-2 rounded-md bg-primary-100">
           <header className="nav-container">
             <div className="nav-container-layout">
               <Link href="/" passHref>
@@ -94,10 +98,17 @@ const Navbar: React.FC<{}> = () => {
                   height={45}
                 />
               </Link>
-              <ul className="nav-list">
+              <div className="flex">
+          <button
+            className="flex items-center justify-center p-1 border border-gray-500 rounded focus:outline-none lg:hidden"
+            onClick={toggle}
+          >
+            <NotificationIcon />
+          </button>
+          <ul className="nav-list">
                 <li>
                   <Link href="/dashboard" passHref>
-                    <span className="nav-link text-primary font-medium">
+                    <span className="font-medium nav-link text-primary">
                       <DashboardIcon className="mr-2 text-primary" />
                       <span>Dashboard</span>
                     </span>
@@ -138,8 +149,9 @@ const Navbar: React.FC<{}> = () => {
                 </li>
               </ul>
             </div>
+            </div>
             {show && (
-            <ul className="dropdown-list dropdown-right mt-6" role="menu">
+            <ul className="mt-6 dropdown-list dropdown-right" role="menu">
             <li role="none">
               <a
                 className="dropdown-item__link"
@@ -156,7 +168,7 @@ const Navbar: React.FC<{}> = () => {
             </li>
             <li role="none">
               <button
-                className="dropdown-item__button justify-between"
+                className="justify-between dropdown-item__button"
                 role="menuitem"
               >
                 <span>Custom design</span>

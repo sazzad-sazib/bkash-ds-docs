@@ -28,8 +28,9 @@ const CodeSwitcher:React.FC<Props> =({options,active,onChange,handleCopy,hasCopy
         {!!hasCopy &&
         <button
             onClick={()=>handleCopyLocal()}
+            title="Copy Code Snippet"
             className={`bg-white border shadow ${isCopied?'bg-opacity-90':''} flex focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 rounded-md focus:outline-none focus-visible:ring-offset-gray-100 ml-0.5 p-1.5 lg:pl-1.5 lg:pr-2.5 rounded-md flex items-center text-sm text-gray-600 font-medium focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 focus:outline-none focus-visible:ring-offset-gray-100`}>
-            {isCopied ? <ClipboardCheckIcon className='h-5 w-5 ml-1 text-primary ' /> : <ClipboardCopyIcon className='h-5 w-5 ml-1 text-gray-600 ' />}
+            {isCopied ? <ClipboardCheckIcon className='w-5 h-5 ml-1 text-primary ' /> : <ClipboardCopyIcon className='w-5 h-5 ml-1 text-gray-600 ' />}
         </button>
         }
         {options.map((option,i)=>{
@@ -38,7 +39,7 @@ const CodeSwitcher:React.FC<Props> =({options,active,onChange,handleCopy,hasCopy
                     key={i}
                     onClick={()=>onChange(option)}
                     className={`${active === option ? 'bg-white border shadow-sm':''} flex focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 rounded-md focus:outline-none focus-visible:ring-offset-gray-100 ml-0.5 p-1.5 lg:pl-2.5 lg:pr-3.5 rounded-md flex items-center text-sm text-gray-600 font-medium focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 focus:outline-none focus-visible:ring-offset-gray-100`}>
-                    {active === option ? <CodeIcon className='h-5 w-5 mr-2 text-primary ' /> : <EyeOffIcon className='h-5 w-5 mr-2 text-gray-600' />} {option.toUpperCase()}
+                    {active === option ? <CodeIcon className='w-5 h-5 mr-2 text-primary ' /> : <EyeOffIcon className='w-5 h-5 mr-2 text-gray-600' />} {option.toUpperCase()}
                 </button>
             )
             }

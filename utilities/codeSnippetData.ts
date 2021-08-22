@@ -2362,3 +2362,158 @@ export const navLayerData = `//navbar
     @apply flex items-center cursor-pointer
   }
 }`;
+
+export const formBasic = {
+  jsx: `<form className="p-10 space-y-6 bg-white rounded shadow">
+  <label className="flex flex-wrap items-center lg:flex-nowrap">
+    <p className="w-full mb-2 lg:w-1/4 lg:mb-0">Bank Name</p>
+    <input
+      className="input input-active"
+      type="text"
+      placeholder="Provide Name"
+    />
+  </label>
+  <label className="flex flex-wrap items-center lg:flex-nowrap">
+    <p className="w-full mb-2 lg:w-1/4 lg:mb-0">Bank Account Name</p>
+    <input
+      className="input input-active"
+      type="text"
+      placeholder="Provide Name"
+    />
+  </label>
+  <label className="flex flex-wrap items-center lg:flex-nowrap">
+    <p className="w-full mb-2 lg:w-1/4 lg:mb-0">Bank Account Number</p>
+    <input
+      className="input input-valid"
+      type="text"
+      placeholder="Provide Name"
+    />
+  </label>
+  <label className="flex flex-wrap items-start lg:flex-nowrap">
+    <p className="w-full mb-2 lg:w-1/4 lg:mb-0">Reference Title (Optional)</p>
+    <textarea className="input input-active" placeholder="Reference Title" />
+  </label>
+  <div className="flex flex-wrap items-center lg:flex-nowrap">
+    <div className="hidden w-1/4 lg:block" />
+    <div className="w-full">
+      <p className="mb-6">
+        <span>By proceeding, you are agreeing to our </span>
+        <a href={"#"} target="_blank" className="underline text-primary">
+          terms and conditions
+        </a>
+      </p>
+      <button className="btn btn-primary btn-regular" type="submit">
+        Submit
+      </button>
+    </div>
+  </div>
+</form>`,
+html: `
+<form class="p-10 space-y-6 bg-white rounded shadow">
+  <label class="flex flex-wrap items-center lg:flex-nowrap">
+    <p class="w-full mb-2 lg:w-1/4 lg:mb-0">Bank Name</p>
+    <input class="input input-active" type="text" placeholder="Provide Name" />
+  </label>
+  <label class="flex flex-wrap items-center lg:flex-nowrap">
+    <p class="w-full mb-2 lg:w-1/4 lg:mb-0">Bank Account Name</p>
+    <input class="input input-active" type="text" placeholder="Provide Name" />
+  </label>
+  <label class="flex flex-wrap items-center lg:flex-nowrap">
+    <p class="w-full mb-2 lg:w-1/4 lg:mb-0">Bank Account Number</p>
+    <input class="input input-valid" type="text" placeholder="Provide Name" />
+  </label>
+  <label class="flex flex-wrap items-start lg:flex-nowrap">
+    <p class="w-full mb-2 lg:w-1/4 lg:mb-0">Reference Title (Optional)</p>
+    <textarea class="input input-active" placeholder="Reference Title" />
+  </label>
+  <div class="flex flex-wrap items-center lg:flex-nowrap">
+    <div class="hidden w-1/4 lg:block" />
+    <div class="w-full">
+      <p class="mb-6">
+        <span>By proceeding, you are agreeing to our </span>
+        <a href={"#"} target="_blank" class="underline text-primary">
+          terms and conditions
+        </a>
+      </p>
+      <button class="btn btn-primary btn-regular" type="submit">
+        Submit
+      </button>
+    </div>
+  </div>
+</form>`
+}
+
+export const summaryBasic = {
+  jsx: `<div className="p-6 mx-auto bg-white rounded-md shadow lg:p-12">
+  <div className="flex-wrap items-center fflex lg:flex-nowrap">
+    <p className="w-full mb-2 lg:w-1/4 lg:mb-0">Bank Name</p>
+    <p className="w-full">{'Lorem Bank Ltd'}</p>
+  </div>
+  <div className="flex-wrap items-center mt-4 fflex lg:flex-nowrap">
+    <p className="w-full mb-2 lg:w-1/4 lg:mb-0">Bank Account Name</p>
+    <p className="w-full">{'John Doe'}</p>
+  </div>
+  <div className="flex-wrap items-center mt-4 fflex lg:flex-nowrap">
+    <p className="w-full mb-2 lg:w-1/4 lg:mb-0">Bank Account Number</p>
+    <p className="w-full uppercase">{'11254546677777'}</p>
+  </div>
+  <div className="flex-wrap items-center mt-4 fflex lg:flex-nowrap">
+    <p className="w-full mb-2 lg:w-1/4 lg:mb-0">
+      Reference Title (Optional)
+    </p>
+    <p className="w-full">{'3asd344444dsd'}</p>
+  </div>
+  <div className="flex-wrap items-center mt-6 fflex lg:flex-nowrap">
+    <div className="w-full mb-2 lg:w-1/4 lg:mb-0" />
+    <div className="w-full">
+      <p className="mb-6">
+        <span>By proceeding, you are agreeing to our </span>
+        <a
+          href={'#'}
+          target="_blank"
+          className="underline text-primary"
+        >
+          terms and conditions
+        </a>
+      </p>
+      <button className="btn btn-primary btn-regular" type="submit">
+        Continue
+      </button>
+    </div>
+    </div>
+    </div>`,
+  html: `
+  <div class="p-6 mx-auto bg-white rounded-md shadow lg:p-12">
+  <div class="flex-wrap items-center fflex lg:flex-nowrap">
+    <p class="w-full mb-2 lg:w-1/4 lg:mb-0">Bank Name</p>
+    <p class="w-full">{"Lorem Bank Ltd"}</p>
+  </div>
+  <div class="flex-wrap items-center mt-4 fflex lg:flex-nowrap">
+    <p class="w-full mb-2 lg:w-1/4 lg:mb-0">Bank Account Name</p>
+    <p class="w-full">{"John Doe"}</p>
+  </div>
+  <div class="flex-wrap items-center mt-4 fflex lg:flex-nowrap">
+    <p class="w-full mb-2 lg:w-1/4 lg:mb-0">Bank Account Number</p>
+    <p class="w-full uppercase">{"11254546677777"}</p>
+  </div>
+  <div class="flex-wrap items-center mt-4 fflex lg:flex-nowrap">
+    <p class="w-full mb-2 lg:w-1/4 lg:mb-0">Reference Title (Optional)</p>
+    <p class="w-full">{"3asd344444dsd"}</p>
+  </div>
+  <div class="flex-wrap items-center mt-6 fflex lg:flex-nowrap">
+    <div class="w-full mb-2 lg:w-1/4 lg:mb-0" />
+    <div class="w-full">
+      <p class="mb-6">
+        <span>By proceeding, you are agreeing to our </span>
+        <a href={"#"} target="_blank" class="underline text-primary">
+          terms and conditions
+        </a>
+      </p>
+      <button class="btn btn-primary btn-regular" type="submit">
+        Continue
+      </button>
+    </div>
+  </div>
+</div>
+`
+}

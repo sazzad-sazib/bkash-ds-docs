@@ -11,10 +11,10 @@ export default [
         link: '/storybook',
         type: 'route',
     },
-    {
-        id: 3,
-        name: 'Github',
-        link: 'https://github.com/sazzad-sazib',
-        type: 'link',
-    },
+    // {
+    //     id: 3,
+    //     name: 'Github',
+    //     link: 'https://github.com/sazzad-sazib',
+    //     type: 'link',
+    // },
 ]

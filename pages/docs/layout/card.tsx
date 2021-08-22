@@ -9,10 +9,10 @@ import CodeSnippet from "../../../components/global/CodeSnippet";
 
 const Card:React.FC<{}> =() => {
     return (
-        <DocumentationLayout parentSlug='components' childSlug='card'>
+        <DocumentationLayout parentSlug='layout' childSlug='card'>
             <div>
                 <CustomHead title='Card' description={'Card Guideline for bKash'} />
-                <h3 className='text-primary mb-2'>Card</h3>
+                <h3 className='mb-2 text-primary'>Card</h3>
                 <p>
                     Here is a preview of all possible Card variant
                 </p>

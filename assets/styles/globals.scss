@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    font-size: 14px;
+  }
+}
+
 //basic typography layout
 @layer base {
   h1 {
@@ -321,7 +327,7 @@
     @apply flex items-center justify-between h-full max-w-6xl mx-auto
   }
   .nav-list {
-    @apply flex items-center space-x-6
+    @apply flex items-center space-x-6 
   }
   .nav-link {
     @apply flex items-center cursor-pointer
