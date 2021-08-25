@@ -1405,15 +1405,15 @@ export const dropdownSample = {
     </li>
   </ul>
 </div>`,
-  html: `<div className="relative pr-20 mb-40">
-  <button className="btn btn-primary btn-regular"> Dropdown </button>
+  html: `<div class="relative pr-20 mb-40">
+  <button class="btn btn-primary btn-regular"> Dropdown </button>
   <ul
-    className="dropdown-list dropdown-left"
+    class="dropdown-list dropdown-left"
     role="menu"
   >
     <li role="none">
       <a
-        className="dropdown-item__link"
+        class="dropdown-item__link"
         role="menuitem"
         href="/?path=/story/dropdown--default"
       >
@@ -1422,7 +1422,7 @@ export const dropdownSample = {
     </li>
     <li role="none">
       <button
-        className="dropdown-item__button"
+        class="dropdown-item__button"
         role="menuitem"
       >
         Button as an item
@@ -1430,7 +1430,7 @@ export const dropdownSample = {
     </li>
     <li role="none">
       <button
-        className="justify-between dropdown-item__button"
+        class="justify-between dropdown-item__button"
         role="menuitem"
       >
         <span>Custom design</span>
@@ -1442,7 +1442,7 @@ export const dropdownSample = {
     <li role="none">
       <button
         aria-disabled="true"
-        className="dropdown-item__disabled"
+        class="dropdown-item__disabled"
         disabled
         role="menuitem"
       >
@@ -1953,10 +1953,10 @@ export const cardStat = {
       </div>
     );
   }`,
-  html: `<div className="grid grid-cols-2 gap-4">
-  <div className="col-span-1 stat-card__container">
+  html: `<div class="grid grid-cols-2 gap-4">
+  <div class="col-span-1 stat-card__container">
     <dt>
-      <div className="stat-card__icon">
+      <div class="stat-card__icon">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-6 w-6 text-white"
@@ -1972,11 +1972,11 @@ export const cardStat = {
           />
         </svg>
       </div>
-      <p className="stat-card__title">Cash In</p>
+      <p class="stat-card__title">Cash In</p>
     </dt>
-    <dd className="stat-card__info-container">
-      <p className="stat-card__info">5000 BDT</p>
-      <p className="text-green-500 stat-card__icon-info-container">
+    <dd class="stat-card__info-container">
+      <p class="stat-card__info">5000 BDT</p>
+      <p class="text-green-500 stat-card__icon-info-container">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="stat-card__icon-info h-5 w-5 text-green-500"
@@ -1996,9 +1996,9 @@ export const cardStat = {
       </p>
     </dd>
   </div>
-  <div className="col-span-1 stat-card__container">
+  <div class="col-span-1 stat-card__container">
     <dt>
-      <div className="stat-card__icon">
+      <div class="stat-card__icon">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-6 w-6 text-white"
@@ -2014,11 +2014,11 @@ export const cardStat = {
           />
         </svg>
       </div>
-      <p className="stat-card__title">Send Money</p>
+      <p class="stat-card__title">Send Money</p>
     </dt>
-    <dd className="stat-card__info-container">
-      <p className="stat-card__info">100 BDT</p>
-      <p className="text-red-500 stat-card__icon-info-container">
+    <dd class="stat-card__info-container">
+      <p class="stat-card__info">100 BDT</p>
+      <p class="text-red-500 stat-card__icon-info-container">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="stat-card__icon-info h-5 w-5 text-red-500"
@@ -2033,7 +2033,7 @@ export const cardStat = {
             d="M7 11l5-5m0 0l5 5m-5-5v12"
           />
         </svg>
-        <span className="sr-only"> 'Decreased' by</span>
+        <span class="sr-only"> 'Decreased' by</span>
         10%
       </p>
     </dd>
@@ -2199,13 +2199,8 @@ export const navbarDataJSX = `<header className="nav-container">
       <MenuIcon />
     </button>
     <ul
-      className={clsx(
-        "fixed right-0 flex flex-col divide-y bg-white shadow-md top-[71px] w-screen",
-        "lg:static lg:flex lg:flex-row lg:items-center lg:space-x-6 lg:divide-y-0 lg:bg-transparent lg:shadow-none lg:top-0 lg:w-auto",
-        {
-          hidden: !showMenu,
-        }
-      )}
+      className={"fixed right-0 flex flex-col divide-y bg-white shadow-md top-[71px] w-screen",
+        "lg:static lg:flex lg:flex-row lg:items-center lg:space-x-6 lg:divide-y-0 lg:bg-transparent lg:shadow-none lg:top-0 lg:w-auto"}
     >
       <li>
         <Link href="/dashboard" passHref>
@@ -2240,7 +2235,6 @@ export const navbarDataJSX = `<header className="nav-container">
       <li>
         <button
           className="flex items-center px-4 py-3 focus:outline-none lg:px-0 lg:py-0"
-          onClick={() => setProfileShow(!profileShow)}
         >
           <span>Alam Haq</span>
           <span className="flex items-center justify-center ml-2 text-lg text-white bg-pink-500 rounded-full w-9 h-9">
@@ -2306,13 +2300,8 @@ export const navbarDataHTML = `<header class="nav-container">
       <MenuIcon />
     </button>
     <ul
-      class={clsx(
-        "fixed right-0 flex flex-col divide-y bg-white shadow-md top-[71px] w-screen",
-        "lg:static lg:flex lg:flex-row lg:items-center lg:space-x-6 lg:divide-y-0 lg:bg-transparent lg:shadow-none lg:top-0 lg:w-auto",
-        {
-          hidden: !showMenu,
-        }
-      )}
+      class={"fixed right-0 flex flex-col divide-y bg-white shadow-md top-[71px] w-screen",
+        "lg:static lg:flex lg:flex-row lg:items-center lg:space-x-6 lg:divide-y-0 lg:bg-transparent lg:shadow-none lg:top-0 lg:w-auto"}
     >
       <li>
         <Link href="/dashboard" passHref>
@@ -2347,7 +2336,6 @@ export const navbarDataHTML = `<header class="nav-container">
       <li>
         <button
           class="flex items-center px-4 py-3 focus:outline-none lg:px-0 lg:py-0"
-          onClick={() => setProfileShow(!profileShow)}
         >
           <span>Alam Haq</span>
           <span class="flex items-center justify-center ml-2 text-lg text-white bg-pink-500 rounded-full w-9 h-9">
@@ -2459,8 +2447,7 @@ export const formBasic = {
     </div>
   </div>
 </form>`,
-html: `
-<form class="p-10 space-y-6 bg-white rounded shadow">
+html: `<form class="p-10 space-y-6 bg-white rounded shadow">
   <label class="flex flex-wrap items-center lg:flex-nowrap">
     <p class="w-full mb-2 lg:w-1/4 lg:mb-0">Bank Name</p>
     <input class="input input-active" type="text" placeholder="Provide Name" />
@@ -2533,8 +2520,7 @@ export const summaryBasic = {
     </div>
     </div>
     </div>`,
-  html: `
-  <div class="p-6 mx-auto bg-white rounded-md shadow lg:p-12">
+  html: `<div class="p-6 mx-auto bg-white rounded-md shadow lg:p-12">
   <div class="flex-wrap items-center fflex lg:flex-nowrap">
     <p class="w-full mb-2 lg:w-1/4 lg:mb-0">Bank Name</p>
     <p class="w-full">{"Lorem Bank Ltd"}</p>
