@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      NEXT_PUBLIC_BASE_PATH: /bkash-ds-docs
+      NEXT_PUBLIC_BASE_PATH: /ds-docs
 
     strategy:
       matrix:
